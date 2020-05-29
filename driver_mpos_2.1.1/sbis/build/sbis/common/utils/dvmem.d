@@ -1,0 +1,30 @@
+/home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/dvmem.o: \
+ /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/common/utils/dvmem.c \
+ /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/common/include/dvmem.h \
+ /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/lib/gcc/arm-none-eabi/6.3.1/include/stddef.h \
+ /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/include/osal/kernel.h \
+ /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/include/zephyr/zephyr/types.h \
+ /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/lib/gcc/arm-none-eabi/6.3.1/include/stdint.h \
+ /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/arm-none-eabi/include/stdint.h \
+ /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/arm-none-eabi/include/machine/_default_types.h \
+ /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/arm-none-eabi/include/sys/features.h \
+ /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/arm-none-eabi/include/_newlib_version.h \
+ /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/arm-none-eabi/include/sys/_intsup.h \
+ /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/arm-none-eabi/include/sys/_stdint.h \
+ /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/lib/gcc/arm-none-eabi/6.3.1/include/stdbool.h \
+ /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/include/zephyr/sys_clock.h \
+ /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/include/zephyr/arch/cpu.h \
+ /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/include/zephyr/broadcom/arch/arm/arch.h \
+ /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/include/zephyr/broadcom/generated_dts_board.h \
+ /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/include/zephyr/broadcom/arch/arm/cortex_a/asm_inline.h \
+ /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/include/zephyr/broadcom/arch/arm/cortex_a/asm_inline_gcc.h \
+ /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/include/zephyr/irq.h \
+ /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/include/zephyr/toolchain.h \
+ /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/include/zephyr/toolchain/gcc.h \
+ /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/include/zephyr/toolchain/common.h \
+ /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/include/zephyr/broadcom/arch/arm/cortex_a/irq.h \
+ /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/include/zephyr/arch/arm/cortex_m/irq.h \
+ /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/include/zephyr/broadcom/sw_isr_table.h \
+ /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/include/zephyr/broadcom/arch/arm/cortex_a/sys_io.h \
+ /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/include/zephyr/sys_io.h \
+ /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/include/zephyr/broadcom/arch/arm/cortex_a/misc.h

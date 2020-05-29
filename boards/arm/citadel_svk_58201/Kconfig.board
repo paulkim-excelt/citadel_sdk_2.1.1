@@ -1,0 +1,9 @@
+# Kconfig - Citadel SVK for 58201 Configuration
+#
+# Copyright (c) 2017 Broadcom Limited.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+config BOARD_CITADEL_SVK_58201
+	bool "Citadel SVK 58201"
+	depends on SOC_BCM5820X

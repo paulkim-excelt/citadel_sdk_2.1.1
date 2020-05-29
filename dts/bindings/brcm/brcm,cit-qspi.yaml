@@ -1,0 +1,21 @@
+---
+title: Broadcom QSPI Controller memory maps
+version: 0.1
+
+description: >
+    This binding describes the Broadcom QSPI controller memory mapped regions
+
+properties:
+    compatible:
+      category: required
+      type: string
+      description: compatible strings
+      constraint: "brcm,cit-qspi"
+
+    reg:
+      category: required
+      type: int
+      description: mmio register space
+      generation: define
+
+...

@@ -1,0 +1,1148 @@
+Archive member included to satisfy reference by file (symbol)
+
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-locale.o)
+                              /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/console/uart_console.o (__locale_ctype_ptr)
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-mbtowc_r.o)
+                              /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-locale.o) (__ascii_mbtowc)
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-memcpy.o)
+                              /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/os/common/cstartup.o (memcpy)
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-strcmp.o)
+                              /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/device.o (strcmp)
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-wctomb_r.o)
+                              /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-locale.o) (__ascii_wctomb)
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-ctype_.o)
+                              /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-locale.o) (_ctype_)
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-impure.o)
+                              /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-locale.o) (_impure_ptr)
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-ar/fpv3/hard/libgcc.a(_udivsi3.o)
+                              /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/printk.o (__aeabi_uidiv)
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-ar/fpv3/hard/libgcc.a(_divsi3.o)
+                              /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/clock_control/clocks_citadel_a7.o (__aeabi_idiv)
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-ar/fpv3/hard/libgcc.a(_dvmd_tls.o)
+                              /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-ar/fpv3/hard/libgcc.a(_udivsi3.o) (__aeabi_idiv0)
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-ar/fpv3/hard/libgcc.a(_aeabi_uldivmod.o)
+                              /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/clock_control/clocks_citadel_a7.o (__aeabi_uldivmod)
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-ar/fpv3/hard/libgcc.a(_udivmoddi4.o)
+                              /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-ar/fpv3/hard/libgcc.a(_aeabi_uldivmod.o) (__udivmoddi4)
+
+Allocating common symbols
+Common symbol       size              file
+
+_default_esf        0x18              /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/fault.o
+heap_info           0x10              /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/no_os/alloc.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH            0x0000000063000760 0x00000000007ff8a0 xr
+RAM              0x0000000024000000 0x0000000000100000 xrw
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/convert_sbi/convert_img.o
+LOAD /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/convert_sbi/customization_key.o
+LOAD /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/exc_manage.o
+LOAD /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/exc_handler.o
+LOAD /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/arm_core_cache.o
+LOAD /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/fault.o
+LOAD /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/arm_core_mmu.o
+LOAD /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/soc/bcm_citadel/bcm5820x/soc_config.o
+LOAD /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/os/no_os/main.o
+LOAD /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/os/common/startup.o
+LOAD /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/os/common/cstartup.o
+LOAD /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/no_os/alloc.o
+LOAD /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/no_os/osal.o
+LOAD /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/printk.o
+LOAD /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/device.o
+LOAD /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/tick.o
+LOAD /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/util.o
+LOAD /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/irq_manage.o
+LOAD /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/atomic_c.o
+LOAD /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/smau_init.o
+LOAD /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/post_log.o
+LOAD /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/bcm_delay.o
+LOAD /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/reg_access.o
+LOAD /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/utils.o
+LOAD /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/dvmem.o
+LOAD /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/console/uart_console.o
+LOAD /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/serial/uart_ns16550.o
+LOAD /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/interrupt_controller/gic.o
+LOAD /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/timer/arm_generic_timer.o
+LOAD /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/timer/sys_clock_init.o
+LOAD /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/pinmux/iomux_bcm58202.o
+LOAD /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/clock_control/clocks_citadel_a7.o
+LOAD /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/clock_control/clocks_bcm58202.o
+LOAD /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/smau/smau.o
+LOAD /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/sotp/sotp.o
+LOAD /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a
+LOAD /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-ar/fpv3/hard/libgcc.a
+LOAD /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libnosys.a
+                0x0000000000000800                SYS_STACK_SIZE = DEFINED (SYS_STACK_SIZE)?SYS_STACK_SIZE:0x800
+                0x0000000000000400                EXP_STACK_SIZE = DEFINED (EXP_STACK_SIZE)?EXP_STACK_SIZE:0x400
+
+.text           0x0000000063000760     0x505c
+ *startup.o(.text.startup .text.startup.*)
+ .text.startup  0x0000000063000760      0x134 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/os/common/startup.o
+                0x0000000063000760                __start
+                0x0000000063000760                _start
+ *(.text.startup .text.startup.*)
+ .text.startup  0x0000000063000894       0x14 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/os/no_os/main.o
+                0x0000000063000894                main
+ EXCLUDE_FILE(*test_smau.o *smau.o *qspi_bcm58202*.o) *(.text .text*)
+ .text          0x00000000630008a8       0x68 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/convert_sbi/convert_img.o
+                0x00000000630008a8                reset_iproc
+                0x00000000630008bc                sbi_main
+ .text          0x0000000063000910        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/convert_sbi/customization_key.o
+ .text          0x0000000063000910       0x64 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/exc_manage.o
+                0x0000000063000910                sys_exc_esf_dump
+ .text          0x0000000063000974        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/exc_handler.o
+ .text.exc_exit
+                0x0000000063000974       0x14 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/exc_handler.o
+ .text._fault_exit
+                0x0000000063000988       0x40 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/exc_handler.o
+ .text.__prefetch_abort
+                0x00000000630009c8       0x1c /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/exc_handler.o
+                0x00000000630009c8                __prefetch_abort
+ .text.__data_abort
+                0x00000000630009e4       0x1c /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/exc_handler.o
+                0x00000000630009e4                __data_abort
+ .text.__undef  0x0000000063000a00       0x24 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/exc_handler.o
+                0x0000000063000a00                __undef
+ .text.irq_exc  0x0000000063000a24       0x2c /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/exc_handler.o
+                0x0000000063000a24                __no_os_irq_handler
+ .text          0x0000000063000a50       0x56 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/arm_core_cache.o
+                0x0000000063000a50                invalidate_icache
+                0x0000000063000a64                enable_icache
+                0x0000000063000a8c                disable_icache
+ *fill*         0x0000000063000aa6        0x2 
+ .text          0x0000000063000aa8      0x128 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/fault.o
+                0x0000000063000aa8                _Fault
+ .text.unlikely
+                0x0000000063000bd0       0x24 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/fault.o
+ .text          0x0000000063000bf4      0x3c4 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/arm_core_mmu.o
+                0x0000000063000c90                arm_core_mmu_init
+ .text          0x0000000063000fb8       0x1c /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/soc/bcm_citadel/bcm5820x/soc_config.o
+ .text          0x0000000063000fd4        0xc /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/os/no_os/main.o
+                0x0000000063000fd4                default_app_main
+                0x0000000063000fd4                app_main
+ .text          0x0000000063000fe0        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/os/common/startup.o
+ .text          0x0000000063000fe0       0x80 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/os/common/cstartup.o
+                0x0000000063000fe0                start_scheduler
+ .text          0x0000000063001060      0x148 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/no_os/alloc.o
+                0x00000000630010ac                k_malloc
+                0x0000000063001158                k_free
+ .text          0x00000000630011a8       0x84 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/no_os/osal.o
+                0x00000000630011a8                k_busy_wait
+                0x00000000630011d0                k_uptime_get_32
+                0x00000000630011e4                k_sleep
+                0x00000000630011fa                k_fifo_init
+                0x00000000630011fc                k_fifo_put
+                0x00000000630011fe                k_fifo_get
+                0x000000006300120a                k_sem_init
+                0x000000006300120c                k_sem_take
+                0x0000000063001210                k_sem_give
+                0x0000000063001212                k_thread_create
+                0x0000000063001216                k_current_get
+                0x000000006300121a                sys_tick_handler
+                0x000000006300121c                default_exc_handler
+ .text          0x000000006300122c      0x3d4 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/printk.o
+                0x000000006300131a                __printk_hook_install
+                0x0000000063001324                __printk_get_hook
+                0x0000000063001330                _vprintk
+                0x0000000063001564                vprintk
+                0x0000000063001584                printk
+                0x000000006300159e                snprintk
+                0x00000000630015d8                vsnprintk
+ .text          0x0000000063001600       0x7c /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/device.o
+                0x0000000063001600                _sys_device_do_config_level
+                0x0000000063001628                device_get_binding
+                0x0000000063001658                device_busy_set
+                0x000000006300165a                device_busy_clear
+                0x000000006300165c                osal_device_init
+ .text          0x000000006300167c        0x4 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/tick.o
+                0x000000006300167c                _nano_sys_clock_tick_announce
+ .text          0x0000000063001680       0x92 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/util.o
+                0x0000000063001680                powerof2align
+                0x0000000063001694                align256
+                0x000000006300169c                winsize_powerof2align
+                0x00000000630016cc                calc_aligned_win_base
+                0x00000000630016fa                k_is_in_isr
+ .text          0x0000000063001712       0x12 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/irq_manage.o
+                0x0000000063001712                _arch_irq_enable
+                0x0000000063001716                _arch_irq_disable
+                0x000000006300171a                _arch_irq_is_enabled
+                0x000000006300171e                _irq_priority_set
+                0x0000000063001722                _irq_spurious
+ .text          0x0000000063001724      0x13e /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/atomic_c.o
+                0x0000000063001724                atomic_cas
+                0x0000000063001746                atomic_add
+                0x0000000063001762                atomic_sub
+                0x000000006300177e                atomic_inc
+                0x000000006300179a                atomic_dec
+                0x00000000630017b6                atomic_get
+                0x00000000630017ba                atomic_set
+                0x00000000630017d4                atomic_clear
+                0x00000000630017f0                atomic_or
+                0x000000006300180c                atomic_xor
+                0x0000000063001828                atomic_and
+                0x0000000063001844                atomic_nand
+ *fill*         0x0000000063001862        0x2 
+ .text          0x0000000063001864       0x20 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/smau_init.o
+                0x0000000063001864                smau_init
+ .text          0x0000000063001884       0x68 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/post_log.o
+                0x0000000063001884                log_buf
+ .text          0x00000000630018ec        0xe /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/bcm_delay.o
+                0x00000000630018ec                bcm_udelay
+                0x00000000630018f0                bcm_mdelay
+ .text          0x00000000630018fa       0x48 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/reg_access.o
+                0x00000000630018fa                cpu_rd_single
+                0x000000006300191c                cpu_wr_single
+ *fill*         0x0000000063001942        0x6 
+ .text          0x0000000063001948      0x2ec /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/utils.o
+                0x0000000063001948                bit_count
+                0x0000000063001980                bit_pair_count
+                0x00000000630019b8                calc_ecc
+                0x0000000063001bca                swap_end
+                0x0000000063001be4                getch
+                0x0000000063001c10                nvm_crc32
+ .text          0x0000000063001c34        0xa /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/dvmem.o
+                0x0000000063001c34                dv_malloc
+                0x0000000063001c38                dv_meminit
+                0x0000000063001c3a                dv_free
+ *fill*         0x0000000063001c3e        0x2 
+ .text          0x0000000063001c40      0x44c /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/console/uart_console.o
+                0x0000000063001ce8                uart_console_isr
+                0x0000000063001fe8                uart_console_in_debug_hook_install
+                0x0000000063001ff4                uart_console_out_debug_hook_install
+                0x0000000063002000                uart_register_input
+                0x0000000063002064                uart_console_hook_install
+ .text          0x000000006300208c      0x214 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/serial/uart_ns16550.o
+                0x00000000630020c4                uart_ns16550_init
+                0x000000006300212e                uart_ns16550_poll_out
+ .text          0x00000000630022a0      0x1d0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/interrupt_controller/gic.o
+                0x00000000630022c0                gic400_irq_enable
+                0x0000000063002330                gic400_irq_disable
+                0x000000006300234c                gic400_irq_set_pend
+                0x0000000063002368                gic400_irq_clear_pend
+                0x0000000063002384                gic400_irq_is_enabled
+                0x00000000630023a8                gic400_set_priority
+                0x00000000630023d4                gic400_install_isr
+                0x00000000630023f4                gic400_call_isr
+                0x0000000063002410                vApplicationFPUSafeIRQHandler
+ .text          0x0000000063002470       0x88 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/timer/arm_generic_timer.o
+                0x00000000630024a8                _timer_cycle_get_32
+                0x00000000630024b2                _sys_clock_driver_init
+ .text          0x00000000630024f8        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/timer/sys_clock_init.o
+ .text          0x00000000630024f8       0x72 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/pinmux/iomux_bcm58202.o
+ *fill*         0x000000006300256a        0x2 
+ .text          0x000000006300256c      0x4b0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/clock_control/clocks_citadel_a7.o
+                0x0000000063002570                get_effective_parameters
+                0x0000000063002726                compare_parameters
+                0x0000000063002884                apply_parameters
+                0x00000000630029ac                citadel_a7_clock_control_set_subsys_rate
+ .text          0x0000000063002a1c      0x1d8 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/clock_control/clocks_bcm58202.o
+ *fill*         0x0000000063002bf4        0x4 
+ .text          0x0000000063002bf8      0xd80 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/sotp/sotp.o
+                0x0000000063002cc0                sotp_mem_read
+                0x0000000063002ddc                sotp_fuse_normal_read
+                0x0000000063002de2                sotp_fuse_verify_read
+                0x0000000063002de8                sotp_mem_write
+                0x0000000063003290                sotp_is_fastauth_enabled
+                0x00000000630032f0                sotp_is_sotp_erased
+                0x0000000063003320                sotp_read_fips_mode
+                0x000000006300333c                sotp_read_dev_config
+                0x0000000063003388                sotp_read_customer_id
+                0x00000000630033b0                sotp_read_customer_config
+                0x0000000063003464                sotp_read_key
+                0x00000000630034b4                sotp_is_ABProd
+                0x00000000630034f8                sotp_is_ABDev
+                0x000000006300353c                sotp_read_sbl_config
+                0x0000000063003594                sotp_is_unassigned
+                0x00000000630035d8                sotp_is_nonAB
+                0x0000000063003606                read_crmu_otp_max_vco
+                0x000000006300366c                read_bvc_from_chip_otp
+                0x00000000630036d4                sotp_read_chip_id
+                0x0000000063003748                calc_crc32
+                0x0000000063003904                sotp_set_key
+ .text          0x0000000063003978        0x0 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-locale.o)
+ .text._setlocale_r
+                0x0000000063003978       0x54 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-locale.o)
+                0x0000000063003978                _setlocale_r
+ .text.__locale_mb_cur_max
+                0x00000000630039cc       0x20 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-locale.o)
+                0x00000000630039cc                __locale_mb_cur_max
+ .text.__locale_ctype_ptr_l
+                0x00000000630039ec        0x8 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-locale.o)
+                0x00000000630039ec                __locale_ctype_ptr_l
+ .text.__locale_ctype_ptr
+                0x00000000630039f4       0x20 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-locale.o)
+                0x00000000630039f4                __locale_ctype_ptr
+ .text.setlocale
+                0x0000000063003a14       0x14 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-locale.o)
+                0x0000000063003a14                setlocale
+ .text          0x0000000063003a28        0x0 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-mbtowc_r.o)
+ .text._mbtowc_r
+                0x0000000063003a28       0x28 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-mbtowc_r.o)
+                0x0000000063003a28                _mbtowc_r
+ .text.__ascii_mbtowc
+                0x0000000063003a50       0x2c /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-mbtowc_r.o)
+                0x0000000063003a50                __ascii_mbtowc
+ .text          0x0000000063003a7c       0xec /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-memcpy.o)
+                0x0000000063003a7c                memcpy
+ .text          0x0000000063003b68      0x1bc /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-strcmp.o)
+                0x0000000063003b68                strcmp
+ .text          0x0000000063003d24        0x0 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-wctomb_r.o)
+ .text._wctomb_r
+                0x0000000063003d24       0x28 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-wctomb_r.o)
+                0x0000000063003d24                _wctomb_r
+ .text.__ascii_wctomb
+                0x0000000063003d4c       0x18 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-wctomb_r.o)
+                0x0000000063003d4c                __ascii_wctomb
+ .text          0x0000000063003d64        0x0 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-ctype_.o)
+ .text          0x0000000063003d64        0x0 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-impure.o)
+ *fill*         0x0000000063003d64        0x4 
+ .text          0x0000000063003d68      0x278 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-ar/fpv3/hard/libgcc.a(_udivsi3.o)
+                0x0000000063003d68                __udivsi3
+                0x0000000063003d68                __aeabi_uidiv
+                0x0000000063003fc4                __aeabi_uidivmod
+ .text          0x0000000063003fe0      0x2b0 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-ar/fpv3/hard/libgcc.a(_divsi3.o)
+                0x0000000063003fe0                __aeabi_idiv
+                0x0000000063003fe0                __divsi3
+                0x0000000063004274                __aeabi_idivmod
+ .text          0x0000000063004290        0x4 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-ar/fpv3/hard/libgcc.a(_dvmd_tls.o)
+                0x0000000063004290                __aeabi_ldiv0
+                0x0000000063004290                __aeabi_idiv0
+ .text          0x0000000063004294       0x30 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-ar/fpv3/hard/libgcc.a(_aeabi_uldivmod.o)
+                0x0000000063004294                __aeabi_uldivmod
+ .text          0x00000000630042c4      0x114 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-ar/fpv3/hard/libgcc.a(_udivmoddi4.o)
+                0x00000000630042c4                __udivmoddi4
+ .text.__stub   0x00000000630043d8        0x8 linker stubs
+ *(.rodata)
+ .rodata        0x00000000630043e0        0x9 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/convert_sbi/convert_img.o
+ *fill*         0x00000000630043e9        0x3 
+ .rodata        0x00000000630043ec      0x1e8 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/fault.o
+ .rodata        0x00000000630045d4       0x14 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/device.o
+ .rodata        0x00000000630045e8      0x400 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/utils.o
+ .rodata        0x00000000630049e8       0x54 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/serial/uart_ns16550.o
+ .rodata        0x0000000063004a3c       0x18 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/pinmux/iomux_bcm58202.o
+ .rodata        0x0000000063004a54      0x400 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/sotp/sotp.o
+ *(.rodata*)
+ .rodata.str1.1
+                0x0000000063004e54       0xf5 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/convert_sbi/convert_img.o
+                                         0xf9 (size before relaxing)
+ .rodata.str1.1
+                0x0000000063004f49       0x80 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/exc_manage.o
+ .rodata.str1.1
+                0x0000000063004fc9      0x5c9 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/fault.o
+                                        0x5cd (size before relaxing)
+ .rodata.str1.1
+                0x0000000063005592      0x5c9 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/soc/bcm_citadel/bcm5820x/soc_config.o
+                                          0x1 (size before relaxing)
+ .rodata.str1.1
+                0x0000000063005592       0x48 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/os/no_os/main.o
+ .rodata.str1.1
+                0x00000000630055da        0x1 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/no_os/alloc.o
+ .rodata.str1.1
+                0x00000000630055da       0x2e /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/no_os/osal.o
+ .rodata.str1.1
+                0x0000000063005608        0xe /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/smau_init.o
+                                          0xf (size before relaxing)
+ .rodata.str1.1
+                0x0000000063005616       0x35 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/post_log.o
+                                         0x37 (size before relaxing)
+ .rodata.str1.1
+                0x000000006300564b        0x7 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/utils.o
+ .rodata.str1.1
+                0x0000000063005652       0x14 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/console/uart_console.o
+                                         0x1c (size before relaxing)
+ .rodata.str1.1
+                0x0000000063005666        0x7 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/serial/uart_ns16550.o
+ .rodata.str1.1
+                0x0000000063005666        0x1 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/interrupt_controller/gic.o
+ .rodata.str1.1
+                0x0000000063005666        0xa /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/timer/sys_clock_init.o
+ .rodata.str1.1
+                0x0000000063005670        0xe /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/pinmux/iomux_bcm58202.o
+ .rodata.str1.1
+                0x000000006300567e       0x12 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/clock_control/clocks_citadel_a7.o
+ .rodata.str1.1
+                0x0000000063005690       0x10 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/clock_control/clocks_bcm58202.o
+ .rodata.str1.1
+                0x00000000630056a0        0xe /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/smau/smau.o
+ .rodata._setlocale_r.str1.4
+                0x00000000630056a0        0xd /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-locale.o)
+ *fill*         0x00000000630056ad        0x3 
+ .rodata.str1.4
+                0x00000000630056b0        0x4 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-locale.o)
+                                          0x2 (size before relaxing)
+ .rodata._ctype_
+                0x00000000630056b4      0x101 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-ctype_.o)
+                0x00000000630056b4                _ctype_
+ *fill*         0x00000000630057b5        0x3 
+ .rodata._global_impure_ptr
+                0x00000000630057b8        0x4 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-impure.o)
+                0x00000000630057b8                _global_impure_ptr
+ *(.glue_7)
+ .glue_7        0x00000000630057bc        0x0 linker stubs
+ *(.glue_7t)
+ .glue_7t       0x00000000630057bc        0x0 linker stubs
+ *(.eh_frame)
+ *(.init)
+ *(.fini)
+                0x00000000630057bc                . = ALIGN (0x4)
+                0x00000000630057bc                _etext = .
+
+.vfp11_veneer   0x00000000630057bc        0x0
+ .vfp11_veneer  0x00000000630057bc        0x0 linker stubs
+
+.v4_bx          0x00000000630057bc        0x0
+ .v4_bx         0x00000000630057bc        0x0 linker stubs
+
+.iplt           0x00000000630057bc        0x0
+ .iplt          0x00000000630057bc        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/convert_sbi/convert_img.o
+
+.ARM.exidx      0x00000000630057bc        0x8
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+ .ARM.exidx     0x00000000630057bc        0x8 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-ar/fpv3/hard/libgcc.a(_udivmoddi4.o)
+
+.devconfig      0x00000000630057c4       0x84
+                0x00000000630057c4                __devconfig_start = .
+ *(.devconfig.*)
+ .devconfig.init
+                0x00000000630057c4        0xc /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/soc/bcm_citadel/bcm5820x/soc_config.o
+ .devconfig.init
+                0x00000000630057d0        0xc /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/no_os/alloc.o
+ .devconfig.init
+                0x00000000630057dc        0xc /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/smau_init.o
+ .devconfig.init
+                0x00000000630057e8        0xc /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/console/uart_console.o
+ .devconfig.init
+                0x00000000630057f4        0xc /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/serial/uart_ns16550.o
+ .devconfig.init
+                0x0000000063005800        0xc /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/interrupt_controller/gic.o
+ .devconfig.init
+                0x000000006300580c        0xc /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/timer/sys_clock_init.o
+ .devconfig.init
+                0x0000000063005818        0xc /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/pinmux/iomux_bcm58202.o
+ .devconfig.init
+                0x0000000063005824        0xc /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/clock_control/clocks_citadel_a7.o
+ .devconfig.init
+                0x0000000063005830        0xc /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/clock_control/clocks_bcm58202.o
+ .devconfig.init
+                0x000000006300583c        0xc /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/smau/smau.o
+ *(SORT(.devconfig*))
+                0x0000000063005848                __devconfig_end = .
+
+.rodata
+ EXCLUDE_FILE(*test_smau.o *smau.o *qspi_bcm58202*.o) *(.rodata .rodata*)
+                0x0000000063005848                _etext = .
+                [!provide]                        PROVIDE (etext, .)
+
+.ARM.extab      0x0000000063005848        0x0
+ .ARM.extab     0x0000000063005848        0x0 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-ar/fpv3/hard/libgcc.a(_udivmoddi4.o)
+
+.fastcode       0x0000000024000000      0x2b4 load address 0x0000000063005848
+                0x0000000063005848                __fastcode_load__ = LOADADDR (.fastcode)
+                0x0000000024000000                __fastcode_start__ = .
+                0x0000000024000000                . = ALIGN (0x4)
+ *(text.fastcode)
+ *qspi_bcm58202*.o(.text*)
+ *qspi_bcm58202*.o(.rodata*)
+ *smau.o(.text*)
+ .text          0x0000000024000000      0x2b4 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/smau/smau.o
+ *smau.o(.rodata*)
+ *test_smau.o(.text*)
+ *test_smau.o(.rodata*)
+                0x00000000240002b4                . = ALIGN (0x4)
+                0x00000000240002b4                __fastcode_end__ = .
+                0x0000000063005afc                _sidata = LOADADDR (.data)
+
+.rel.dyn        0x00000000240002b4        0x0 load address 0x0000000063005afc
+ .rel.iplt      0x00000000240002b4        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/convert_sbi/convert_img.o
+
+.data           0x00000000240002b8      0x998 load address 0x0000000063005afc
+                0x00000000240002b8                _sdata = .
+                0x00000000240002b8                __data_start__ = .
+                0x00000000240002b8                . = ALIGN (0x4)
+ *(.data .data.*)
+ .data          0x00000000240002b8        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/convert_sbi/convert_img.o
+ .data          0x00000000240002b8      0x108 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/convert_sbi/customization_key.o
+                0x00000000240002b8                CustomerSBLConfiguration
+                0x00000000240002bc                CustomerID
+                0x00000000240002c0                RSA2KpubKeyModulus
+ .data          0x00000000240003c0        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/exc_manage.o
+ .data          0x00000000240003c0        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/exc_handler.o
+ .data          0x00000000240003c0        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/arm_core_cache.o
+ .data          0x00000000240003c0        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/fault.o
+ .data          0x00000000240003c0        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/arm_core_mmu.o
+ .data          0x00000000240003c0      0x244 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/soc/bcm_citadel/bcm5820x/soc_config.o
+                0x00000000240003c0                mem_region_info
+ .data          0x0000000024000604        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/os/no_os/main.o
+ .data          0x0000000024000604        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/os/common/startup.o
+ .data          0x0000000024000604        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/os/common/cstartup.o
+ .data          0x0000000024000604        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/no_os/alloc.o
+ .data          0x0000000024000604        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/no_os/osal.o
+ .data          0x0000000024000604        0x4 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/printk.o
+ .data          0x0000000024000608        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/device.o
+ .data          0x0000000024000608        0x4 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/tick.o
+                0x0000000024000608                _sys_idle_elapsed_ticks
+ .data          0x000000002400060c        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/util.o
+ .data          0x000000002400060c        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/irq_manage.o
+ .data          0x000000002400060c        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/atomic_c.o
+ .data          0x000000002400060c        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/smau_init.o
+ .data          0x000000002400060c        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/post_log.o
+ .data          0x000000002400060c        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/bcm_delay.o
+ .data          0x000000002400060c        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/reg_access.o
+ .data          0x000000002400060c        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/utils.o
+ .data          0x000000002400060c        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/dvmem.o
+ .data          0x000000002400060c        0x4 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/console/uart_console.o
+ .data          0x0000000024000610       0x10 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/serial/uart_ns16550.o
+ .data          0x0000000024000620        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/interrupt_controller/gic.o
+ .data          0x0000000024000620        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/timer/arm_generic_timer.o
+ .data          0x0000000024000620        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/timer/sys_clock_init.o
+ .data          0x0000000024000620        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/pinmux/iomux_bcm58202.o
+ .data          0x0000000024000620       0x20 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/clock_control/clocks_citadel_a7.o
+ .data          0x0000000024000640       0x54 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/clock_control/clocks_bcm58202.o
+                0x0000000024000640                clk_en
+ .data          0x0000000024000694       0x20 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/smau/smau.o
+ .data          0x00000000240006b4        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/sotp/sotp.o
+ .data          0x00000000240006b4        0x0 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-locale.o)
+ .data.__global_locale
+                0x00000000240006b4      0x16c /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-locale.o)
+                0x00000000240006b4                __global_locale
+ .data          0x0000000024000820        0x0 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-mbtowc_r.o)
+ .data          0x0000000024000820        0x0 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-memcpy.o)
+ .data          0x0000000024000820        0x0 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-strcmp.o)
+ .data          0x0000000024000820        0x0 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-wctomb_r.o)
+ .data          0x0000000024000820        0x0 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-ctype_.o)
+ .data          0x0000000024000820        0x0 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-impure.o)
+ .data._impure_ptr
+                0x0000000024000820        0x4 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-impure.o)
+                0x0000000024000820                _impure_ptr
+ *fill*         0x0000000024000824        0x4 
+ .data.impure_data
+                0x0000000024000828      0x428 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-impure.o)
+ .data          0x0000000024000c50        0x0 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-ar/fpv3/hard/libgcc.a(_udivsi3.o)
+ .data          0x0000000024000c50        0x0 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-ar/fpv3/hard/libgcc.a(_divsi3.o)
+ .data          0x0000000024000c50        0x0 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-ar/fpv3/hard/libgcc.a(_dvmd_tls.o)
+ .data          0x0000000024000c50        0x0 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-ar/fpv3/hard/libgcc.a(_aeabi_uldivmod.o)
+ .data          0x0000000024000c50        0x0 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-ar/fpv3/hard/libgcc.a(_udivmoddi4.o)
+                0x0000000024000c50                __data_end__ = .
+                [!provide]                        PROVIDE (edata, .)
+                0x0000000024000c50                _edata = .
+
+.igot.plt       0x0000000024000c50        0x0 load address 0x0000000063006494
+ .igot.plt      0x0000000024000c50        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/convert_sbi/convert_img.o
+
+initlevel       0x0000000024000c50       0x84 load address 0x0000000063006494
+                0x0000000024000c50                __device_init_start = .
+                0x0000000024000c50                __device_PRE_KERNEL_1_start = .
+ *(SORT(.init_PRE_KERNEL_1[0-9]))
+ .init_PRE_KERNEL_10
+                0x0000000024000c50        0xc /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/no_os/alloc.o
+ .init_PRE_KERNEL_10
+                0x0000000024000c5c        0xc /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/clock_control/clocks_bcm58202.o
+ .init_PRE_KERNEL_11
+                0x0000000024000c68        0xc /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/pinmux/iomux_bcm58202.o
+ .init_PRE_KERNEL_12
+                0x0000000024000c74        0xc /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/soc/bcm_citadel/bcm5820x/soc_config.o
+ .init_PRE_KERNEL_13
+                0x0000000024000c80        0xc /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/interrupt_controller/gic.o
+ .init_PRE_KERNEL_14
+                0x0000000024000c8c        0xc /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/serial/uart_ns16550.o
+ .init_PRE_KERNEL_15
+                0x0000000024000c98        0xc /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/console/uart_console.o
+ .init_PRE_KERNEL_16
+                0x0000000024000ca4        0xc /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/clock_control/clocks_citadel_a7.o
+ *(SORT(.init_PRE_KERNEL_1[1-9][0-9]))
+                0x0000000024000cb0                __device_PRE_KERNEL_1_end = .
+                0x0000000024000cb0                __device_PRE_KERNEL_2_start = .
+ *(SORT(.init_PRE_KERNEL_2[0-9]))
+ .init_PRE_KERNEL_20
+                0x0000000024000cb0        0xc /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/timer/sys_clock_init.o
+ .init_PRE_KERNEL_24
+                0x0000000024000cbc        0xc /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/smau/smau.o
+ *(SORT(.init_PRE_KERNEL_2[1-9][0-9]))
+                0x0000000024000cc8                __device_PRE_KERNEL_2_end = .
+                0x0000000024000cc8                __device_POST_KERNEL_start = .
+ *(SORT(.init_POST_KERNEL[0-9]))
+ *(SORT(.init_POST_KERNEL[1-9][0-9]))
+ .init_POST_KERNEL99
+                0x0000000024000cc8        0xc /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/smau_init.o
+                0x0000000024000cd4                __device_POST_KERNEL_end = .
+                0x0000000024000cd4                __device_APPLICATION_start = .
+ *(SORT(.init_APPLICATION[0-9]))
+ *(SORT(.init_APPLICATION[1-9][0-9]))
+                0x0000000024000cd4                __device_APPLICATION_end = .
+                0x0000000024000cd4                __device_init_end = .
+                0x0000000063006494                _device_init_load = LOADADDR (initlevel)
+                0x0000000063006518                END_LOADABLE_SECTION = (LOADADDR (initlevel) + SIZEOF (initlevel))
+
+.bss            0x0000000024004000     0x859c load address 0x000000006300c000
+                0x0000000024004000                . = ALIGN (0x4)
+                0x0000000024004000                _sbss = .
+                0x0000000024004000                __bss_start__ = .
+ *(.bss .bss.*)
+ .bss           0x0000000024004000        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/convert_sbi/convert_img.o
+ .bss           0x0000000024004000      0x248 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/convert_sbi/customization_key.o
+                0x0000000024004000                SBIRevisionID
+                0x0000000024004002                CustomerRevisionID
+                0x0000000024004004                ECDSApubKey
+                0x0000000024004044                RSA4KpubKeyModulus
+                0x0000000024004244                encryption
+ .bss           0x0000000024004248        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/exc_manage.o
+ .bss           0x0000000024004248        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/exc_handler.o
+ .bss           0x0000000024004248        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/arm_core_cache.o
+ .bss           0x0000000024004248        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/fault.o
+ *fill*         0x0000000024004248     0x3db8 
+ .bss           0x0000000024008000     0x4000 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/arm_core_mmu.o
+ .bss           0x000000002400c000        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/soc/bcm_citadel/bcm5820x/soc_config.o
+ .bss           0x000000002400c000        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/os/no_os/main.o
+ .bss           0x000000002400c000        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/os/common/startup.o
+ .bss           0x000000002400c000        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/os/common/cstartup.o
+ .bss           0x000000002400c000        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/no_os/alloc.o
+ .bss           0x000000002400c000        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/no_os/osal.o
+ .bss           0x000000002400c000        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/printk.o
+ .bss           0x000000002400c000        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/device.o
+ .bss           0x000000002400c000        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/tick.o
+ .bss           0x000000002400c000        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/util.o
+ .bss           0x000000002400c000        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/irq_manage.o
+ .bss           0x000000002400c000        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/atomic_c.o
+ .bss           0x000000002400c000        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/smau_init.o
+ .bss           0x000000002400c000        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/post_log.o
+ .bss           0x000000002400c000        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/bcm_delay.o
+ .bss           0x000000002400c000        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/reg_access.o
+ .bss           0x000000002400c000        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/utils.o
+ .bss           0x000000002400c000        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/dvmem.o
+ .bss           0x000000002400c000       0x28 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/console/uart_console.o
+ .bss           0x000000002400c028        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/serial/uart_ns16550.o
+ .bss           0x000000002400c028      0x500 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/interrupt_controller/gic.o
+ .bss           0x000000002400c528        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/timer/arm_generic_timer.o
+ .bss           0x000000002400c528        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/timer/sys_clock_init.o
+ .bss           0x000000002400c528       0x48 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/pinmux/iomux_bcm58202.o
+ .bss           0x000000002400c570        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/clock_control/clocks_citadel_a7.o
+ .bss           0x000000002400c570        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/clock_control/clocks_bcm58202.o
+ .bss           0x000000002400c570        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/smau/smau.o
+ .bss           0x000000002400c570        0x0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/sotp/sotp.o
+ .bss           0x000000002400c570        0x0 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-locale.o)
+ .bss._PathLocale
+                0x000000002400c570        0x4 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-locale.o)
+                0x000000002400c570                _PathLocale
+ .bss           0x000000002400c574        0x0 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-mbtowc_r.o)
+ .bss           0x000000002400c574        0x0 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-memcpy.o)
+ .bss           0x000000002400c574        0x0 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-strcmp.o)
+ .bss           0x000000002400c574        0x0 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-wctomb_r.o)
+ .bss           0x000000002400c574        0x0 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-ctype_.o)
+ .bss           0x000000002400c574        0x0 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-impure.o)
+ .bss           0x000000002400c574        0x0 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-ar/fpv3/hard/libgcc.a(_udivsi3.o)
+ .bss           0x000000002400c574        0x0 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-ar/fpv3/hard/libgcc.a(_divsi3.o)
+ .bss           0x000000002400c574        0x0 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-ar/fpv3/hard/libgcc.a(_dvmd_tls.o)
+ .bss           0x000000002400c574        0x0 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-ar/fpv3/hard/libgcc.a(_aeabi_uldivmod.o)
+ .bss           0x000000002400c574        0x0 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-ar/fpv3/hard/libgcc.a(_udivmoddi4.o)
+ *(COMMON)
+ COMMON         0x000000002400c574       0x18 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/fault.o
+                0x000000002400c574                _default_esf
+ COMMON         0x000000002400c58c       0x10 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/no_os/alloc.o
+                0x000000002400c58c                heap_info
+                0x000000002400c59c                . = ALIGN (0x4)
+                0x000000002400c59c                __bss_end__ = .
+                [!provide]                        PROVIDE (end, .)
+                0x000000002400c59c                _end = .
+                0x0000000024000000                __RAM_START = ORIGIN (RAM)
+                0x0000000024100000                __RAM_END = (__RAM_START + LENGTH (RAM))
+                0x000000002400c800                __heap_start__ = ((__bss_end__ + 0x3ff) & 0xfffffffffffffc00)
+                0x0000000000000800                SVC_MODE_STACK_SIZE = SYS_STACK_SIZE
+                0x0000000000000400                FIQ_MODE_STACK_SIZE = EXP_STACK_SIZE
+                0x0000000000000400                IRQ_MODE_STACK_SIZE = EXP_STACK_SIZE
+                0x0000000000000400                ABT_MODE_STACK_SIZE = EXP_STACK_SIZE
+                0x0000000000000400                UND_MODE_STACK_SIZE = EXP_STACK_SIZE
+                0x0000000000000800                USR_MODE_STACK_SIZE = SYS_STACK_SIZE
+                0x0000000000004000                RSTR_STACK_SIZE = 0x4000
+                0x0000000000002000                TOTAL_STACK_SIZE = (((((SVC_MODE_STACK_SIZE + FIQ_MODE_STACK_SIZE) + IRQ_MODE_STACK_SIZE) + ABT_MODE_STACK_SIZE) + UND_MODE_STACK_SIZE) + USR_MODE_STACK_SIZE)
+                0x00000000000f1800                __heap_size__ = ((__RAM_END - __heap_start__) - TOTAL_STACK_SIZE)
+                0x00000000240fe000                __heap_end__ = (__heap_start__ + __heap_size__)
+                0x00000000240fe800                __SVC_STACK_START__ = (__heap_end__ + SVC_MODE_STACK_SIZE)
+                0x00000000240fec00                __FIQ_STACK_START__ = (__SVC_STACK_START__ + FIQ_MODE_STACK_SIZE)
+                0x00000000240ff000                __IRQ_STACK_START__ = (__FIQ_STACK_START__ + IRQ_MODE_STACK_SIZE)
+                0x00000000240ff400                __ABT_STACK_START__ = (__IRQ_STACK_START__ + ABT_MODE_STACK_SIZE)
+                0x00000000240ff800                __UND_STACK_START__ = (__ABT_STACK_START__ + UND_MODE_STACK_SIZE)
+                0x0000000024100000                __USR_STACK_START__ = (__UND_STACK_START__ + USR_MODE_STACK_SIZE)
+                0x0000000024000000                __RSTR_STACK_START__ = __RAM_START
+                0x0000000000000001                ASSERT ((__USR_STACK_START__ <= __RAM_END), **** SRAM OVERFLOW DETECTED ****)
+OUTPUT(/home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/convert_img elf32-littlearm)
+
+.debug_info     0x0000000000000000    0x132de
+ .debug_info    0x0000000000000000      0xb28 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/convert_sbi/convert_img.o
+ .debug_info    0x0000000000000b28      0x1a2 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/convert_sbi/customization_key.o
+ .debug_info    0x0000000000000cca      0x279 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/exc_manage.o
+ .debug_info    0x0000000000000f43       0xb1 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/exc_handler.o
+ .debug_info    0x0000000000000ff4      0x16c /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/arm_core_cache.o
+ .debug_info    0x0000000000001160      0x66f /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/fault.o
+ .debug_info    0x00000000000017cf      0xda2 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/arm_core_mmu.o
+ .debug_info    0x0000000000002571      0x291 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/soc/bcm_citadel/bcm5820x/soc_config.o
+ .debug_info    0x0000000000002802      0x124 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/os/no_os/main.o
+ .debug_info    0x0000000000002926       0xa9 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/os/common/startup.o
+ .debug_info    0x00000000000029cf      0xac8 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/os/common/cstartup.o
+ .debug_info    0x0000000000003497      0x364 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/no_os/alloc.o
+ .debug_info    0x00000000000037fb      0x4a1 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/no_os/osal.o
+ .debug_info    0x0000000000003c9c      0x803 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/printk.o
+ .debug_info    0x000000000000449f      0xb75 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/device.o
+ .debug_info    0x0000000000005014       0xf9 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/tick.o
+ .debug_info    0x000000000000510d      0x1fe /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/util.o
+ .debug_info    0x000000000000530b      0x204 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/irq_manage.o
+ .debug_info    0x000000000000550f      0x6fc /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/atomic_c.o
+ .debug_info    0x0000000000005c0b      0x3cd /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/smau_init.o
+ .debug_info    0x0000000000005fd8      0x13c /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/post_log.o
+ .debug_info    0x0000000000006114      0x14c /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/bcm_delay.o
+ .debug_info    0x0000000000006260      0x133 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/reg_access.o
+ .debug_info    0x0000000000006393      0xee0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/utils.o
+ .debug_info    0x0000000000007273      0x14b /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/dvmem.o
+ .debug_info    0x00000000000073be     0x1d51 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/console/uart_console.o
+ .debug_info    0x000000000000910f     0x17dc /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/serial/uart_ns16550.o
+ .debug_info    0x000000000000a8eb     0x10d7 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/interrupt_controller/gic.o
+ .debug_info    0x000000000000b9c2      0x483 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/timer/arm_generic_timer.o
+ .debug_info    0x000000000000be45      0x1a6 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/timer/sys_clock_init.o
+ .debug_info    0x000000000000bfeb      0xd79 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/pinmux/iomux_bcm58202.o
+ .debug_info    0x000000000000cd64     0x1a56 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/clock_control/clocks_citadel_a7.o
+ .debug_info    0x000000000000e7ba     0x154b /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/clock_control/clocks_bcm58202.o
+ .debug_info    0x000000000000fd05     0x11ea /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/smau/smau.o
+ .debug_info    0x0000000000010eef     0x23ef /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/sotp/sotp.o
+
+.debug_abbrev   0x0000000000000000     0x4557
+ .debug_abbrev  0x0000000000000000      0x298 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/convert_sbi/convert_img.o
+ .debug_abbrev  0x0000000000000298       0x7b /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/convert_sbi/customization_key.o
+ .debug_abbrev  0x0000000000000313      0x101 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/exc_manage.o
+ .debug_abbrev  0x0000000000000414       0x12 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/exc_handler.o
+ .debug_abbrev  0x0000000000000426       0xf4 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/arm_core_cache.o
+ .debug_abbrev  0x000000000000051a      0x240 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/fault.o
+ .debug_abbrev  0x000000000000075a      0x31b /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/arm_core_mmu.o
+ .debug_abbrev  0x0000000000000a75      0x156 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/soc/bcm_citadel/bcm5820x/soc_config.o
+ .debug_abbrev  0x0000000000000bcb       0xc8 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/os/no_os/main.o
+ .debug_abbrev  0x0000000000000c93       0x14 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/os/common/startup.o
+ .debug_abbrev  0x0000000000000ca7      0x27d /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/os/common/cstartup.o
+ .debug_abbrev  0x0000000000000f24      0x1a0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/no_os/alloc.o
+ .debug_abbrev  0x00000000000010c4      0x20c /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/no_os/osal.o
+ .debug_abbrev  0x00000000000012d0      0x346 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/printk.o
+ .debug_abbrev  0x0000000000001616      0x2c4 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/device.o
+ .debug_abbrev  0x00000000000018da       0xb2 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/tick.o
+ .debug_abbrev  0x000000000000198c       0xf3 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/util.o
+ .debug_abbrev  0x0000000000001a7f       0xe2 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/irq_manage.o
+ .debug_abbrev  0x0000000000001b61      0x198 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/atomic_c.o
+ .debug_abbrev  0x0000000000001cf9      0x18b /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/smau_init.o
+ .debug_abbrev  0x0000000000001e84       0xa2 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/post_log.o
+ .debug_abbrev  0x0000000000001f26       0xeb /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/bcm_delay.o
+ .debug_abbrev  0x0000000000002011       0x87 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/reg_access.o
+ .debug_abbrev  0x0000000000002098      0x34d /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/utils.o
+ .debug_abbrev  0x00000000000023e5       0xeb /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/dvmem.o
+ .debug_abbrev  0x00000000000024d0      0x519 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/console/uart_console.o
+ .debug_abbrev  0x00000000000029e9      0x3fd /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/serial/uart_ns16550.o
+ .debug_abbrev  0x0000000000002de6      0x3bc /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/interrupt_controller/gic.o
+ .debug_abbrev  0x00000000000031a2      0x200 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/timer/arm_generic_timer.o
+ .debug_abbrev  0x00000000000033a2       0xb3 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/timer/sys_clock_init.o
+ .debug_abbrev  0x0000000000003455      0x292 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/pinmux/iomux_bcm58202.o
+ .debug_abbrev  0x00000000000036e7      0x42d /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/clock_control/clocks_citadel_a7.o
+ .debug_abbrev  0x0000000000003b14      0x39f /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/clock_control/clocks_bcm58202.o
+ .debug_abbrev  0x0000000000003eb3      0x36b /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/smau/smau.o
+ .debug_abbrev  0x000000000000421e      0x339 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/sotp/sotp.o
+
+.debug_loc      0x0000000000000000     0x8d4b
+ .debug_loc     0x0000000000000000       0x59 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/convert_sbi/convert_img.o
+ .debug_loc     0x0000000000000059       0x2c /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/exc_manage.o
+ .debug_loc     0x0000000000000085       0x81 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/arm_core_cache.o
+ .debug_loc     0x0000000000000106      0x158 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/fault.o
+ .debug_loc     0x000000000000025e      0x766 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/arm_core_mmu.o
+ .debug_loc     0x00000000000009c4       0x21 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/soc/bcm_citadel/bcm5820x/soc_config.o
+ .debug_loc     0x00000000000009e5       0x91 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/os/common/cstartup.o
+ .debug_loc     0x0000000000000a76      0x1be /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/no_os/alloc.o
+ .debug_loc     0x0000000000000c34      0x111 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/no_os/osal.o
+ .debug_loc     0x0000000000000d45      0xa3e /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/printk.o
+ .debug_loc     0x0000000000001783       0xd1 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/device.o
+ .debug_loc     0x0000000000001854       0x21 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/tick.o
+ .debug_loc     0x0000000000001875      0x234 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/util.o
+ .debug_loc     0x0000000000001aa9       0xc6 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/irq_manage.o
+ .debug_loc     0x0000000000001b6f      0x2cc /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/atomic_c.o
+ .debug_loc     0x0000000000001e3b       0x66 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/smau_init.o
+ .debug_loc     0x0000000000001ea1       0xa5 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/post_log.o
+ .debug_loc     0x0000000000001f46       0x78 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/bcm_delay.o
+ .debug_loc     0x0000000000001fbe       0xdd /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/reg_access.o
+ .debug_loc     0x000000000000209b      0x30a /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/utils.o
+ .debug_loc     0x00000000000023a5       0x42 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/dvmem.o
+ .debug_loc     0x00000000000023e7      0x93f /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/console/uart_console.o
+ .debug_loc     0x0000000000002d26      0x975 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/serial/uart_ns16550.o
+ .debug_loc     0x000000000000369b      0x86f /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/interrupt_controller/gic.o
+ .debug_loc     0x0000000000003f0a       0xeb /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/timer/arm_generic_timer.o
+ .debug_loc     0x0000000000003ff5      0x24c /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/pinmux/iomux_bcm58202.o
+ .debug_loc     0x0000000000004241     0x1020 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/clock_control/clocks_citadel_a7.o
+ .debug_loc     0x0000000000005261      0xb70 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/clock_control/clocks_bcm58202.o
+ .debug_loc     0x0000000000005dd1      0x78b /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/smau/smau.o
+ .debug_loc     0x000000000000655c     0x27ef /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/sotp/sotp.o
+
+.debug_aranges  0x0000000000000000      0x488
+ .debug_aranges
+                0x0000000000000000       0x20 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/convert_sbi/convert_img.o
+ .debug_aranges
+                0x0000000000000020       0x18 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/convert_sbi/customization_key.o
+ .debug_aranges
+                0x0000000000000038       0x20 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/exc_manage.o
+ .debug_aranges
+                0x0000000000000058       0x48 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/exc_handler.o
+ .debug_aranges
+                0x00000000000000a0       0x20 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/arm_core_cache.o
+ .debug_aranges
+                0x00000000000000c0       0x28 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/fault.o
+ .debug_aranges
+                0x00000000000000e8       0x20 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/arm_core_mmu.o
+ .debug_aranges
+                0x0000000000000108       0x20 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/soc/bcm_citadel/bcm5820x/soc_config.o
+ .debug_aranges
+                0x0000000000000128       0x28 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/os/no_os/main.o
+ .debug_aranges
+                0x0000000000000150       0x20 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/os/common/startup.o
+ .debug_aranges
+                0x0000000000000170       0x20 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/os/common/cstartup.o
+ .debug_aranges
+                0x0000000000000190       0x20 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/no_os/alloc.o
+ .debug_aranges
+                0x00000000000001b0       0x20 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/no_os/osal.o
+ .debug_aranges
+                0x00000000000001d0       0x20 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/printk.o
+ .debug_aranges
+                0x00000000000001f0       0x20 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/device.o
+ .debug_aranges
+                0x0000000000000210       0x20 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/tick.o
+ .debug_aranges
+                0x0000000000000230       0x20 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/util.o
+ .debug_aranges
+                0x0000000000000250       0x20 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/irq_manage.o
+ .debug_aranges
+                0x0000000000000270       0x20 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/atomic_c.o
+ .debug_aranges
+                0x0000000000000290       0x20 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/smau_init.o
+ .debug_aranges
+                0x00000000000002b0       0x20 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/post_log.o
+ .debug_aranges
+                0x00000000000002d0       0x20 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/bcm_delay.o
+ .debug_aranges
+                0x00000000000002f0       0x20 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/reg_access.o
+ .debug_aranges
+                0x0000000000000310       0x20 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/utils.o
+ .debug_aranges
+                0x0000000000000330       0x20 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/dvmem.o
+ .debug_aranges
+                0x0000000000000350       0x20 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/console/uart_console.o
+ .debug_aranges
+                0x0000000000000370       0x20 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/serial/uart_ns16550.o
+ .debug_aranges
+                0x0000000000000390       0x20 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/interrupt_controller/gic.o
+ .debug_aranges
+                0x00000000000003b0       0x20 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/timer/arm_generic_timer.o
+ .debug_aranges
+                0x00000000000003d0       0x18 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/timer/sys_clock_init.o
+ .debug_aranges
+                0x00000000000003e8       0x20 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/pinmux/iomux_bcm58202.o
+ .debug_aranges
+                0x0000000000000408       0x20 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/clock_control/clocks_citadel_a7.o
+ .debug_aranges
+                0x0000000000000428       0x20 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/clock_control/clocks_bcm58202.o
+ .debug_aranges
+                0x0000000000000448       0x20 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/smau/smau.o
+ .debug_aranges
+                0x0000000000000468       0x20 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/sotp/sotp.o
+
+.debug_line     0x0000000000000000     0x61b2
+ .debug_line    0x0000000000000000      0x340 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/convert_sbi/convert_img.o
+ .debug_line    0x0000000000000340      0x1ad /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/convert_sbi/customization_key.o
+ .debug_line    0x00000000000004ed      0x1dd /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/exc_manage.o
+ .debug_line    0x00000000000006ca       0xff /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/exc_handler.o
+ .debug_line    0x00000000000007c9      0x139 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/arm_core_cache.o
+ .debug_line    0x0000000000000902      0x26f /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/fault.o
+ .debug_line    0x0000000000000b71      0x39d /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/arm_core_mmu.o
+ .debug_line    0x0000000000000f0e      0x1af /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/soc/bcm_citadel/bcm5820x/soc_config.o
+ .debug_line    0x00000000000010bd      0x174 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/os/no_os/main.o
+ .debug_line    0x0000000000001231       0xbe /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/os/common/startup.o
+ .debug_line    0x00000000000012ef      0x294 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/os/common/cstartup.o
+ .debug_line    0x0000000000001583      0x243 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/no_os/alloc.o
+ .debug_line    0x00000000000017c6      0x2bc /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/no_os/osal.o
+ .debug_line    0x0000000000001a82      0x243 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/printk.o
+ .debug_line    0x0000000000001cc5      0x2b1 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/device.o
+ .debug_line    0x0000000000001f76      0x115 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/tick.o
+ .debug_line    0x000000000000208b      0x16e /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/util.o
+ .debug_line    0x00000000000021f9      0x185 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/irq_manage.o
+ .debug_line    0x000000000000237e      0x2d5 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/atomic_c.o
+ .debug_line    0x0000000000002653      0x193 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/smau_init.o
+ .debug_line    0x00000000000027e6       0xfa /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/post_log.o
+ .debug_line    0x00000000000028e0      0x16c /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/bcm_delay.o
+ .debug_line    0x0000000000002a4c      0x19a /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/reg_access.o
+ .debug_line    0x0000000000002be6      0x3dd /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/utils.o
+ .debug_line    0x0000000000002fc3      0x1da /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/dvmem.o
+ .debug_line    0x000000000000319d      0x5c0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/console/uart_console.o
+ .debug_line    0x000000000000375d      0x5eb /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/serial/uart_ns16550.o
+ .debug_line    0x0000000000003d48      0x3b1 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/interrupt_controller/gic.o
+ .debug_line    0x00000000000040f9      0x2aa /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/timer/arm_generic_timer.o
+ .debug_line    0x00000000000043a3      0x177 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/timer/sys_clock_init.o
+ .debug_line    0x000000000000451a      0x303 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/pinmux/iomux_bcm58202.o
+ .debug_line    0x000000000000481d      0x5c8 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/clock_control/clocks_citadel_a7.o
+ .debug_line    0x0000000000004de5      0x40f /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/clock_control/clocks_bcm58202.o
+ .debug_line    0x00000000000051f4      0x4cc /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/smau/smau.o
+ .debug_line    0x00000000000056c0      0xaf2 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/sotp/sotp.o
+
+.debug_str      0x0000000000000000     0x35ab
+ .debug_str     0x0000000000000000      0x6fb /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/convert_sbi/convert_img.o
+                                        0x7ab (size before relaxing)
+ .debug_str     0x00000000000006fb      0x124 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/convert_sbi/customization_key.o
+                                        0x265 (size before relaxing)
+ .debug_str     0x000000000000081f       0xb0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/exc_manage.o
+                                        0x23b (size before relaxing)
+ .debug_str     0x00000000000008cf       0x86 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/arm_core_cache.o
+                                        0x20a (size before relaxing)
+ .debug_str     0x0000000000000955      0x14a /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/fault.o
+                                        0x350 (size before relaxing)
+ .debug_str     0x0000000000000a9f      0x131 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/arm_core_mmu.o
+                                        0x682 (size before relaxing)
+ .debug_str     0x0000000000000bd0       0xc5 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/soc/bcm_citadel/bcm5820x/soc_config.o
+                                        0x33d (size before relaxing)
+ .debug_str     0x0000000000000c95       0x8c /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/os/no_os/main.o
+                                        0x21f (size before relaxing)
+ .debug_str     0x0000000000000d21      0x13b /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/os/common/cstartup.o
+                                        0x6b0 (size before relaxing)
+ .debug_str     0x0000000000000e5c      0x11b /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/no_os/alloc.o
+                                        0x35f (size before relaxing)
+ .debug_str     0x0000000000000f77      0x1df /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/no_os/osal.o
+                                        0x3aa (size before relaxing)
+ .debug_str     0x0000000000001156      0x1e0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/printk.o
+                                        0x361 (size before relaxing)
+ .debug_str     0x0000000000001336      0x123 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/device.o
+                                        0x7c7 (size before relaxing)
+ .debug_str     0x0000000000001459       0x7a /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/tick.o
+                                        0x20f (size before relaxing)
+ .debug_str     0x00000000000014d3       0xc0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/util.o
+                                        0x261 (size before relaxing)
+ .debug_str     0x0000000000001593       0xf1 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/irq_manage.o
+                                        0x287 (size before relaxing)
+ .debug_str     0x0000000000001684      0x110 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/atomic_c.o
+                                        0x2a3 (size before relaxing)
+ .debug_str     0x0000000000001794      0x123 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/smau_init.o
+                                        0x3ef (size before relaxing)
+ .debug_str     0x00000000000018b7       0x99 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/post_log.o
+                                        0x1ca (size before relaxing)
+ .debug_str     0x0000000000001950       0x65 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/bcm_delay.o
+                                        0x1ef (size before relaxing)
+ .debug_str     0x00000000000019b5       0x77 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/reg_access.o
+                                        0x1e7 (size before relaxing)
+ .debug_str     0x0000000000001a2c      0x10c /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/utils.o
+                                        0x88e (size before relaxing)
+ .debug_str     0x0000000000001b38       0x68 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/dvmem.o
+                                        0x202 (size before relaxing)
+ .debug_str     0x0000000000001ba0      0x458 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/console/uart_console.o
+                                        0xc6d (size before relaxing)
+ .debug_str     0x0000000000001ff8      0x3ac /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/serial/uart_ns16550.o
+                                        0xb7c (size before relaxing)
+ .debug_str     0x00000000000023a4      0x13c /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/interrupt_controller/gic.o
+                                        0x815 (size before relaxing)
+ .debug_str     0x00000000000024e0      0x140 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/timer/arm_generic_timer.o
+                                        0x406 (size before relaxing)
+ .debug_str     0x0000000000002620       0xa4 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/timer/sys_clock_init.o
+                                        0x2eb (size before relaxing)
+ .debug_str     0x00000000000026c4      0x1a2 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/pinmux/iomux_bcm58202.o
+                                        0x81b (size before relaxing)
+ .debug_str     0x0000000000002866      0x3fe /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/clock_control/clocks_citadel_a7.o
+                                        0xad7 (size before relaxing)
+ .debug_str     0x0000000000002c64      0x222 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/clock_control/clocks_bcm58202.o
+                                        0xa27 (size before relaxing)
+ .debug_str     0x0000000000002e86      0x23e /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/smau/smau.o
+                                        0x9d2 (size before relaxing)
+ .debug_str     0x00000000000030c4      0x4e7 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/sotp/sotp.o
+                                        0x8fe (size before relaxing)
+
+.comment        0x0000000000000000       0x7f
+ .comment       0x0000000000000000       0x7f /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/convert_sbi/convert_img.o
+                                         0x80 (size before relaxing)
+ .comment       0x000000000000007f       0x80 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/convert_sbi/customization_key.o
+ .comment       0x000000000000007f       0x80 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/exc_manage.o
+ .comment       0x000000000000007f       0x80 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/arm_core_cache.o
+ .comment       0x000000000000007f       0x80 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/fault.o
+ .comment       0x000000000000007f       0x80 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/arm_core_mmu.o
+ .comment       0x000000000000007f       0x80 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/soc/bcm_citadel/bcm5820x/soc_config.o
+ .comment       0x000000000000007f       0x80 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/os/no_os/main.o
+ .comment       0x000000000000007f       0x80 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/os/common/cstartup.o
+ .comment       0x000000000000007f       0x80 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/no_os/alloc.o
+ .comment       0x000000000000007f       0x80 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/no_os/osal.o
+ .comment       0x000000000000007f       0x80 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/printk.o
+ .comment       0x000000000000007f       0x80 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/device.o
+ .comment       0x000000000000007f       0x80 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/tick.o
+ .comment       0x000000000000007f       0x80 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/util.o
+ .comment       0x000000000000007f       0x80 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/irq_manage.o
+ .comment       0x000000000000007f       0x80 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/atomic_c.o
+ .comment       0x000000000000007f       0x80 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/smau_init.o
+ .comment       0x000000000000007f       0x80 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/post_log.o
+ .comment       0x000000000000007f       0x80 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/bcm_delay.o
+ .comment       0x000000000000007f       0x80 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/reg_access.o
+ .comment       0x000000000000007f       0x80 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/utils.o
+ .comment       0x000000000000007f       0x80 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/dvmem.o
+ .comment       0x000000000000007f       0x80 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/console/uart_console.o
+ .comment       0x000000000000007f       0x80 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/serial/uart_ns16550.o
+ .comment       0x000000000000007f       0x80 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/interrupt_controller/gic.o
+ .comment       0x000000000000007f       0x80 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/timer/arm_generic_timer.o
+ .comment       0x000000000000007f       0x80 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/timer/sys_clock_init.o
+ .comment       0x000000000000007f       0x80 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/pinmux/iomux_bcm58202.o
+ .comment       0x000000000000007f       0x80 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/clock_control/clocks_citadel_a7.o
+ .comment       0x000000000000007f       0x80 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/clock_control/clocks_bcm58202.o
+ .comment       0x000000000000007f       0x80 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/smau/smau.o
+ .comment       0x000000000000007f       0x80 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/sotp/sotp.o
+
+.ARM.attributes
+                0x0000000000000000       0x33
+ .ARM.attributes
+                0x0000000000000000       0x35 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/convert_sbi/convert_img.o
+ .ARM.attributes
+                0x0000000000000035       0x35 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/convert_sbi/customization_key.o
+ .ARM.attributes
+                0x000000000000006a       0x35 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/exc_manage.o
+ .ARM.attributes
+                0x000000000000009f       0x21 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/exc_handler.o
+ .ARM.attributes
+                0x00000000000000c0       0x35 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/arm_core_cache.o
+ .ARM.attributes
+                0x00000000000000f5       0x35 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/fault.o
+ .ARM.attributes
+                0x000000000000012a       0x35 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/arm_core_mmu.o
+ .ARM.attributes
+                0x000000000000015f       0x35 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/soc/bcm_citadel/bcm5820x/soc_config.o
+ .ARM.attributes
+                0x0000000000000194       0x35 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/os/no_os/main.o
+ .ARM.attributes
+                0x00000000000001c9       0x21 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/os/common/startup.o
+ .ARM.attributes
+                0x00000000000001ea       0x35 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/os/common/cstartup.o
+ .ARM.attributes
+                0x000000000000021f       0x35 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/no_os/alloc.o
+ .ARM.attributes
+                0x0000000000000254       0x35 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/no_os/osal.o
+ .ARM.attributes
+                0x0000000000000289       0x35 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/printk.o
+ .ARM.attributes
+                0x00000000000002be       0x35 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/device.o
+ .ARM.attributes
+                0x00000000000002f3       0x35 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/tick.o
+ .ARM.attributes
+                0x0000000000000328       0x35 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/util.o
+ .ARM.attributes
+                0x000000000000035d       0x35 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/irq_manage.o
+ .ARM.attributes
+                0x0000000000000392       0x35 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/atomic_c.o
+ .ARM.attributes
+                0x00000000000003c7       0x35 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/smau_init.o
+ .ARM.attributes
+                0x00000000000003fc       0x35 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/post_log.o
+ .ARM.attributes
+                0x0000000000000431       0x35 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/bcm_delay.o
+ .ARM.attributes
+                0x0000000000000466       0x35 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/reg_access.o
+ .ARM.attributes
+                0x000000000000049b       0x35 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/utils.o
+ .ARM.attributes
+                0x00000000000004d0       0x35 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/dvmem.o
+ .ARM.attributes
+                0x0000000000000505       0x35 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/console/uart_console.o
+ .ARM.attributes
+                0x000000000000053a       0x35 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/serial/uart_ns16550.o
+ .ARM.attributes
+                0x000000000000056f       0x35 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/interrupt_controller/gic.o
+ .ARM.attributes
+                0x00000000000005a4       0x35 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/timer/arm_generic_timer.o
+ .ARM.attributes
+                0x00000000000005d9       0x35 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/timer/sys_clock_init.o
+ .ARM.attributes
+                0x000000000000060e       0x35 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/pinmux/iomux_bcm58202.o
+ .ARM.attributes
+                0x0000000000000643       0x35 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/clock_control/clocks_citadel_a7.o
+ .ARM.attributes
+                0x0000000000000678       0x35 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/clock_control/clocks_bcm58202.o
+ .ARM.attributes
+                0x00000000000006ad       0x35 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/smau/smau.o
+ .ARM.attributes
+                0x00000000000006e2       0x35 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/sotp/sotp.o
+ .ARM.attributes
+                0x0000000000000717       0x2d /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-locale.o)
+ .ARM.attributes
+                0x0000000000000744       0x2d /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-mbtowc_r.o)
+ .ARM.attributes
+                0x0000000000000771       0x19 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-memcpy.o)
+ .ARM.attributes
+                0x000000000000078a       0x19 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-strcmp.o)
+ .ARM.attributes
+                0x00000000000007a3       0x2d /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-wctomb_r.o)
+ .ARM.attributes
+                0x00000000000007d0       0x2d /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-ctype_.o)
+ .ARM.attributes
+                0x00000000000007fd       0x2d /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-impure.o)
+ .ARM.attributes
+                0x000000000000082a       0x1b /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-ar/fpv3/hard/libgcc.a(_udivsi3.o)
+ .ARM.attributes
+                0x0000000000000845       0x1b /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-ar/fpv3/hard/libgcc.a(_divsi3.o)
+ .ARM.attributes
+                0x0000000000000860       0x1b /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-ar/fpv3/hard/libgcc.a(_dvmd_tls.o)
+ .ARM.attributes
+                0x000000000000087b       0x1b /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-ar/fpv3/hard/libgcc.a(_aeabi_uldivmod.o)
+ .ARM.attributes
+                0x0000000000000896       0x2d /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-ar/fpv3/hard/libgcc.a(_udivmoddi4.o)
+
+.debug_frame    0x0000000000000000     0x148c
+ .debug_frame   0x0000000000000000       0x38 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/convert_sbi/convert_img.o
+ .debug_frame   0x0000000000000038       0x2c /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/exc_manage.o
+ .debug_frame   0x0000000000000064       0x48 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/arm_core_cache.o
+ .debug_frame   0x00000000000000ac       0x44 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/fault.o
+ .debug_frame   0x00000000000000f0       0x5c /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/arm_core_mmu.o
+ .debug_frame   0x000000000000014c       0x28 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/soc/bcm_citadel/bcm5820x/soc_config.o
+ .debug_frame   0x0000000000000174       0x38 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/os/no_os/main.o
+ .debug_frame   0x00000000000001ac       0x28 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/os/common/cstartup.o
+ .debug_frame   0x00000000000001d4       0x68 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/no_os/alloc.o
+ .debug_frame   0x000000000000023c      0x110 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/no_os/osal.o
+ .debug_frame   0x000000000000034c      0x16c /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/printk.o
+ .debug_frame   0x00000000000004b8       0x84 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/device.o
+ .debug_frame   0x000000000000053c       0x20 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/tick.o
+ .debug_frame   0x000000000000055c       0x78 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/util.o
+ .debug_frame   0x00000000000005d4       0x60 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/irq_manage.o
+ .debug_frame   0x0000000000000634       0xd8 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/atomic_c.o
+ .debug_frame   0x000000000000070c       0x30 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/smau_init.o
+ .debug_frame   0x000000000000073c       0x34 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/post_log.o
+ .debug_frame   0x0000000000000770       0x30 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/bcm_delay.o
+ .debug_frame   0x00000000000007a0       0x30 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/reg_access.o
+ .debug_frame   0x00000000000007d0       0xd0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/utils.o
+ .debug_frame   0x00000000000008a0       0x40 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/utils/dvmem.o
+ .debug_frame   0x00000000000008e0      0x128 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/console/uart_console.o
+ .debug_frame   0x0000000000000a08      0x1b8 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/serial/uart_ns16550.o
+ .debug_frame   0x0000000000000bc0       0xe0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/interrupt_controller/gic.o
+ .debug_frame   0x0000000000000ca0       0x54 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/timer/arm_generic_timer.o
+ .debug_frame   0x0000000000000cf4       0x68 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/pinmux/iomux_bcm58202.o
+ .debug_frame   0x0000000000000d5c      0x138 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/clock_control/clocks_citadel_a7.o
+ .debug_frame   0x0000000000000e94       0xa0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/clock_control/clocks_bcm58202.o
+ .debug_frame   0x0000000000000f34       0xd0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/smau/smau.o
+ .debug_frame   0x0000000000001004      0x2c0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/sotp/sotp.o
+ .debug_frame   0x00000000000012c4       0x6c /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-locale.o)
+ .debug_frame   0x0000000000001330       0x4c /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-mbtowc_r.o)
+ .debug_frame   0x000000000000137c       0x34 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-strcmp.o)
+ .debug_frame   0x00000000000013b0       0x3c /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-ar/fpv3/hard/libc.a(lib_a-wctomb_r.o)
+ .debug_frame   0x00000000000013ec       0x20 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-ar/fpv3/hard/libgcc.a(_udivsi3.o)
+ .debug_frame   0x000000000000140c       0x20 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-ar/fpv3/hard/libgcc.a(_divsi3.o)
+ .debug_frame   0x000000000000142c       0x2c /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-ar/fpv3/hard/libgcc.a(_aeabi_uldivmod.o)
+ .debug_frame   0x0000000000001458       0x34 /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-ar/fpv3/hard/libgcc.a(_udivmoddi4.o)
+
+.debug_ranges   0x0000000000000000      0x840
+ .debug_ranges  0x0000000000000000       0x40 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/exc_handler.o
+ .debug_ranges  0x0000000000000040       0x88 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/fault.o
+ .debug_ranges  0x00000000000000c8       0x40 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/arch/arm/core/arm_core_mmu.o
+ .debug_ranges  0x0000000000000108       0x18 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/os/no_os/main.o
+ .debug_ranges  0x0000000000000120       0x18 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/os/common/cstartup.o
+ .debug_ranges  0x0000000000000138       0x40 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/no_os/alloc.o
+ .debug_ranges  0x0000000000000178       0x70 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/osal/common/printk.o
+ .debug_ranges  0x00000000000001e8       0x18 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/sbis/common/smau_init.o
+ .debug_ranges  0x0000000000000200      0x168 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/console/uart_console.o
+ .debug_ranges  0x0000000000000368       0x78 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/serial/uart_ns16550.o
+ .debug_ranges  0x00000000000003e0       0x18 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/interrupt_controller/gic.o
+ .debug_ranges  0x00000000000003f8       0x20 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/timer/arm_generic_timer.o
+ .debug_ranges  0x0000000000000418       0x40 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/clock_control/clocks_citadel_a7.o
+ .debug_ranges  0x0000000000000458       0x20 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/clock_control/clocks_bcm58202.o
+ .debug_ranges  0x0000000000000478       0xd8 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/smau/smau.o
+ .debug_ranges  0x0000000000000550      0x2f0 /home/paulkim/work/sdk/citadel/driver_mpos_2.1.1/sbis/build/drivers/broadcom/sotp/sotp.o

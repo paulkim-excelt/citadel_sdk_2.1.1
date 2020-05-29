@@ -1,0 +1,1 @@
+zephyr_library_sources(bbl_bcm5820x.c)

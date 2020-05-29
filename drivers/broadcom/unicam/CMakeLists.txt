@@ -1,0 +1,3 @@
+zephyr_library_sources(li_v024m.c)
+
+zephyr_library_sources_ifdef(CONFIG_UNICAM_PHYS_INTERFACE_CSI unicam_bcm5820x_csi.c)

@@ -1,0 +1,15 @@
+1. Generate SBI with entry point at 0x189860 for HMAC-SHA256 only authentication
+
+2. For hMAC-SHA256 and AES256 authentication, generate SBI with entry point at 0x189870. This is because 16 byte AES IV will be stored at 0x189860.
+
+3. Copy the above generated image as f.bin here
+
+4. Run the signsbi_symmetric_hmac.sh script for case1 above and run signsbi_symmetric_hmac_aes.sh for case 2 above.
+
+5. simple_sbi_chipit.bin is generated with entry point at 0x189860 (for case1).  The corresponding HMAC-SH256 signed SBI is final_symmetric_hmac_ChipIt.bin.
+
+6. simple_sbi_symmetric_iv_chipit.bin is generated with entry point at 0x189870 (for case2). The corresponding HMAC-SHA256/AES256 SBI is final_symmetric_hmac_aes_ChipIt.bin
+
+7. Make sure to load otp_kaes256_hmac.bin into OTP/corresponding RAM location(pOtp6t in bootstrap.c) when authenticating symmetric SBI. On real silicon OTP must be programmed with symmetric keys to authenticate symmetric SBIs. 
+
+8. For more information, refer SBL/SBI design documents, and BCM5892 architecture document.

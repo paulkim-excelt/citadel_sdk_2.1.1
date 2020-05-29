@@ -1,0 +1,59 @@
+{
+   "build" : {
+      "requires" : "ubuntu14",
+      "resource" : "RTP",
+      "dirs" : [],
+      "buildlist" : {
+         "smoketest" : [
+            "openrtos",
+            "upgrade_sbi",
+            "convert_sbi",
+            "stage2_bl",
+            "secure_xip",
+            "sample_aai",
+            "sample_aai_xip",
+            "sample_aai_flash",
+            "no_os"
+         ]
+      },
+      "config" : {
+         "openrtos" : {
+            "build_cmd" : "make Q= CONFIG_RTOS=openrtos",
+            "install_cmd" : "echo \"Nothing to do.\""
+         },
+         "upgrade_sbi" : {
+            "build_cmd" : "make Q= -C sbis/upgrade_sbi",
+            "install_cmd" : "echo \"Nothing to do.\""
+         },
+         "convert_sbi" : {
+            "build_cmd" : "make Q= -C sbis/convert_sbi",
+            "install_cmd" : "echo \"Nothing to do.\""
+         },
+         "stage2_bl" : {
+            "build_cmd" : "make Q= -C sbis/stage2_bl",
+            "install_cmd" : "echo \"Nothing to do.\""
+         },
+         "secure_xip" : {
+            "build_cmd" : "make Q= -C sbis/secure_xip",
+            "install_cmd" : "echo \"Nothing to do.\""
+         },
+         "sample_aai" : {
+            "build_cmd" : "make Q= -C sbis/sample_aai",
+            "install_cmd" : "echo \"Nothing to do.\""
+         },
+         "sample_aai_xip" : {
+            "build_cmd" : "make Q= -C sbis/sample_aai -f Makefile.sxip",
+            "install_cmd" : "echo \"Nothing to do.\""
+         },
+         "sample_aai_flash" : {
+            "build_cmd" : "make Q= -C sbis/sample_aai target=flash",
+            "install_cmd" : "echo \"Nothing to do.\""
+         },
+         "no_os" : {
+            "build_cmd" : "make Q=",
+            "install_cmd" : "echo \"Nothing to do.\""
+         }
+      }
+   }
+}
+

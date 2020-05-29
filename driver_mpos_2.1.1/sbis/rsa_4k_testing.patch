@@ -1,0 +1,116 @@
+diff --git a/sbis/convert_sbi/Makefile b/sbis/convert_sbi/Makefile
+index 1832184..e4debc2 100644
+--- a/sbis/convert_sbi/Makefile
++++ b/sbis/convert_sbi/Makefile
+@@ -69,7 +69,7 @@ $(LDFILE): $(LDSFILE)
+ $(KEY_FILE):
+ 	$(Q)echo [Generating ... $(notdir $@)]
+ 	$(Q)python $(TOOLS_PATH)/scripts/generatekey.py -f \
+-               $(TOOLS_PATH)/secimage/LYNX-BRCM-CID-0x60000003-ROT.priv.pem \
++               $(TOOLS_PATH)/secimage/rsa_dauth4096_key.pem \
+                -ci 0x60000003 -csc 0x44 -cri 0 -sri 0 > $@
+ 
+ clean:
+diff --git a/sbis/sample_aai/Makefile b/sbis/sample_aai/Makefile
+index 30de8eb..a931226 100644
+--- a/sbis/sample_aai/Makefile
++++ b/sbis/sample_aai/Makefile
+@@ -26,12 +26,12 @@ CFLAGS += -DS2BL_IMAGE_SIZE=DEF_AAI_IMAGE_OFFSET
+ CFLAGS += -DDEFAULT_FLASH_SIZE=0x800000 # 8 MB
+ 
+ ifeq ($(target), ram)
+-CFLAGS += -DRO_MEM_START=SRAM_START+$(DEF_S2BL_SIZE)+SBI_HEADER_SIZE_RSA2K
++CFLAGS += -DRO_MEM_START=SRAM_START+$(DEF_S2BL_SIZE)+SBI_HEADER_SIZE_RSA4K
+ CFLAGS += -DRO_MEM_LENGTH=0x40000 # 256 K
+ CFLAGS += -DRW_MEM_START=RO_MEM_START+RO_MEM_LENGTH
+ CFLAGS += -DRW_MEM_LENGTH=SRAM_SIZE+SRAM_START-\(RW_MEM_START\)
+ else
+-CFLAGS += -DRO_MEM_START=FLASH_START+S2BL_IMAGE_SIZE+SBI_HEADER_SIZE_RSA2K
++CFLAGS += -DRO_MEM_START=FLASH_START+S2BL_IMAGE_SIZE+SBI_HEADER_SIZE_RSA4K
+ CFLAGS += -DRO_MEM_LENGTH=DEFAULT_FLASH_SIZE+FLASH_START-\(RO_MEM_START\)
+ CFLAGS += -DRW_MEM_START=SRAM_START
+ CFLAGS += -DRW_MEM_LENGTH=SRAM_SIZE
+diff --git a/sbis/sample_aai/sign_sample_aai.sh b/sbis/sample_aai/sign_sample_aai.sh
+index 000c00f..a40a013 100755
+--- a/sbis/sample_aai/sign_sample_aai.sh
++++ b/sbis/sample_aai/sign_sample_aai.sh
+@@ -7,7 +7,7 @@ cp -f $TARGET.bin  ${SEC_DIR}/$TARGET.bin
+ cd ${SEC_DIR}
+ 
+ echo Signing image with RSA 2K
+-./sign_image_rsa_a0_ab.sh $TARGET.bin
++./sign_image_rsa_4k_a0_ab.sh $TARGET.bin
+ 
+ cd -
+ cp -f ${SEC_DIR}/$TARGET.sign.bin ./
+diff --git a/sbis/secure_xip/Makefile b/sbis/secure_xip/Makefile
+index b778d7a..3da2845 100644
+--- a/sbis/secure_xip/Makefile
++++ b/sbis/secure_xip/Makefile
+@@ -25,14 +25,14 @@ algo ?= aes_hmac
+ # requirement for AB parts)
+ ifeq ($(UNASSIGNED_BUILD),1)
+ # The secure_xip image sits between the start of the flash and AAI image offset
+-CFLAGS += -DRO_MEM_START=FLASH_START+DEF_TOC_SIZE+SBI_HEADER_SIZE_RSA2K
++CFLAGS += -DRO_MEM_START=FLASH_START+DEF_TOC_SIZE+SBI_HEADER_SIZE_RSA4K
+ CFLAGS += -DRO_MEM_LENGTH=DEF_AAI_IMAGE_OFFSET+FLASH_START-\(RO_MEM_START\)
+ CFLAGS += -DRW_MEM_START=SRAM_START
+ CFLAGS += -DRW_MEM_LENGTH=SRAM_SIZE
+ else
+ # Top 256 KB for code/rodata/fastcode/data (loadable sections)
+ SECURE_XIP_SBI_SIZE=0x40000
+-CFLAGS += -DRO_MEM_START=DEF_SBI_BIN_START_RSA2K
++CFLAGS += -DRO_MEM_START=DEF_SBI_BIN_START_RSA4K
+ CFLAGS += -DRO_MEM_LENGTH=SRAM_START+$(SECURE_XIP_SBI_SIZE)-\(RO_MEM_START\)
+ CFLAGS += -DRW_MEM_START=RO_MEM_START+RO_MEM_LENGTH
+ CFLAGS += -DRW_MEM_LENGTH=SRAM_START+SRAM_SIZE-\(RW_MEM_START\)
+diff --git a/sbis/secure_xip/sign_secure_xip.sh b/sbis/secure_xip/sign_secure_xip.sh
+index 9c9c349..9f709f1 100755
+--- a/sbis/secure_xip/sign_secure_xip.sh
++++ b/sbis/secure_xip/sign_secure_xip.sh
+@@ -22,7 +22,7 @@ else
+ 
+ 	# Sign the target binary only for AB builds
+ 	cd ${SEC_DIR}
+-	./sign_image_rsa_a0_ab.sh $TARGET.bin
++	./sign_image_rsa_4k_a0_ab.sh $TARGET.bin
+ 	cd -
+ 
+ 	# tocgen script assumes the input file name is sbi.bin
+diff --git a/sbis/stage2_bl/Makefile b/sbis/stage2_bl/Makefile
+index 74e3d6b..79b25bb 100644
+--- a/sbis/stage2_bl/Makefile
++++ b/sbis/stage2_bl/Makefile
+@@ -15,7 +15,7 @@ XIP_IMAGE_START_ADDR = \(FLASH_START+DEF_AAI_IMAGE_OFFSET\)
+ # Stage 2 Boot loader will fit into the region between 0x24000000 & 0x24020000
+ # The top IPROC stack region upto 0x2400CC00 will be used as data memory for
+ # no-load sections (bss/heap/stack). And the region from the default SBI start
+-# (0x2400D360 for RSA2K signed image) to 0x24020000 will be used for code/data/
++# (0x2400E2B0 for RSA4K signed image) to 0x24020000 will be used for code/data/
+ # rodata/fastcode (loadable sections). This will allow the target image, if
+ # linked to ram (target=ram), to avail the 896 KB of SRAM starting from
+ # 0x24000000. Note that the sample AAI that will be built with target=ram should
+@@ -27,7 +27,7 @@ target ?= ram
+ 
+ # Use the section from end of SBI header upto 128 KB from the start of SRAM
+ # for code/data (loadable sections)
+-CFLAGS += -DRO_MEM_START=DEF_SBI_BIN_START_RSA2K
++CFLAGS += -DRO_MEM_START=DEF_SBI_BIN_START_RSA4K
+ CFLAGS += -DRO_MEM_LENGTH=SRAM_START+$(S2BL_SIZE)-\(RO_MEM_START\)
+ # Use the IPROC stack start region (0x24000000 - 0x2400CC00) for bss/heap/stack
+ CFLAGS += -DRW_MEM_START=SRAM_START
+diff --git a/sbis/stage2_bl/sign_stage2_bl.sh b/sbis/stage2_bl/sign_stage2_bl.sh
+index 4dec3b8..a7e1280 100755
+--- a/sbis/stage2_bl/sign_stage2_bl.sh
++++ b/sbis/stage2_bl/sign_stage2_bl.sh
+@@ -7,8 +7,8 @@ TARGET=stage2_bl
+ cp -f $TARGET.bin  ${SEC_DIR}/
+ 
+ cd ${SEC_DIR}
+-echo Signing stage2_blwith RSA 2K
+-./sign_image_rsa_a0_ab.sh $TARGET.bin
++echo Signing stage2_blwith RSA 4K
++./sign_image_rsa_4k_a0_ab.sh $TARGET.bin
+ cd -
+ 
+ # tocgen script assumes the input file name is sbi.bin

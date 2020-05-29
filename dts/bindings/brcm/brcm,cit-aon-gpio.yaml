@@ -1,0 +1,21 @@
+---
+title: Broadcom AON GPIO Controller register map
+version: 0.1
+
+description: >
+    This binding describes the Broadcom AON GPIO controller registers
+
+properties:
+    compatible:
+      category: required
+      type: string
+      description: compatible strings
+      constraint: "brcm,cit-aon-gpio"
+
+    reg:
+      category: required
+      type: array
+      description: mmio register space
+      generation: define
+
+...

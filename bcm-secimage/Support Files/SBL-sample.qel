@@ -1,0 +1,75 @@
+#Load SOTP Image- Replace this with your Image
+stop -emulation
+#memory -load %readmemb cygnus.cygnus_chip.cygnus_core.cygnus_iproc_wrapper.iproc_top.u_sotp_top.u_sotpmem_otp_controller.otp_cell_inst.IPR_M28HDOTP112X41R312VTS38F328_inst_0.progarray -file /projects/cygnus_dv4/revA0/users/venkatesh/emul_combo/cygnus/dv/emulation/qt/DL1/SOTP_IMAGES/sotp_prod_ab.txt
+#memory -load %readmemb cygnus.cygnus_chip.cygnus_core.cygnus_iproc_wrapper.iproc_top.u_sotp_top.u_sotpmem_otp_controller.otp_cell_inst.IPR_M28HDOTP112X41R312VTS38F328_inst_0.progarray -file /projects/ntsw-sw4/home/rayees/sw/iproc/sbl/sotp/SOTP_new/pending_ab.txt
+memory -load %readmemb cygnus.cygnus_chip.cygnus_core.cygnus_iproc_wrapper.iproc_top.u_sotp_top.u_sotpmem_otp_controller.otp_cell_inst.IPR_M28HDOTP112X41R312VTS38F328_inst_0.progarray -file /projects/ntsw-sw4/home/rayees/sw/iproc/sbl/sotp/SOTP_new/prod_ab.txt
+
+run -emulation
+
+force  pad_VDD 1'b1
+
+
+#Powerup reset generation
+force cygnus.cygnus_chip.crmu_top.u_crmu_core.pwr_up_rstb 1'b1
+
+#STRAP FOR QSPI BOOT - 000
+force SC0_CMDVCC_L 1'b0
+force SC0_RST_L 1'b0
+force UART3_TX 1'b0
+
+#QSPI 4 BYTE MODE
+force UART1_TX 1'b0
+force D1WOWSTZ_L 1'b0
+force SC1_RST_L  1'b0
+
+#BISR AUTOLOAD BYPASS
+force NAND_WP_L 1'b1
+
+#CORTEXA9JTAG enable
+force JTCE0 1'b0
+force JTCE1 1'b0
+
+force oe_rgmii 1'b1
+
+#Functional Debug Mode
+force CHIP_MODE0 1'b1
+force CHIP_MODE1	1'b1
+force CHIP_MODE2	1'b1
+force CHIP_MODE3	1'b0
+force CHIP_MODE4	1'b1
+
+#Load IhOST IMAGE
+memory -load  %readmemb cygnus.cygnus_chip.cygnus_core.cygnus_iproc_wrapper.iproc_top.u_rom_top.u_rom_word1.mem  -nochecksize -file /projects/cygnus_dv4/revA0/users/iproc_releases/iproc_rtl_p7_v1.37.11/iproc/ip_revision/rom/rev_6/rtl/IPR_M28RM1024X64R512VMVTSES35YT_WD1.codefile
+
+### jump to SBL
+force cygnus.cygnus_chip.cygnus_core.cygnus_iproc_wrapper.iproc_top.u_rom_top.strap_rom_jump_to_sbl 1'b1
+
+#Load ROM
+memory -load %readmemb cygnus.cygnus_chip.cygnus_core.cygnus_iproc_wrapper.iproc_top.u_rom_top.u_rom_word0.mem -file /projects/ntsw-sw4/home/rayees/sw/iproc/sbl/bootstrap/bootstrap.out
+
+#memory -load  %readmemb cygnus.cygnus_chip.cygnus_core.cygnus_iproc_wrapper.iproc_top.u_rom_top.u_rom_word0.mem  -nochecksize -file ../nishant/rom_WD0.codefile
+
+#Load QSPI - Replace this with your image
+memory -load qt_qspi_serial_flash.core_i.mem_array -nochecksize -file /projects/ntsw-sw4/home/rayees/sw/iproc/sbl/testsbi/fabi.out -nofill
+
+##Load M0 Code
+#memory -load %readmemb \
+#cygnus.cygnus_chip.crmu_top.u_crmu_core.u_mcu_top.u_crmu_rom_top.u_rom_wrap.rom.mem -file \
+#../mcu_image.txt
+
+#MITTAL MCU IMAGE
+memory -load %readmemb \
+cygnus.cygnus_chip.crmu_top.u_crmu_core.u_mcu_top.u_crmu_rom_top.u_rom_wrap.rom.mem -file \
+/home/mittal/mcu_code/CRM_M28RM1024X32R512VMVTSES35YTP_CFC.codefile
+
+#MITTAL IDRAM IMAGE
+memory -load %readmemb cygnus.cygnus_chip.crmu_top.u_crmu_core.u_mcu_top.u_id_ram_top.u_id_ram_wrap.id_ram_wrapper.mem.ram.mem -nochecksize -file /home/mittal/mcu_code/CRM_M28SPLL4096X39R2042VTES35D122BSIRLQF_ded_wrapper.codefile
+
+#SET UART BAUD RATE DIVISOR
+memory -setvalue cygnus.cygnus_chip.cygnus_core.agcs_top.sram_top.u_mem_top.LSB_sram0_bank0.mem.ram.mem -start 0 -end 1 -value 16
+
+force SYS_RST_L 1'b0
+sleep 1
+force SYS_RST_L 1'b1
+
+echo "sys_rst done, you can reboot the sdk now ..."

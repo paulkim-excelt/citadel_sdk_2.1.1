@@ -1,0 +1,80 @@
+Date: 2 May 2019
+
+This README contains details about how to build and run the zephyr (v 1.14) rtos
+image on a Citadel 58201 SVK board or serp_cp development board.
+
+Directory structure:
+===================
+
+- zephyr_os_src.tgz: Tarball containing the Zephyr sources. Create a folder,
+  say zephyr_citadel and untar the tar ball with `tar -xvzf zephyr_os_src.tgz'
+  into the folder.
+- zephyr_unassigned_58201.bin: Pre-built zephyr binary for an unassigned 58201
+  part, built with the instructions below. This can be programmed into the flash
+  using the firmware upgrade process (See User Guide for details)
+- zephyr_unassigned_58201_serp_cp.bin: Pre-built zephyr binary for serp_cp board
+  with an unassigned 58201 part, built with the instructions below. This can be
+  programmed into the flash using the firmware upgrade process
+- tocgen_sim.py: Python script to convert the zephyr.bin generated from zephyr
+  build to an unassigned image to be programmed on to an unassigned part.
+
+Instructions to build the zephyr image:
+===================
+1. Untar the zephyr_os_src.tgz folder using the command below
+   - mkdir zephyr_citadel
+   - cd zephyr_citadel
+   - tar -xvzf <path_to_tarball>/zephyr_os_src.tgz.
+2. Setup bash environment for Zephyr build. This step requires the following
+   pre-requisites
+      - python 3.4 or higher
+      - cmake version 3.13.1 or higher
+      - dtc (device tree compiler) version 1.4.6 or higher
+      - arm toolchain gcc-arm-none-eabi-6-2017-q1-update installed in the path
+   ~/toolchains/gcc-arm-none-eabi-6-2017-q1-update
+   - source zephyr-env.sh
+   - export GNUARMEMB_TOOLCHAIN_PATH=~/toolchains/gcc-arm-none-eabi-6-2017-q1-update/
+   - export ZEPHYR_TOOLCHAIN_VARIANT=gnuarmemb
+   - export CROSS_COMPILE=~/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-
+3. Build the zephyr image with the below commands
+   - cd samples/testing/broadcom
+   - mkdir -p build && cd build
+   # To build for SVK board
+   - cmake -DBOARD=citadel_svk_58201 .. && make
+   # To build for serp_cp board
+   - cmake -DBOARD=serp_cp .. && make
+4. The build output should be available as zephyr/zephyr.bin
+   -  For unassigned parts, the zephyr.bin needs to be converted to an unassigned
+      image with the below commands before it can be used with firmware upgrade
+      process.
+      - cd zephyr
+      - tocgen_sim.py -o zephyr_unassigned_58201.bin
+      - The output file zephyr_unassigned_58201.bin can now be used with the
+        firmware upgrade process.
+
+Instructions to run the driver unit tests:
+===================
+- Follow the instructions in User Guide to flash the zephyr image generated
+  with the above steps on to the citadel SVK board.
+- Connect the serial port to the PC and set the baud rate to 115200, with local
+  echo on. The console should show the below message on power cycling the board
+  shell> ***** BOOTING ZEPHYR OS v1.9.2 *****
+- At the shell prompt the driver tests can be run using the commands below
+  shell> test unicam_driver
+  shell> test dma_driver
+  shell> test gpio_driver
+  shell> test qspi_driver
+  shell> test timer_driver
+  shell> test clock_driver
+  shell> test crypto_driver
+  shell> test pka_driver
+  shell> test spi_legacy_driver
+  shell> test drips
+  shell> test deepsleep
+  shell> test lcd
+  shell> test adc
+  shell> test bbl
+  shell> test rtc_driver
+  shell> test usbd
+  shell> test i2c_driver
+  shell> test sotp_driver
+

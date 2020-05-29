@@ -1,0 +1,12 @@
+[submodule "drivers/broadcom"]
+        path = drivers/broadcom
+        url = ../citadel-drivers
+        branch = citadel_mpos_2.1.x
+[submodule "include/broadcom"]
+        path = include/broadcom
+        url = ../citadel-include
+        branch = citadel_mpos_2.1.x
+[submodule "apps/ut/tests"]
+        path = apps/ut/tests
+        url = ../citadel-test
+        branch = citadel_mpos_2.1.x

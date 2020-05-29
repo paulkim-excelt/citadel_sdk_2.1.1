@@ -1,0 +1,21 @@
+# Kconfig - BRCM IOMUX drvier configuration options
+
+#
+# Copyright (c) 2018 Broadcom Inc.
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+#
+# BRCM IOMUX driver options
+#
+
+config ALLOW_IOMUX_OVERRIDE
+	bool "Allow application to override pinmux setting after init"
+	default n
+	help
+		Setting this flag allows the application to override a
+		previously configrued iomux setting. By default this is
+		set to 'n', so that there are no accidental overriding
+		of an MFIO function. This flag is made available for
+		testing purposes only.

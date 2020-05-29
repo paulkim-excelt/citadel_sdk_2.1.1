@@ -1,0 +1,2 @@
+ccache /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-ar qc libdrivers__broadcom__pka.a  CMakeFiles/drivers__broadcom__pka.dir/crypto_pka.c.obj CMakeFiles/drivers__broadcom__pka.dir/crypto_pka_util.c.obj CMakeFiles/drivers__broadcom__pka.dir/crypto_pka_selftest.c.obj CMakeFiles/drivers__broadcom__pka.dir/crypto_pka_ushx.c.obj
+ccache /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-ranlib libdrivers__broadcom__pka.a

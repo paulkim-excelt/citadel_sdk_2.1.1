@@ -1,0 +1,30 @@
+# hmac sha256 sign
+secimage sbi -out fabi.bin -hmac khmacsha256 -bl f.bin
+
+# encryption
+secimage sbi -out fabi.bin -dl kaes128 -iv ivaes -hmac khmacsha256 -bl f.bin
+
+# rsa sign
+secimage sbi -out fabi.bin -rsa rsa_eng_key.pem -bl f.bin
+
+# generate chain of trust file
+# the first -key signs the second -key, second -key signs the third -key, etc.
+# NOTE: 
+#  1. each key takes 3 parameters: key file, RevisionInfo, CustomerID. The latter two are read in as hex
+#  2. the first key's RevisionInfo and CustomerID (e.g. the 0 0 following rsa_eng_key.pem) are not used, 
+#     they are just place holders, but the rest of keys these values are used, and be put into chain of trust file
+#  3. The example passes for bootrom version = 1, otp (key and customer id) both not programmed
+
+chmod +w chain.out
+secimage chain -out chain.out -rsa -key rsa_eng_key.pem 0 0 -key rsa_sbi1.pem 0x10000 0 -key rsa_sbi2.pem 102 0 -key rsa_sbi3.pem 0 0
+
+#This is earlier example, which will not pass in real sim, because they do not match the requirements of revisioninfo and customer id. This is just to pass the sig auth of the chain. You need to debug this under ICE so you can skip the revisioninfo and customer id checks.
+#secimage chain -out chain.out -rsa -key rsa_eng_key.pem 100 1 -key rsa_sbi1.pem 101 0 -key rsa_sbi2.pem 102 0 -key rsa_sbi3.pem 103 1
+
+# rsa sign with chain of trust file
+# NOTE: must use the last -key in the chain of trust file to sign SBI
+secimage sbi -out fabi.bin -chain chain.out -rsa rsa_sbi3.pem -bl f.bin -depth 3
+
+#### final:
+cat add0.bin fabi.bin > final.bin
+

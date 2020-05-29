@@ -1,0 +1,2 @@
+ccache /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-ar qc libboards__arm__citadel_svk_58201.a  CMakeFiles/boards__arm__citadel_svk_58201.dir/pinmux.c.obj CMakeFiles/boards__arm__citadel_svk_58201.dir/lcd.c.obj
+ccache /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-ranlib libboards__arm__citadel_svk_58201.a

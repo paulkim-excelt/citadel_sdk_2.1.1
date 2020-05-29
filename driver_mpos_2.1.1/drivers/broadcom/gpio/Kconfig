@@ -1,0 +1,18 @@
+# Kconfig - BRCM GPIO drvier configuration options
+
+#
+# Copyright (c) 2019 Broadcom
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+#
+# BRCM GPIO driver options
+#
+
+config AON_GPIO_INTERRUPT_SUPPORT
+	bool "AON GPIO INTERRUPT"
+	depends on BRCM_DRIVER_GPIO && BRCM_DRIVER_PM
+	default n
+	help
+		This flag enables AON gpio interrupt support

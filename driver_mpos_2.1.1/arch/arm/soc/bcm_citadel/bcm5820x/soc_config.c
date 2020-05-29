@@ -1,0 +1,329 @@
+/*
+ * Copyright (c) 2017 Broadcom Corporation
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+/**
+ * @file
+ * @brief System/hardware module for bcm5820x platform
+ *
+ * This module provides routines to initialize soc specific hardware
+ * for the bcm5820x platform.
+ */
+
+#include <kernel.h>
+#include <device.h>
+#include <init.h>
+#include <arch/cpu.h>
+#include <cortex_a/cache.h>
+#include <logging/sys_log.h>
+#include "soc.h"
+
+#ifdef CONFIG_ARM_CORE_MMU
+#include <cortex_a/mmu.h>
+#include <misc/util.h>
+#include <board.h>
+
+/* These addresses should come from a common soc config header file */
+#define CONFIG_ROM_BASE_ADDRESS		0xFFF00000	/* Aligned to 1M */
+#define CONFIG_SMC_BASE_ADDRESS		0x61000000
+
+#define CONFIG_DMU_REGS_BASE		0x30000000
+#define CONFIG_JTAG_REGS_BASE		0x40200000
+#define CONFIG_UART_REGS_BASE		0x44000000
+#define CONFIG_GPIO_TIM_REGS_BASE	0x45000000
+#define CONFIG_QSPI_REGS_BASE		0x45100000
+#define CONFIG_RNG_REGS_BASE		0x45200000
+#define CONFIG_USBH_REGS_BASE		0x46000000
+#define CONFIG_USBD_REGS_BASE		0x47000000
+#define CONFIG_SDIO_REGS_BASE		0x48000000
+#define CONFIG_SDIO_IDM_REGS_BASE	0x6B000000
+#define CONFIG_SMAU_REGS_BASE		0x50000000
+#define CONFIG_DMA0_REGS_BASE		0x51000000
+#define CONFIG_SMC_CFG_REGS_BASE	0x53000000
+#define CONFIG_GPV_REGS_BASE		0x55000000
+#define CONFIG_MEM_CFG_REGS_BASE	0x56000000
+#define CONFIG_GIC_REGS_BASE		0x62000000
+#define CONFIG_PKA_NVIC_REGS_BASE	0xE0000000
+
+#define CONFIG_FLASH_WSPI_ADDRESS (CONFIG_FLASH_BASE_ADDRESS + 64*1024*1024)
+
+/* Default attribiutes for normal memory (ROM/RAM/FLASH)
+ *  - Shareable is not set because we only have a single core on bcm5820x
+ *    and setting shareable results in data aborts on exectuting ldrex/strex
+ *    instructions
+ */
+#define CACHED_MEM_DEFAULT_ATTR			\
+	(MEM_ATTR_CACHEABLE |			\
+	 MEM_ATTR_CACHEABLE_WRITE_BACK |	\
+	 MEM_ATTR_CACHEABLE_WRITE_ALLOCATE)
+
+#define NORMAL_MEM_DEFAULT_ATTR		MEM_ATTR_NON_CACHEABLE
+
+struct mmu_mem_region_info mem_region_info[] = {
+	/* Boot ROM */
+	{
+		CONFIG_ROM_BASE_ADDRESS,
+		SECTION_SIZE,
+		MEM_TYPE_NORMAL,
+		NORMAL_MEM_DEFAULT_ATTR,
+		MEM_ACCESS_READONLY
+	},
+	/* SRAM */
+	{
+		CONFIG_SRAM_BASE_ADDRESS,
+		CONFIG_SRAM_SIZE*1024,
+		MEM_TYPE_NORMAL,
+		CACHED_MEM_DEFAULT_ATTR,
+		MEM_ACCESS_READWRITE
+	},
+	/* SRAM (Uncached) */
+	{
+		CONFIG_SRAM_BASE_ADDRESS | BIT(UNCACHED_ADDR_BIT),
+		CONFIG_SRAM_SIZE*1024,
+		MEM_TYPE_NORMAL,
+		MEM_ATTR_NON_CACHEABLE | MEM_ATTR_UNCACHED_MAP |
+			(UNCACHED_ADDR_BIT << MEM_ATTR_UNCACHED_BIT_POS),
+		MEM_ACCESS_READWRITE
+	},
+	/* FLASH mapped through BSPI CS0 - Lower 16M */
+	{
+		CONFIG_FLASH_BASE_ADDRESS,
+		SUPER_SECTION_SIZE,
+		MEM_TYPE_NORMAL,
+		CACHED_MEM_DEFAULT_ATTR,
+		MEM_ACCESS_READONLY
+	},
+	/* FLASH mapped through BSPI CS0 - Higher 16M */
+	{
+		CONFIG_FLASH_BASE_ADDRESS + SUPER_SECTION_SIZE,
+		SUPER_SECTION_SIZE,
+		MEM_TYPE_NORMAL,
+		CACHED_MEM_DEFAULT_ATTR,
+		MEM_ACCESS_READONLY
+	},
+	/* FLASH mapped through BSPI CS1 - Lower 16M */
+	{
+		CONFIG_FLASH_BASE_ADDRESS + 2*SUPER_SECTION_SIZE,
+		SUPER_SECTION_SIZE,
+		MEM_TYPE_NORMAL,
+		CACHED_MEM_DEFAULT_ATTR,
+		MEM_ACCESS_READONLY
+	},
+	/* FLASH mapped through BSPI CS1 - Higher 16M */
+	{
+		CONFIG_FLASH_BASE_ADDRESS + 3*SUPER_SECTION_SIZE,
+		SUPER_SECTION_SIZE,
+		MEM_TYPE_NORMAL,
+		CACHED_MEM_DEFAULT_ATTR,
+		MEM_ACCESS_READONLY
+	},
+	/* FLASH mapped through WSPI CS0 - Lower 16M */
+	{
+		CONFIG_FLASH_WSPI_ADDRESS,
+		SUPER_SECTION_SIZE,
+		MEM_TYPE_DEVICE,
+		MEM_ATTR_NON_CACHEABLE,
+		MEM_ACCESS_READWRITE
+	},
+	/* FLASH mapped through WSPI CS0 - Higher 16M */
+	{
+		CONFIG_FLASH_WSPI_ADDRESS + SUPER_SECTION_SIZE,
+		SUPER_SECTION_SIZE,
+		MEM_TYPE_DEVICE,
+		MEM_ATTR_NON_CACHEABLE,
+		MEM_ACCESS_READWRITE
+	},
+	/* FLASH mapped through WSPI CS1 - Lower 16M */
+	{
+		CONFIG_FLASH_WSPI_ADDRESS + 2*SUPER_SECTION_SIZE,
+		SUPER_SECTION_SIZE,
+		MEM_TYPE_DEVICE,
+		MEM_ATTR_NON_CACHEABLE,
+		MEM_ACCESS_READWRITE
+	},
+	/* FLASH mapped through WSPI CS1 - Higher 16M */
+	{
+		CONFIG_FLASH_WSPI_ADDRESS + 3*SUPER_SECTION_SIZE,
+		SUPER_SECTION_SIZE,
+		MEM_TYPE_DEVICE,
+		MEM_ATTR_NON_CACHEABLE,
+		MEM_ACCESS_READWRITE
+	},
+	/* DMU register address space mapping */
+	{
+		CONFIG_DMU_REGS_BASE,
+		SECTION_SIZE,
+		MEM_TYPE_DEVICE,
+		MEM_ATTR_SHAREABLE,
+		MEM_ACCESS_READWRITE | MEM_ACCESS_NO_EXEC
+	},
+	/* JTAG register address space mapping */
+	{
+		CONFIG_JTAG_REGS_BASE,
+		SECTION_SIZE,
+		MEM_TYPE_DEVICE,
+		MEM_ATTR_SHAREABLE,
+		MEM_ACCESS_READWRITE | MEM_ACCESS_NO_EXEC
+	},
+	/* UART register address space mapping */
+	{
+		CONFIG_UART_REGS_BASE,
+		SECTION_SIZE,
+		MEM_TYPE_DEVICE,
+		MEM_ATTR_SHAREABLE,
+		MEM_ACCESS_READWRITE | MEM_ACCESS_NO_EXEC
+	},
+	/* GPIO/Timer register address space mapping */
+	{
+		CONFIG_GPIO_TIM_REGS_BASE,
+		SECTION_SIZE,
+		MEM_TYPE_DEVICE,
+		MEM_ATTR_SHAREABLE,
+		MEM_ACCESS_READWRITE | MEM_ACCESS_NO_EXEC
+	},
+	/* QSPI register address space mapping */
+	{
+		CONFIG_QSPI_REGS_BASE,
+		SECTION_SIZE,
+		MEM_TYPE_DEVICE,
+		MEM_ATTR_SHAREABLE,
+		MEM_ACCESS_READWRITE | MEM_ACCESS_NO_EXEC
+	},
+	/* RNG register address space mapping */
+	{
+		CONFIG_RNG_REGS_BASE,
+		SECTION_SIZE,
+		MEM_TYPE_DEVICE,
+		MEM_ATTR_SHAREABLE,
+		MEM_ACCESS_READWRITE | MEM_ACCESS_NO_EXEC
+	},
+	/* USBH register address space mapping */
+	{
+		CONFIG_USBH_REGS_BASE,
+		SUPER_SECTION_SIZE,
+		MEM_TYPE_DEVICE,
+		MEM_ATTR_SHAREABLE,
+		MEM_ACCESS_READWRITE | MEM_ACCESS_NO_EXEC
+	},
+	/* USBD register address space mapping */
+	{
+		CONFIG_USBD_REGS_BASE,
+		SUPER_SECTION_SIZE,
+		MEM_TYPE_DEVICE,
+		MEM_ATTR_SHAREABLE,
+		MEM_ACCESS_READWRITE | MEM_ACCESS_NO_EXEC
+	},
+	/* SDIO register address space mapping */
+	{
+		CONFIG_SDIO_REGS_BASE,
+		SECTION_SIZE,
+		MEM_TYPE_DEVICE,
+		MEM_ATTR_SHAREABLE,
+		MEM_ACCESS_READWRITE | MEM_ACCESS_NO_EXEC
+	},
+	/* SDIO IDM register address space mapping */
+	{
+		CONFIG_SDIO_IDM_REGS_BASE,
+		SECTION_SIZE,
+		MEM_TYPE_DEVICE,
+		MEM_ATTR_SHAREABLE,
+		MEM_ACCESS_READWRITE | MEM_ACCESS_NO_EXEC
+	},
+	/* SMAU register address space mapping */
+	{
+		CONFIG_SMAU_REGS_BASE,
+		SUPER_SECTION_SIZE,
+		MEM_TYPE_DEVICE,
+		MEM_ATTR_SHAREABLE,
+		MEM_ACCESS_READWRITE | MEM_ACCESS_NO_EXEC
+	},
+	/* DMA0 register address space mapping */
+	{
+		CONFIG_DMA0_REGS_BASE,
+		SUPER_SECTION_SIZE,
+		MEM_TYPE_DEVICE,
+		MEM_ATTR_SHAREABLE,
+		MEM_ACCESS_READWRITE | MEM_ACCESS_NO_EXEC
+	},
+	/* SMC_CFG register address space mapping */
+	{
+		CONFIG_SMC_CFG_REGS_BASE,
+		SUPER_SECTION_SIZE,
+		MEM_TYPE_DEVICE,
+		MEM_ATTR_SHAREABLE,
+		MEM_ACCESS_READWRITE | MEM_ACCESS_NO_EXEC
+	},
+	/* GPV register address space mapping */
+	{
+		CONFIG_GPV_REGS_BASE,
+		SUPER_SECTION_SIZE,
+		MEM_TYPE_DEVICE,
+		MEM_ATTR_SHAREABLE,
+		MEM_ACCESS_READWRITE | MEM_ACCESS_NO_EXEC
+	},
+	/* MEM_CFG register address space mapping */
+	{
+		CONFIG_MEM_CFG_REGS_BASE,
+		SUPER_SECTION_SIZE,
+		MEM_TYPE_DEVICE,
+		MEM_ATTR_SHAREABLE,
+		MEM_ACCESS_READWRITE | MEM_ACCESS_NO_EXEC
+	},
+	/* GIC register address space mapping */
+	{
+		CONFIG_GIC_REGS_BASE,
+		SECTION_SIZE,
+		MEM_TYPE_DEVICE,
+		MEM_ATTR_SHAREABLE,
+		MEM_ACCESS_READWRITE | MEM_ACCESS_NO_EXEC
+	},
+	/* PKA/NVIC register address space mapping */
+	{
+		CONFIG_PKA_NVIC_REGS_BASE,
+		SECTION_SIZE,
+		MEM_TYPE_DEVICE,
+		MEM_ATTR_SHAREABLE,
+		MEM_ACCESS_READWRITE | MEM_ACCESS_NO_EXEC
+	},
+    /* SMC mapped region 16M */
+    {   
+        CONFIG_SMC_BASE_ADDRESS,
+        SUPER_SECTION_SIZE,
+        MEM_TYPE_DEVICE,
+        MEM_ATTR_NON_CACHEABLE,
+        MEM_ACCESS_READWRITE
+    },
+};
+#endif /* CONFIG_ARM_CORE_MMU */
+
+/**
+ *
+ * @brief Perform basic hardware initialization
+ *
+ * Board specific initializations
+ *
+ * @return 0
+ */
+static int soc_init(struct device *arg)
+{
+	ARG_UNUSED(arg);
+
+#ifdef CONFIG_ARM_CORE_MMU
+	arm_core_mmu_init(mem_region_info,
+			  ARRAY_SIZE(mem_region_info),
+			  NULL,
+			  0);
+#endif
+
+	/* Cache initialization */
+	enable_icache();
+#ifdef CONFIG_DATA_CACHE_SUPPORT
+	enable_dcache();
+#endif
+
+	return 0;
+}
+
+SYS_INIT(soc_init, PRE_KERNEL_1, CONFIG_SOC_CONFIG_PRIORITY);

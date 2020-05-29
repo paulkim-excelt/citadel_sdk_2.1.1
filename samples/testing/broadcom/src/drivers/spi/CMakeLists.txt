@@ -1,0 +1,2 @@
+zephyr_library_sources(test_bcm58202_spi_legacy.c)
+zephyr_library_sources(test_bcm58202_spi.c)

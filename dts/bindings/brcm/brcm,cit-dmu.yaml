@@ -1,0 +1,21 @@
+---
+title: Broadcom DMU (Device Management Unit) Common Registers
+version: 0.1
+
+description: >
+    This binding describes the Broadcom DMU
+
+properties:
+    compatible:
+      category: required
+      type: string
+      description: compatible strings
+      constraint: "brcm,cit-dmu"
+
+    reg:
+      category: required
+      type: int
+      description: mmio register space
+      generation: define
+
+...

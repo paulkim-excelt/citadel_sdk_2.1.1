@@ -1,0 +1,6 @@
+obj-y = ztest.o
+
+CFLAGS += -DCONFIG_ZTEST_STACKSIZE=2048
+CFLAGS += -DCONFIG_TEST_EXTRA_STACKSIZE=25000
+
+include $(MPOS_BASE)/Makefile.inc

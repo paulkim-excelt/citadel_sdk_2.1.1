@@ -1,0 +1,1 @@
+zephyr_library_sources_ifdef(CONFIG_BRCM_DRIVER_TIMERS timer_bcm58202.c)

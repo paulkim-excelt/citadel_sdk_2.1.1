@@ -1,0 +1,210 @@
+;/*++
+;
+;Copyright (c) Broadcom Corporation.  All rights reserved.
+;
+;Module Name:
+;
+;    USHWBFDRV.INF
+;
+;Abstract:
+;    Installation inf for ControlVault WBDI Driver
+;
+;--*/
+
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=Biometric
+ClassGuid={53D29EF7-377C-4D14-864B-EB3A85769359}
+Provider=%BRCM%
+DriverVer = 02/07/2019,5.1.13.18
+CatalogFile=wbfcvusbdrv.cat
+
+
+; ================= Class section =====================
+; === Do not need this, since WBF driver is inbox
+
+;[ClassInstall32]
+;AddReg=BiometricClass_RegistryAdd
+
+;[BiometricClass_RegistryAdd]
+;HKR,,ClassDesc,,%ClassName% 
+;HKR,,Icon,,"-201"
+;HKR,,IconPath,0x00010000,"%SYSTEMROOT%\system32\SysClass.dll,-201"
+
+; ================= Device section =====================
+
+[Manufacturer]
+%MfgName%=Broadcom,NTamd64
+
+; For XP and later
+[Broadcom.NTamd64]
+%USB\VID_0A5C&PID_5843.DeviceDesc%=Biometric_Install, CVUSBDRV\WBF_PROVIDER_TOUCH
+%USB\VID_0A5C&PID_5845.DeviceDesc%=Biometric_Install, CVUSBDRV\WBF_PROVIDER_TOUCH
+
+[Biometric_Install.NT]
+CopyFiles=wbfcvusbdrv.Files.Ext,UMDriverCopy,WinBioEngineAdapterCopy,WinBioSensorAdapterCopy,WinBioStorageAdapterCopy
+AddProperty=Device_Properties
+
+[Biometric_Install.NT.hw]
+AddReg=Biometric_Device_AddReg
+AddReg=DriverPlugInAddReg, DatabaseAddReg
+AddReg=UshcvUsb_AddReg
+
+[Device_Properties]
+DeviceIcon,,,,"%10%\system32\SysClass.dll,-201" ; This is where a device specific icon can be specified.
+
+[Biometric_Install.NT.CoInstallers]
+AddReg=CoInstaller_AddReg
+CopyFiles=CoInstaller_CopyFiles
+
+[Biometric_Install.NT.Services]
+AddService=WUDFRd,0x000001fa,WUDFRD_ServiceInstall  
+AddService=wbfcvusbdrv, 0x000001f8, wbfcvusbdrv.AddService ;flag 0x2 sets this as the service for the device
+
+[Biometric_Install.NT.Wdf]
+KmdfService=wbfcvusbdrv, wbfcvusbdrv_wdfsect
+UmdfService="ushwbfdrv", ushwbfdrv_Install
+UmdfServiceOrder=ushwbfdrv
+
+[UshcvUsb_AddReg]
+HKR,,"LowerFilters",0x00010008,"wbfcvusbdrv" ; FLG_ADDREG_TYPE_MULTI_SZ | FLG_ADDREG_APPEND
+
+[ushwbfdrv_Install]
+UmdfLibraryVersion=1.9.0
+DriverCLSID = "{AF7C2C41-FA1C-42d2-9DF3-C9770BE469AE}"
+ServiceBinary = "%12%\UMDF\ushwbfdrv.dll"
+
+[Biometric_Device_AddReg]
+HKR,,"DeviceCharacteristics",0x10001,0x0100     ; Use same security checks on relative opens
+HKR,,"Security",,"D:P(A;;GA;;;BA)(A;;GA;;;SY)"  ; Allow generic-all access to Built-in administrators and Local system
+HKR,,"Exclusive",0x10001,1
+
+[DriverPlugInAddReg]
+; Default Broadcom Advanced Configuration
+HKR,WinBio\Configurations,DefaultConfiguration,,"0"
+HKR,WinBio\Configurations,VirtualSecureConfiguration,0x00010001,0x00000001
+HKR,WinBio\Configurations\0,DatabaseId,,"EFBD8DB5-53E4-4794-B9AD-8AFD1745B9CA"  ; Unique database GUID
+HKR,WinBio\Configurations\0,SensorAdapterBinary,,"BrcmSensorAdapter.dLL"      	; Broadcom sensor adapter.
+HKR,WinBio\Configurations\0,EngineAdapterBinary,,"BrcmEngineAdapter.dll"        ; Broadcom engine adapter
+HKR,WinBio\Configurations\0,SensorMode,0x10001,2                                ; Basic - 1, Advanced - 2
+HKR,WinBio\Configurations\0,StorageAdapterBinary,,"BrcmStorageAdapter.dLL"    	; Broadcom storage adapter
+HKR,WinBio\Configurations\0,SystemSensor,0x10001,1                              ; UAC/Winlogon - 1
+HKR,WinBio\Configurations\1,DatabaseId,,"63AA34C9-8BF2-40B7-98A1-675215A0A6B3"
+HKR,WinBio\Configurations\1,SensorAdapterBinary,,"BrcmSensorAdapter.dLL"      	; Broadcom sensor adapter.
+HKR,WinBio\Configurations\1,EngineAdapterBinary,,"BrcmEngineAdapter.dll"        ; Broadcom engine adapter
+HKR,WinBio\Configurations\1,StorageAdapterBinary,,"BrcmStorageAdapter.dLL"    	; Broadcom storage adapter
+HKR,WinBio\Configurations\1,VsmEngineAdapterBinary,,"WinBioVsmNullAdapter"
+HKR,WinBio\Configurations\1,VsmSensorAdapterBinary,,"WinBioVsmNullAdapter"
+HKR,WinBio\Configurations\1,VsmStorageAdapterBinary,,"WinBioVsmNullAdapter"
+HKR,WinBio\Configurations\1,SensorMode,0x00010001,0x00000002            
+HKR,WinBio\Configurations\1,SystemSensor,0x00010001,0x00000001         
+HKR,WinBio\Configurations\1,VirtualSecureMode,0x00010001,0x00000001
+
+[DatabaseAddReg]
+HKLM,System\CurrentControlSet\Services\WbioSrvc\Databases\{EFBD8DB5-53E4-4794-B9AD-8AFD1745B9CA},BiometricType,0x00010001,0x00000008
+HKLM,System\CurrentControlSet\Services\WbioSrvc\Databases\{EFBD8DB5-53E4-4794-B9AD-8AFD1745B9CA},Attributes,0x00010001,0x00000001
+HKLM,System\CurrentControlSet\Services\WbioSrvc\Databases\{EFBD8DB5-53E4-4794-B9AD-8AFD1745B9CA},Format,,"00000000-0000-0000-0000-000000000000"
+HKLM,System\CurrentControlSet\Services\WbioSrvc\Databases\{EFBD8DB5-53E4-4794-B9AD-8AFD1745B9CA},InitialSize,0x00010001,0x00000020
+HKLM,System\CurrentControlSet\Services\WbioSrvc\Databases\{EFBD8DB5-53E4-4794-B9AD-8AFD1745B9CA},AutoCreate,0x00010001,0x00000001
+HKLM,System\CurrentControlSet\Services\WbioSrvc\Databases\{EFBD8DB5-53E4-4794-B9AD-8AFD1745B9CA},AutoName,0x00010001,0x00000001
+HKLM,System\CurrentControlSet\Services\WbioSrvc\Databases\{EFBD8DB5-53E4-4794-B9AD-8AFD1745B9CA},FilePath,,""
+HKLM,System\CurrentControlSet\Services\WbioSrvc\Databases\{EFBD8DB5-53E4-4794-B9AD-8AFD1745B9CA},ConnectionString,,""
+;
+HKLM,System\CurrentControlSet\Services\WbioSrvc\Databases\{63AA34C9-8BF2-40B7-98A1-675215A0A6B3},BiometricType,0x00010001,0x00000008
+HKLM,System\CurrentControlSet\Services\WbioSrvc\Databases\{63AA34C9-8BF2-40B7-98A1-675215A0A6B3},Attributes,0x00010001,0x00000001
+HKLM,System\CurrentControlSet\Services\WbioSrvc\Databases\{63AA34C9-8BF2-40B7-98A1-675215A0A6B3},Format,,"00000000-0000-0000-0000-000000000000"
+HKLM,System\CurrentControlSet\Services\WbioSrvc\Databases\{63AA34C9-8BF2-40B7-98A1-675215A0A6B3},InitialSize,0x00010001,0x00000020
+HKLM,System\CurrentControlSet\Services\WbioSrvc\Databases\{63AA34C9-8BF2-40B7-98A1-675215A0A6B3},AutoCreate,0x00010001,0x00000001
+HKLM,System\CurrentControlSet\Services\WbioSrvc\Databases\{63AA34C9-8BF2-40B7-98A1-675215A0A6B3},AutoName,0x00010001,0x00000001
+HKLM,System\CurrentControlSet\Services\WbioSrvc\Databases\{63AA34C9-8BF2-40B7-98A1-675215A0A6B3},FilePath,,""
+HKLM,System\CurrentControlSet\Services\WbioSrvc\Databases\{63AA34C9-8BF2-40B7-98A1-675215A0A6B3},ConnectionString,,""
+
+[wbfcvusbdrv_wdfsect]
+KmdfLibraryVersion=1.9
+
+[WUDFRD_ServiceInstall]
+DisplayName = %WudfRdDisplayName%
+ServiceType = 1
+StartType = 3
+ErrorControl = 1
+ServiceBinary = %12%\WUDFRd.sys
+LoadOrderGroup = Base
+
+[wbfcvusbdrv.AddService]
+DisplayName    = %wbfcvusbdrv.SvcDesc%
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_DEMAND_START
+ErrorControl   = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %10%\System32\Drivers\wbfcvusbdrv.sys
+AddReg         = wbfcvusbdrv.AddReg
+LoadOrderGroup = Base
+
+[wbfcvusbdrv.AddReg]
+HKR, Parameters\Wdf, VerboseOn,       0x00010001, 1
+HKR, Parameters\Wdf, VerifierOn,      0x00010001, 1
+HKR, Parameters\Wdf, DbgBreakOnError, 0x00010001, 1
+
+[wbfcvusbdrv.Files.Ext]
+wbfcvusbdrv.sys
+
+[UMDriverCopy]
+ushwbfdrv.dll,,,0x4000
+
+[WinBioEngineAdapterCopy]
+BrcmEngineAdapter.dll,,,0x4000
+
+[WinBioSensorAdapterCopy]
+BrcmSensorAdapter.dll,,,0x4000
+
+[WinBioStorageAdapterCopy]
+BrcmStorageAdapter.dll,,,0x4000
+
+[SourceDisksNames]
+1=%Disk_Description%,,,
+
+[SourceDisksFiles]
+wbfcvusbdrv.sys = 1
+ushwbfdrv.dll=1
+WudfUpdate_01009.dll=1
+WdfCoInstaller01009.dll=1
+BrcmEngineAdapter.dll=1
+BrcmSensorAdapter.dll=1
+BrcmStorageAdapter.dll=1
+
+;-------------- Destination Directories installation
+
+[DestinationDirs]
+UMDriverCopy=12,UMDF ; copy to drivers\umdf
+DefaultDestDir = 12
+CoInstaller_CopyFiles = 11
+WinBioEngineAdapterCopy=11,WinBioPlugins 	; copy to \Windows\System32\WinBioPlugins
+WinBioSensorAdapterCopy=11,WinBioPlugins 	; copy to \Windows\System32\WinBioPlugins
+WinBioStorageAdapterCopy=11,WinBioPlugins 	; copy to \Windows\System32\WinBioPlugins
+
+[SignatureAttributes]
+BrcmSensorAdapter.dll = SignatureAttributes.WindowsHello
+BrcmEngineAdapter.dll = SignatureAttributes.WindowsHello
+BrcmStorageAdapter.dll = SignatureAttributes.WindowsHello
+
+[SignatureAttributes.WindowsHello]
+WindowsHello = true
+
+[CoInstaller_CopyFiles]
+WudfUpdate_01009.dll,,,0x4000
+WdfCoInstaller01009.dll,,,0x4000
+
+[CoInstaller_AddReg]
+HKR,,CoInstallers32,0x00010000,"WudfUpdate_01009.dll","WdfCoInstaller01009.dll,WdfCoInstaller"
+
+;---------------------------------------------------------------;
+
+[Strings]
+BRCM="Broadcom Corporation"
+MfgName="Broadcom Corporation"
+Disk_Description="Biometric_Install Installation Disk"
+wbfcvusbdrv.SvcDesc="WBF Control Vault"
+ClassName="Biometric Devices"
+USB\VID_0A5C&PID_5843.DeviceDesc="Control Vault w/ Fingerprint Touch Sensor"
+USB\VID_0A5C&PID_5845.DeviceDesc="Control Vault w/ Fingerprint Touch Sensor"
+WudfRdDisplayName="Windows Driver Foundation - User-mode Driver Framework Reflector"

@@ -1,0 +1,139 @@
+# Kconfig - Citadel SVK 58201 board configuration
+#
+# Copyright (c) 2017 Broadcom Limited
+#
+# SPDX-License-Identifier: Apache-2.0
+
+if BOARD_SERP_CP
+
+config BOARD
+	default "serp_cp"
+
+config LCD_SPI_PORT
+	string
+	default "spi4"
+
+config SPI4_ENABLE
+	def_bool y
+
+config SPI1_USES_MFIO_6_TO_9
+	def_bool n
+
+config SPI2_USES_MFIO_10_TO_13
+	def_bool n
+
+config SPI3_USES_MFIO_14_TO_17
+	def_bool n
+
+config SPI4_USES_MFIO_18_TO_21
+	def_bool n
+
+config CAM_I2C_PORT
+	int
+	default 0
+
+if UART_NS16550
+
+config UART_NS16550_PORT_0
+	def_bool y
+
+if UART_NS16550_PORT_0
+
+config UART_NS16550_PORT_0_NAME
+	string
+	default "UART_0"
+config UART_NS16550_PORT_0_IRQ_PRI
+	int
+	default 0
+config UART_NS16550_PORT_0_BAUD_RATE
+	int
+	default 115200
+config UART_NS16550_PORT_0_OPTIONS
+	int
+	default 0
+
+endif # UART_NS16550_PORT_0
+
+config UART_NS16550_PORT_1
+	def_bool n
+
+if UART_NS16550_PORT_1
+
+config UART_NS16550_PORT_1_NAME
+	string
+	default "UART_1"
+config UART_NS16550_PORT_1_IRQ_PRI
+	int
+	default 0
+config UART_NS16550_PORT_1_BAUD_RATE
+	int
+	default 9600
+config UART_NS16550_PORT_1_OPTIONS
+	int
+	default 0
+
+endif # UART_NS16550_PORT_1
+
+config UART_NS16550_PORT_2
+	def_bool n
+
+if UART_NS16550_PORT_2
+
+config UART_NS16550_PORT_2_NAME
+	string
+	default "UART_2"
+config UART_NS16550_PORT_2_IRQ_PRI
+	int
+	default 0
+config UART_NS16550_PORT_2_BAUD_RATE
+	int
+	default 9600
+config UART_NS16550_PORT_2_OPTIONS
+	int
+	default 0
+
+endif # UART_NS16550_PORT_2
+
+config UART_NS16550_PORT_3
+	def_bool n
+
+if UART_NS16550_PORT_3
+
+config UART_NS16550_PORT_3_NAME
+	string
+	default "UART_3"
+config UART_NS16550_PORT_3_IRQ_PRI
+	int
+	default 0
+config UART_NS16550_PORT_3_BAUD_RATE
+	int
+	default 9600
+config UART_NS16550_PORT_3_OPTIONS
+	int
+	default 0
+
+endif # UART_NS16550_PORT_3
+
+endif # UART_NS16550
+
+if BRCM_DRIVER_DMA
+
+config DMA_IRQ_PRI
+	int
+	default 0
+
+endif
+
+# Add any uart pin routing and other configurations here
+# Example below.
+#if UART_BCM5820X
+#
+#config UART_BCM5820X_GPIO_TX_PIN
+#	default 9
+#
+#config UART_BCM5820X_GPIO_RX_PIN
+#	default 11
+#
+#endif # UART_BCM5820X
+
+endif # BOARD_CITADEL_SVK_58201

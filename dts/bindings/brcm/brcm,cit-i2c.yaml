@@ -1,0 +1,21 @@
+---
+title: Broadcom I2C Controller
+version: 0.1
+
+description: >
+    This binding describes the Broadcom I2C Nodes
+
+properties:
+    compatible:
+      category: required
+      type: string
+      description: compatible strings
+      constraint: "brcm,cit-i2c"
+
+    reg:
+      category: required
+      type: int
+      description: mmio register space
+      generation: define
+
+...

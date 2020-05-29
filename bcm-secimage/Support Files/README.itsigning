@@ -1,0 +1,25 @@
+IT provides two public keys for the signing process.  A ROT key and a CHAIN key.  The ROT is the root of trust
+and the CHAIN key is the 'signing key' analagous to the public keys from rsa_eng_key.pem and rsa_sbi1.pem
+
+To create a production image, you will want to :
+Be sure your sbi binary was built with the proper -Ttext address (see Makefile in simple_sbi directory) so that it will know how to run when the SBL jumps to it.
+
+run the signing steps that make the most sense to you.  Fix up customer ids etc to match SOTP values, fix up your key names.
+
+Produces Production Image that validates with dauth (you can get the dauth from the output of the secimage sbi step).
+prod_key_sign_dauth_step1.sh
+prod_key_sign_dauth_step2.sh
+prod_key_sign_dauth_step3.sh
+(For Cygnus B0, use CygB0_prod_key_sign_dauth_step1.sh, CygB0_prod_key_sign_dauth_step2.sh and CygB0_prod_key_sign_dauth_step3.sh)
+
+Produces AB Pending Image which validates against bootromHeader public key.
+prod_key_sign_step1.sh
+prod_key_sign_step2.sh
+prod_key_sign_step3.sh
+(For Cygnus B0, use CygB0_prod_key_sign_step1.sh, CygB0_prod_key_sign_step2.sh and CygB0_prod_key_sign_step3.sh)
+
+These are scripts that either use secimage standalone, or mimic the IT process using BRCM keys
+eng_key_sign_dauth_onestep.sh
+eng_key_sign_dauth.sh
+eng_key_sign_onestep.sh
+eng_key_sign.sh

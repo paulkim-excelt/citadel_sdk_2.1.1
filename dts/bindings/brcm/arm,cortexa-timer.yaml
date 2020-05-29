@@ -1,0 +1,20 @@
+---
+title: ARM CORTEX A TIMER
+version: 0.1
+
+description: >
+    This binding gives a base representation of the ARM CORTEX A TIMER
+
+properties:
+    compatible:
+      type: string
+      category: required
+      description: compatible strings
+      constraint: "arm,cortexa-timer"
+
+    interrupts:
+      type: array
+      category: required
+      description: required interrupts
+      generation: define
+...

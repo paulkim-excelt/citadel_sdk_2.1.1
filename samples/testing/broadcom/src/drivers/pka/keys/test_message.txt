@@ -1,0 +1,87 @@
+#! /bin/sh
+
+############
+## RSA 2K ##
+############
+# This is a sample message that will be signed by RSA 2K using the private key in private_key.pem
+# and the signature wll be verified using the corresponding public key in public_key.pem
+
+# The commands used to generate these keys are below for reference
+openssl genpkey -algorithm RSA -out private_key.pem -pkeyopt rsa_keygen_bits:2048
+openssl rsa -pubout -in private_key.pem -out public_key.pem
+
+# Commands to create modulus and private exponent binary blobs
+openssl rsa -in private_key.pem -noout -text | \
+	sed -n '/modulus:/,/publicExponent:/{//!p}' | \
+	sed -E 's/:/ /g' | xxd -r -p  > modulus.bin
+openssl rsa -in private_key.pem -noout -text | \
+	sed -n '/privateExponent:/,/prime1:/{//!p}' | \
+	sed -E 's/:/ /g' | xxd -r -p > priv_exp.bin
+
+# The Signature will be generated using the command below. This command uses pkcs15 for the hash generation
+# This command generates the digest for the message using sha256
+openssl dgst -sha256 -binary -out sha256.hash test_message.txt
+xxd -p -c 16 sha256.hash
+# This command generates the signature for the hash generated
+openssl rsautl -sign -pkcs -in sha256.hash -inkey private_key.pem -out signature.bin
+xxd -p -c 16 signature.bin
+
+# And the Signature will be verified using the command below
+# This command generates the input (sha256 hash in this case) from the signature and the publick key
+openssl rsautl -verify -pkcs -in signature.bin -inkey public_key.pem -pubin -out out.sha256.hash
+xxd -p -c 16 out.sha256.hash
+# This command compares the output hash generated and the input hash that was signed for a match
+[[ $(diff -u sha256.hash out.sha256.hash | wc -l) == "0" ]] && echo Verification Successful
+
+#################
+## ECDSA P-256 ##
+#################
+# The command to generate ECDSA P-256 Public/Private Key pair is below
+openssl ecparam -genkey -name prime256v1 -noout -out private_key_ecdsa_p256.pem
+openssl ec -in private_key_ecdsa_p256.pem -pubout -out public_key_ecdsa_p256.pem
+
+# The commands to get binary versions of private and public keys
+openssl ec -in private_key_ecdsa_p256.pem -noout -text 2>&1 | \
+	sed -n '/priv:/,/pub:/{//!p}' | sed -E 's/:/ /g' | \
+	xxd -r -p > private_key_ecdsa_p256.bin
+openssl ec -in public_key_ecdsa_p256.pem -pubin -noout -text 2>&1 | \
+	sed -n '/pub:/,/ASN1/{//!p}' | sed -E 's/:/ /g' | \
+	xxd -r -p > public_key_ecdsa_p256.bin
+
+# The command to sign the test message using the private key is below
+openssl dgst -sha256 -sign private_key_ecdsa_p256.pem -out signature_ecdsa_p256.bin test_message.txt
+# Split signature to R and S components
+openssl asn1parse -inform DER -in signature_ecdsa_p256.bin | \
+	grep INTEGER | cut -d":" -f4 | head -1 | xxd -r -p > ecdsa_p256_sig_r.bin
+openssl asn1parse -inform DER -in signature_ecdsa_p256.bin | \
+	grep INTEGER | cut -d":" -f4 | tail -1 | xxd -r -p > ecdsa_p256_sig_s.bin
+
+# The command to verify the signature of the message using the public key is below
+openssl dgst -sha256 -verify public_key_ecdsa_p256.pem -signature signature_ecdsa_p256.bin test_message.txt
+
+#################
+## ECDSA P-521 ##
+#################
+# The command to generate ECDSA P-521 Public/Private Key pair is below
+openssl ecparam -genkey -name secp521r1 -noout -out private_key_ecdsa_p521.pem
+openssl ec -in private_key_ecdsa_p521.pem  -pubout -out public_key_ecdsa_p521.pem
+
+# The commands to get binary versions of private and public keys
+openssl ec -in private_key_ecdsa_p521.pem -noout -text 2>&1 | \
+	sed -n '/priv:/,/pub:/{//!p}' | sed -E 's/:/ /g' | \
+	xxd -r -p > private_key_ecdsa_p521.bin
+openssl ec -in public_key_ecdsa_p521.pem -pubin -noout -text 2>&1 | \
+	sed -n '/pub:/,/ASN1/{//!p}' | sed -E 's/:/ /g' | \
+	xxd -r -p > public_key_ecdsa_p521.bin
+
+# The command to sign the test message using the private key is below
+openssl dgst -sha512 -sign private_key_ecdsa_p521.pem -out signature_ecdsa_p521.bin test_message.txt
+# Split signature to R and S components
+openssl asn1parse -inform DER -in signature_ecdsa_p521.bin | \
+	grep INTEGER | cut -d":" -f4 | head -1 | xxd -r -p > ecdsa_p521_sig_r.bin
+openssl asn1parse -inform DER -in signature_ecdsa_p521.bin | \
+	grep INTEGER | cut -d":" -f4 | tail -1 | xxd -r -p > ecdsa_p521_sig_s.bin
+
+# The command to verify the signature of the message using the public key is below
+openssl dgst -sha512 -verify public_key_ecdsa_p521.pem -signature signature_ecdsa_p521.bin test_message.txt 
+

@@ -1,0 +1,1 @@
+zephyr_library_sources(dmu_bcm58202.c)

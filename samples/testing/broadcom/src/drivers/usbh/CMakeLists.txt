@@ -1,0 +1,1 @@
+zephyr_library_sources_ifdef(CONFIG_BRCM_DRIVER_USBH test_usbh_zephyr.c)

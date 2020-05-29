@@ -1,0 +1,81 @@
+Release Date: Mon Aug 12 04:53:04 EDT 2019
+
+commit 23e7e04dd2a6293b1d88af282fae413166f8e161
+Author: Yendapally Reddy Dhananjaya Reddy <yendapally.reddy@broadcom.com>
+Date:   Sun Aug 11 12:00:50 2019 +0530
+
+    Updated git submodules
+    
+    Project: citadel-drivers citadel_mpos_2.1.x 0066a4547f0ad3b7f44b9c9e11f507b9e016d078
+    
+    BCM5820x: Fix memory leak in adc msr
+    
+    Fix memory leak in adc msr
+    
+    Bug: CS-4558
+    Change-Id: I1616ffe8c5df66b47e815ad1da5b764c4160345b
+    Reviewed-on: http://gerrit-ccxsw.broadcom.net/98612
+    Reviewed-by: Anil Ranjan Roy Samanta Singhar <anil.singhar@broadcom.com>
+    Reviewed-by: Ccxsw Build <ccxsw.build@broadcom.com>
+    Tested-by: Ccxsw Build <ccxsw.build@broadcom.com>
+    (cherry picked from commit 4885acd7d15c23ab9705b869de169693440d6f67)
+    Reviewed-on: http://gerrit-ccxsw.broadcom.net/98617
+    Reviewed-by: Reddy Dhananjaya Reddy Yendapalli <yendapally.reddy@broadcom.com>
+    Tested-by: Reddy Dhananjaya Reddy Yendapalli <yendapally.reddy@broadcom.com>
+
+Entering 'apps/ut/tests'
+commit 443f6ea7d91f472e6c9c2d4bc8085dacf8f1516f
+Author: Anil R Samanta Singhar <anil.singhar@broadcom.com>
+Date:   Mon Aug 5 14:22:52 2019 +0530
+
+    BCM5820x: SPI Slave Interrupt Mode (non-DMA case) Tests
+    
+    Reduced delays.
+    
+    Bug: CS-4590
+    Change-Id: I8047ec6441589daae25196e2668f758106457031
+    Reviewed-on: http://gerrit-ccxsw.broadcom.net/98086
+    Reviewed-by: Ccxsw Build <ccxsw.build@broadcom.com>
+    Tested-by: Ccxsw Build <ccxsw.build@broadcom.com>
+    Reviewed-by: Sivasekar Palanisamy <sivasekar.palanisamy@broadcom.com>
+    (cherry picked from commit 4fe388c00c3269bd2d169abbd24a2af6bf20fb4e)
+    Reviewed-on: http://gerrit-ccxsw.broadcom.net/98097
+Entering 'drivers/broadcom'
+commit 0066a4547f0ad3b7f44b9c9e11f507b9e016d078
+Author: Yendapally Reddy Dhananjaya Reddy <yendapally.reddy@broadcom.com>
+Date:   Sun Aug 11 12:00:50 2019 +0530
+
+    BCM5820x: Fix memory leak in adc msr
+    
+    Fix memory leak in adc msr
+    
+    Bug: CS-4558
+    Change-Id: I1616ffe8c5df66b47e815ad1da5b764c4160345b
+    Reviewed-on: http://gerrit-ccxsw.broadcom.net/98612
+    Reviewed-by: Anil Ranjan Roy Samanta Singhar <anil.singhar@broadcom.com>
+    Reviewed-by: Ccxsw Build <ccxsw.build@broadcom.com>
+    Tested-by: Ccxsw Build <ccxsw.build@broadcom.com>
+    (cherry picked from commit 4885acd7d15c23ab9705b869de169693440d6f67)
+    Reviewed-on: http://gerrit-ccxsw.broadcom.net/98617
+    Reviewed-by: Reddy Dhananjaya Reddy Yendapalli <yendapally.reddy@broadcom.com>
+    Tested-by: Reddy Dhananjaya Reddy Yendapalli <yendapally.reddy@broadcom.com>
+Entering 'include/broadcom'
+commit aefafe26e59ccf4c2a2c2a7c3090e2452e85b729
+Author: Anil R Samanta Singhar <anil.singhar@broadcom.com>
+Date:   Wed Jul 17 12:04:38 2019 +0530
+
+    BCM5820x: Missing 500MHz Clock settings
+    
+    Changes in include headers to facilitate testing and characterization
+    of different CPU frequencies for 500MHz parts. Includes API for reading out
+    max_vco OTP value.
+    
+    Bug: CS-4586
+    Change-Id: I95335b0d80253e1fbdd01cc10a1ae7ede5428c22
+    Reviewed-on: http://gerrit-ccxsw.broadcom.net/96744
+    Tested-by: Ccxsw Build <ccxsw.build@broadcom.com>
+    Reviewed-by: Reddy Dhananjaya Reddy Yendapalli <yendapally.reddy@broadcom.com>
+    (cherry picked from commit 169f56d6ea3f8218d9eeebaa2b72b561c029eb5b)
+    Reviewed-on: http://gerrit-ccxsw.broadcom.net/98081
+    Reviewed-by: Anil Ranjan Roy Samanta Singhar <anil.singhar@broadcom.com>
+    Tested-by: Anil Ranjan Roy Samanta Singhar <anil.singhar@broadcom.com>

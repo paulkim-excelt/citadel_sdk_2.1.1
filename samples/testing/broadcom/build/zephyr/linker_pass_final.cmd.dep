@@ -1,0 +1,28 @@
+zephyr/linker_pass_final.cmd: \
+ /home/paulkim/work/sdk/citadel/soc/arm/brcm_bcm5820x/linker.ld \
+ /home/paulkim/work/sdk/citadel/include/arch/arm/cortex_a/scripts/linker.ld \
+ /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/zephyr/include/generated/autoconf.h \
+ /home/paulkim/work/sdk/citadel/include/linker/sections.h \
+ /home/paulkim/work/sdk/citadel/include/linker/section_tags.h \
+ /home/paulkim/work/sdk/citadel/include/toolchain.h \
+ /home/paulkim/work/sdk/citadel/include/toolchain/gcc.h \
+ /home/paulkim/work/sdk/citadel/include/toolchain/common.h \
+ /home/paulkim/work/sdk/citadel/lib/libc/minimal/include/stdbool.h \
+ /home/paulkim/work/sdk/citadel/include/generated_dts_board.h \
+ /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/zephyr/include/generated/generated_dts_board_unfixed.h \
+ /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/zephyr/include/generated/generated_dts_board_fixups.h \
+ /home/paulkim/work/sdk/citadel/include/linker/linker-defs.h \
+ /home/paulkim/work/sdk/citadel/include/misc/util.h \
+ /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/zephyr/include/generated/offsets.h \
+ /home/paulkim/work/sdk/citadel/include/linker/linker-tool.h \
+ /home/paulkim/work/sdk/citadel/include/linker/linker-tool-gcc.h \
+ /home/paulkim/work/sdk/citadel/include/linker/rel-sections.ld \
+ /home/paulkim/work/sdk/citadel/include/linker/common-rom.ld \
+ /home/paulkim/work/sdk/citadel/include/linker/priv_stacks-rom.ld \
+ /home/paulkim/work/sdk/citadel/include/linker/kobject-rom.ld \
+ /home/paulkim/work/sdk/citadel/include/linker/common-ram.ld \
+ /home/paulkim/work/sdk/citadel/include/linker/priv_stacks.ld \
+ /home/paulkim/work/sdk/citadel/include/linker/kobject.ld \
+ /home/paulkim/work/sdk/citadel/include/linker/priv_stacks-noinit.ld \
+ /home/paulkim/work/sdk/citadel/include/linker/intlist.ld \
+ /home/paulkim/work/sdk/citadel/include/linker/debug-sections.ld

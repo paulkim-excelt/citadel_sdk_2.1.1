@@ -1,0 +1,55 @@
+# Kconfig - BRCM Unicam drvier configuration options
+
+#
+# Copyright (c) 2018 Broadcom Inc.
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+#
+# BRCM Unicam driver options
+
+config USE_STATIC_MEMORY_FOR_BUFFER
+	bool
+	default y
+	depends on BRCM_DRIVER_UNICAM
+	help
+	  Enable usage of statically allocated memory for image
+	  buffers.
+
+# Select one of the three unicam physical interfaces supported
+config UNICAM_PHYS_INTERFACE_CSI
+	bool "Select the CSI 2 (MIPI) camera interface"
+	default y
+	depends on BRCM_DRIVER_UNICAM
+	help
+	  Choose csi-2 physical interface for unicam
+
+config UNICAM_PHYS_INTERFACE_CCP
+	bool "Select the CCP2 (Serial) camera interface"
+	default n
+	depends on BRCM_DRIVER_UNICAM
+	help
+	  Choose ccp-2 physical interface for unicam
+
+config UNICAM_PHYS_INTERFACE_CPI
+	bool "Select the CPI (Parallel) camera interface"
+	default n
+	depends on BRCM_DRIVER_UNICAM
+	help
+	  Choose cpi physical interface for unicam
+
+config CAM_I2C_PORT
+	int "Select which I2C port is used for camera control"
+	default 1
+	depends on BRCM_DRIVER_UNICAM
+	help
+	  Select which I2C port number controls camera, SVK = 1, SERP = 0
+
+# Camera module option - Select one
+config LI_V024M_CAMERA
+	bool "Select Leopard Imaging's V024M camera"
+	default y
+	depends on BRCM_DRIVER_UNICAM
+	help
+	  Choose Leopard imaging's V024M camera module

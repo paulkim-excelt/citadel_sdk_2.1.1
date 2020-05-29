@@ -1,0 +1,1 @@
+zephyr_library_sources(sdio_bcm5820x.c)

@@ -1,0 +1,26 @@
+---
+title: ARM SP804 TIMER
+version: 0.1
+
+description: >
+    This binding gives a base representation of the ARM SP804 TIMER
+
+properties:
+    compatible:
+      type: string
+      category: required
+      description: compatible strings
+      constraint: "arm,sp804-timer"
+
+    reg:
+      type: array
+      description: mmio register space
+      generation: define
+      category: required
+
+    interrupts:
+      type: array
+      category: required
+      description: required interrupts
+      generation: define
+...

@@ -1,0 +1,1 @@
+zephyr_library_sources(pwm_bcm58602.c)

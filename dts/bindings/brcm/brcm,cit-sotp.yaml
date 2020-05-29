@@ -1,0 +1,21 @@
+---
+title: Broadcom SOTP Controller register map
+version: 0.1
+
+description: >
+    This binding describes the Broadcom SOTP controller registers
+
+properties:
+    compatible:
+      category: required
+      type: string
+      description: compatible strings
+      constraint: "brcm,cit-sotp"
+
+    reg:
+      category: required
+      type: int
+      description: mmio register space
+      generation: define
+
+...

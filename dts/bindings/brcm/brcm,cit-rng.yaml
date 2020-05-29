@@ -1,0 +1,21 @@
+---
+title: Broadcom RNG hardware map
+version: 0.1
+
+description: >
+    This binding describes the Broadcom RNG hardware registers
+
+properties:
+    compatible:
+      category: required
+      type: string
+      description: compatible strings
+      constraint: "brcm,cit-rng"
+
+    reg:
+      category: required
+      type: int
+      description: mmio register space
+      generation: define
+
+...

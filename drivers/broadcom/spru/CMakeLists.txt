@@ -1,0 +1,1 @@
+zephyr_library_sources(spru_bbl_access.c)

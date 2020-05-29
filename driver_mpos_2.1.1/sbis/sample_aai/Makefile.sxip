@@ -1,0 +1,66 @@
+# Common make configuration flags
+include ../make.cfg
+
+# Target name
+TARGET = sample_aai
+
+
+# Memory layout
+# 	1. The entire flash from offset 0x20000 (top 128 K reserved for S2BL) is 
+#	   available for text and rodata (0x63000000 - 0x637FFFFF)
+#	2. The complete 1MB of SRAM is available for data/heap/stack/bss for flash
+#	   images
+
+# Top 128 KB is reserved for S2BL (Stage 2 boot loader)
+CFLAGS += -DDEFAULT_FLASH_SIZE=0x800000 # 8 MB
+
+# For secure xip demo, the AAI is prepended only with the SCD header
+# No TOC or SBI is added
+CFLAGS += -DSCD_HEADER_SIZE=0x100 # 256 bytes
+CFLAGS += -DRO_MEM_START=FLASH_START+DEF_AAI_IMAGE_OFFSET+SCD_HEADER_SIZE
+CFLAGS += -DRO_MEM_LENGTH=DEFAULT_FLASH_SIZE+FLASH_START-\(RO_MEM_START\)
+CFLAGS += -DRW_MEM_START=SRAM_START
+CFLAGS += -DRW_MEM_LENGTH=SRAM_SIZE
+
+# Linker flags
+LDFLAGS += -Bstatic
+LDSFILE = $(CWD)/$(TARGET).lds
+LDFILE = $(BUILDDIR)/$(TARGET).ld
+
+# Required only for SBI Debug build
+CFLAGS += -DSBI_DEBUG -DCONFIG_DEBUG
+
+# App sources
+APP_SRCS = $(CWD)/sample_aai.c
+
+# App objects
+APP_OBJS = $(subst $(MPOS_BASE),$(BUILDDIR),$(APP_SRCS:.c=.o))
+
+.PHONY: help
+
+all: $(BUILDDIR)/$(TARGET)
+
+$(BUILDDIR)/$(TARGET): subdirs $(LDFILE) $(APP_OBJS)
+	$(Q)echo "[Linking ... $(notdir $@)]"
+	$(Q)$(LD) -o $@ $(APP_OBJS) `find $(subst $(MPOS_BASE),$(BUILDDIR),$(SUBDIRS)) -type f -name '*.o'` \
+        `find $(subst $(MPOS_BASE),$(BUILDDIR),$(SUBDIRS)) -type f -name '*.a'` $(LDFLAGS)
+	$(Q)$(OBJDUMP) -d $@ > $@.lst
+	$(Q)$(OBJCOPY) -O binary $@ $@.bin
+	$(Q)cp -f $@.bin $(CWD)
+	$(Q)$(MPOS_BASE)/sbis/tools/scripts/mkaai.py $(TARGET).bin
+
+$(LDFILE): $(LDSFILE)
+	$(Q)$(CC) $(CFLAGS) -E -P -o $@ -x c-header $<
+
+clean: 
+	$(Q)echo [Cleaning ... ]
+	$(Q)-rm -rf $(BUILDDIR)
+	$(Q)-rm -f $(TARGET).bin *.bin *.xip *.noxip
+
+help:
+	$(Q)echo "make                # for small image (<=256K) that runs in"
+	$(Q)echo "                    # scratch ram, same as make target=ram"
+	$(Q)echo "make target=flash   # for big image (>256K) that runs in flash"
+
+include $(MPOS_BASE)/sbis/driver.cfg
+include $(MPOS_BASE)/Makefile.inc

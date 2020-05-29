@@ -1,0 +1,2 @@
+ccache /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-ar qc libdrivers__serial.a  CMakeFiles/drivers__serial.dir/uart_ns16550.c.obj
+ccache /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-ranlib libdrivers__serial.a

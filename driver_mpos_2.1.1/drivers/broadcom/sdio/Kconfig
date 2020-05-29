@@ -1,0 +1,18 @@
+# Kconfig - BRCM SDIO driver configuration options
+
+#
+# Copyright (c) 2019 Broadcom Inc.
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+#
+# BRCM SDIO driver options
+#
+
+config SDIO_DMA_MODE
+	bool "Enable DMA mode for SD transfers"
+	default y
+	depends on BRCM_DRIVER_SDIO
+	help
+		Enable DMA mode for SD data transfers

@@ -1,0 +1,9 @@
+config SOC_BCM5820X
+	bool "Broadcom 5820X"
+	select CPU_HAS_FPU
+	select ARM_CORE_MMU
+	select CORTEX_A_TIMER
+	select ARM_GIC_400
+	select CPU_CORTEX_A7
+	select CPU_CORTEX_A
+	select BOOT_LOADER_IN_ARM_STATE

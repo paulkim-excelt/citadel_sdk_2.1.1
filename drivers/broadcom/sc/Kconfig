@@ -1,0 +1,21 @@
+# Kconfig - BRCM Smart card drvier configuration options
+
+#
+# Copyright (c) 2018 Broadcom Inc.
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+#
+# BRCM Smart card driver options
+#
+
+config EMVCO_TEST
+	bool "Enable EMVCo test"
+	default n
+	depends on BRCM_DRIVER_SCC
+	select UART_LINE_CTRL
+	select UART_NS16550_LINE_CTRL
+	select UART_CONSOLE_DEBUG_SERVER_HOOKS
+	help
+		Enable EMVCo test

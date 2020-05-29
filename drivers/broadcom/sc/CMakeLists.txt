@@ -1,0 +1,6 @@
+zephyr_library_sources(sc_cit.c)
+zephyr_library_sources(sc_cit_main.c)
+zephyr_library_sources(sc_cit_priv.c)
+zephyr_library_sources(sc_acos2.c)
+zephyr_library_sources(sc_cit_atrpriv.c)
+zephyr_library_sources(sc_bcm58202_clk.c)

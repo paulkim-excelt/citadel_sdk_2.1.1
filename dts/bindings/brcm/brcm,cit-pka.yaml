@@ -1,0 +1,21 @@
+---
+title: Broadcom PKA hardware map
+version: 0.1
+
+description: >
+    This binding describes the Broadcom PKA controller registers
+
+properties:
+    compatible:
+      category: required
+      type: string
+      description: compatible strings
+      constraint: "brcm,cit-pka"
+
+    reg:
+      category: required
+      type: int
+      description: mmio register space
+      generation: define
+
+...

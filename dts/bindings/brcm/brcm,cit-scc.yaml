@@ -1,0 +1,21 @@
+---
+title: Broadcom Smart card Controller
+version: 0.1
+
+description: >
+    This binding describes the Broadcom Smart card controller Nodes
+
+properties:
+    compatible:
+      category: required
+      type: string
+      description: compatible strings
+      constraint: "brcm,cit-scc"
+
+    reg:
+      category: required
+      type: int
+      description: mmio register space
+      generation: define
+
+...

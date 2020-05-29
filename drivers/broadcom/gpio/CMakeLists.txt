@@ -1,0 +1,1 @@
+zephyr_library_sources(gpio_bcm58202.c)

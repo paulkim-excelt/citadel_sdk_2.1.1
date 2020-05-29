@@ -1,0 +1,7 @@
+zephyr_library_sources_ifdef(CONFIG_BRCM_DRIVER_SCC test_sc_main.c)
+zephyr_library_sources_ifdef(CONFIG_BRCM_DRIVER_SCC test_sc_infra.c)
+zephyr_library_sources_ifdef(CONFIG_BRCM_DRIVER_SCC test_sc_states.c)
+zephyr_library_sources_ifdef(CONFIG_BRCM_DRIVER_SCC emv2000/test_emv2000_t0.c)
+zephyr_library_sources_ifdef(CONFIG_BRCM_DRIVER_SCC emv2000/test_emv2000_t1.c)
+zephyr_library_sources_ifdef(CONFIG_BRCM_DRIVER_SCC emv2000/test_emv2000_tests.c)
+zephyr_library_sources_ifdef(CONFIG_BRCM_DRIVER_SCC test_sc_card.c)

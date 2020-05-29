@@ -1,0 +1,90 @@
+# Kconfig - BRCM SPI drvier configuration options
+
+#
+# Copyright (c) 2018 Broadcom Inc.
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+#
+# BRCM SPI driver options
+#
+
+config SPI_DMA_MODE
+	bool "Enable DMA mode for SPI transfers"
+	default y
+	depends on BRCM_DRIVER_SPI
+	help
+		Enable DMA mode for SPI data transfers
+
+config SPI1_ENABLE
+	bool "Enabled SPI 1 interface"
+	default y
+	depends on BRCM_DRIVER_SPI
+	help
+		Enable SPI1 interface
+
+config SPI1_USES_MFIO_6_TO_9
+	bool "Route SPI signals to MFIO 6 .. 9"
+	default y
+	depends on SPI1_ENABLE
+	help
+		This flag enables SPI1 interface to be routed to
+		MFIO pins 6 - 9. With this flag disable they
+		are routed to MFIO pins 53 - 56.
+
+config SPI2_ENABLE
+	bool "Enabled SPI 2 interface"
+	default y
+	depends on BRCM_DRIVER_SPI
+	help
+		Enable SPI2 interface
+
+config SPI2_USES_MFIO_10_TO_13
+	bool "Route SPI signals to MFIO 10 .. 13"
+	default y
+	depends on SPI2_ENABLE
+	help
+		This flag enables SPI2 interface to be routed to
+		MFIO pins 10 - 13. With this flag disable they
+		are routed to MFIO pins 57 - 60.
+
+config SPI3_ENABLE
+	bool "Enabled SPI 3 interface"
+	default y
+	depends on BRCM_DRIVER_SPI
+	help
+		Enable SPI3 interface
+
+config SPI3_USES_MFIO_14_TO_17
+	bool "Route SPI signals to MFIO 14 .. 17"
+	default y
+	depends on SPI3_ENABLE
+	help
+		This flag enables SPI3 interface to be routed to
+		MFIO pins 14 - 17. With this flag disable they
+		are routed to MFIO pins 61 - 64.
+
+config SPI4_ENABLE
+	bool "Enabled SPI 4 interface"
+	default y
+	depends on BRCM_DRIVER_SPI
+	help
+		Enable SPI4 interface
+
+config SPI4_USES_MFIO_18_TO_21
+	bool "Route SPI signals to MFIO 18 .. 21"
+	default y
+	depends on SPI4_ENABLE
+	help
+		This flag enables SPI4 interface to be routed to
+		MFIO pins 18 - 21. With this flag disable they
+		are routed to MFIO pins 65 - 68.
+
+config SPI5_ENABLE
+	bool "Enabled SPI 5 interface"
+	default y
+	depends on BRCM_DRIVER_SPI
+	help
+		Enable SPI5 interface
+

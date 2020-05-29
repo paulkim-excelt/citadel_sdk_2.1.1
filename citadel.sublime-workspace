@@ -1,0 +1,263 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "samples/testing/broadcom/src/test.c",
+			"settings":
+			{
+				"buffer_size": 10852,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 146.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/paulkim/work/sdk/citadel",
+		"/home/paulkim/work/sdk/citadel/samples",
+		"/home/paulkim/work/sdk/citadel/samples/testing",
+		"/home/paulkim/work/sdk/citadel/samples/testing/broadcom",
+		"/home/paulkim/work/sdk/citadel/samples/testing/broadcom/src"
+	],
+	"file_history":
+	[
+		"/home/paulkim/work/sdk/scopio/BCM8956X_REL_0.3_Org/Source/BCM8956X_REL_0.3_src/bootloader/bcm8956x/chip/common/bl_xcvr_cfg.c",
+		"/home/paulkim/work/sdk/scopio/BCM8956X_REL_0.3_Org/Source/BCM8956X_REL_0.3_src/ethernet/drivers/transceiver/lib/ethxcvr_drv.c",
+		"/home/paulkim/work/sdk/scopio/BCM8956X_REL_0.3_Org/Source/BCM8956X_REL_0.3_src/ethernet/common/comms/os/erika/comms_osil.c",
+		"/home/paulkim/work/sdk/scopio/BCM8956X_REL_0.3_Org/Source/BCM8956X_REL_0.3_src/bootloader/build/bcm8956x/bcm8956x.mk",
+		"/home/paulkim/work/sdk/scopio/BCM8956X_REL_0.3_Org/Source/BCM8956X_REL_0.3_src/applications/avb_switch/bcm89564g.xml",
+		"/home/paulkim/work/sdk/scopio/BCM8956X_REL_0.3_Org/Source/BCM8956X_REL_0.3_src/ethernet/drivers/transceiver/lib/bcm8956x/rgmii.c",
+		"/home/paulkim/work/sdk/scopio/BCM8956X_REL_0.3_Org/Source/BCM8956X_REL_0.3_src/ethernet/drivers/transceiver/lib/bcm8956x/ethxcvr_platform.c",
+		"/home/paulkim/work/sdk/scopio/BCM8956X_REL_0.3_Org/Source/BCM8956X_REL_0.3_src/ethernet/drivers/transceiver/lib/ethxcvr.c",
+		"/home/paulkim/work/sdk/scopio/BCM8956X_REL_0.3_Org/Source/BCM8956X_REL_0.3_src/ethernet/drivers/switch/lib/switch_drv.c",
+		"/home/paulkim/work/sdk/scopio/BCM8956X_REL_0.3_Org/Source/BCM8956X_REL_0.3_src/bootloader/control/bl_switch_access.c",
+		"/home/paulkim/work/sdk/scopio/BCM8956X_REL_0.3_Org/Source/BCM8956X_REL_0.3_src/bootloader/control/bl_main.c",
+		"/home/paulkim/work/sdk/scopio/BCM8956X_REL_0.3_Org/Source/BCM8956X_REL_0.3_src/bootloader/control/bl_xcvr_cfg.c",
+		"/home/paulkim/work/sdk/scopio/BCM8956X_REL_0.3_Org/Source/BCM8956X_REL_0.3_src/bootloader/bcm8956x/board/common/bl_board.c",
+		"/home/paulkim/work/sdk/scopio/BCM8956X_REL_0.3_Org/Source/BCM8956X_REL_0.3_src/bootloader/bcm8956x/board/bcm89564g_evk/bl_board.c"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 100.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"mii2_config",
+			"RGMII_REGS",
+			"sgmii",
+			"comms_osil.c",
+			"PLL2_CTRL3",
+			"BL_REG_WRITE16",
+			"0x4a480000",
+			"0x4014d",
+			"0x4014",
+			"io_ctl",
+			"MDC",
+			":\n",
+			"BL_IO_RDB_REG",
+			"io_ctl",
+			"BL_REG_WRITE32",
+			"RGMII_REGS",
+			"io_ctl",
+			"rgmii2",
+			"RGMII2_CTL",
+			"rgmii2_ctl",
+			"RGMII_REGS",
+			"BL_ENABLE_PCIE_GEN1",
+			"Ulog",
+			"SwitchDrv_WriteReg",
+			"BL_Switch_WriteReg",
+			"SwitchDrv_WriteReg",
+			"BL_BCM8956X_SetXcvrConfig",
+			"BL_Switch_WriteReg",
+			"RGMII_DeInit",
+			"ETHXCVR_PlatformGetFnTblsCntxt"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "samples/testing/broadcom/src/test.c",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 10852,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								9016,
+								9016
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3456.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 118.0
+	},
+	"pinned_build_system": "",
+	"project": "citadel.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 440.0,
+		"last_filter": "rgmii2_ctl",
+		"selected_items":
+		[
+			[
+				"rgmii2_ctl",
+				"IO_RGMII2_CTL_TYPE"
+			],
+			[
+				"",
+				"ETHXCVR_PlatformGetFnTblsCntxt"
+			]
+		],
+		"width": 1246.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 349.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

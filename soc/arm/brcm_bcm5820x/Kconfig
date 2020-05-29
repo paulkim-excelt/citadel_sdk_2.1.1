@@ -1,0 +1,21 @@
+# Kconfig - BCM5820X platform configuration options
+
+#
+# Copyright (c) 2017 Broadcom Limited
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+if SOC_BCM5820X
+
+config RAM_RESERVED_FOR_POWER_MGMT
+	int
+	# Omit prompt to signify "hidden" option
+	default 64
+	help
+	This config flag specifies the RAM reserved for use by the boot loader
+	when the system supports low power mode enter/exit. This memory is expected
+	to be used by the boot loader and will not be preserved after a deep
+	sleep enter/exit sequence
+
+endif # SOC_BCM5820X

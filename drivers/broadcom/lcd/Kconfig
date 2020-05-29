@@ -1,0 +1,43 @@
+# Kconfig - BRCM LCD driver configuration options
+
+#
+# Copyright (c) 2018 Broadcom Inc.
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+#
+# BRCM LCD driver options
+#
+
+config LCD_SPI_MODE
+	bool "Enable SPI mode for LCD"
+	default n
+	depends on BRCM_DRIVER_LCD
+	help
+		This flag enables LCD in SPI (serial) mode. If this
+		flag is not enabled, LCD will be configured to work
+		in Parallel (8-bit) mode usinge SMC interface.
+
+if LCD_SPI_MODE
+config LCD_SPI_DEV
+	string "LCD SPI Dev interface"
+	default "spi1"
+	help
+		Select the SPI interface used for LCD.
+
+config LCD_SPI_MODE_DC_GPIO
+	int "GPIO pin used for data/command selection in SPI mode"
+	default 2
+	help
+		Select the GPIO used for data/command selection
+		on the LCD in SPI mode
+endif
+
+config LCD_8080_MODE_DC_GPIO
+	int "GPIO pin used for data/command selection in 8080 mode"
+	default 12
+	depends on BRCM_DRIVER_LCD
+	help
+		Select the GPIO used for data/command selection
+		on the LCD in parallel mode

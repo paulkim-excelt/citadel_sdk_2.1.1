@@ -1,0 +1,27 @@
+---
+title: Broadcom Secure Protection Logic
+version: 0.1
+
+description: >
+    This binding describes the Broadcom Secure Protection Logic
+
+properties:
+    compatible:
+      category: required
+      type: string
+      description: compatible strings
+      constraint: "brcm,cit-spl"
+
+    reg:
+      category: required
+      type: int
+      description: mmio register space
+      generation: define
+
+    interrupts:
+      type: array
+      category: required
+      description: required interrupts
+      generation: define
+
+...

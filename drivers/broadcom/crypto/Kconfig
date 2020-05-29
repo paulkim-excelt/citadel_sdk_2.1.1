@@ -1,0 +1,25 @@
+# Kconfig - BRCM CRYPTO drvier configuration options
+
+#
+# Copyright (c) 2018 Broadcom Inc.
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+#
+# BRCM crypto driver options
+#
+
+config CRYPTO_DPA
+	bool "DPA"
+	default y
+	depends on BRCM_DRIVER_CRYPTO
+	help
+		This flag enables DPA
+
+config CRYPTO_BRCM_MBEDTLS
+	bool "BRCM MBEDTLS support"
+	default n
+	depends on BRCM_DRIVER_CRYPTO && MBEDTLS
+	help
+		This flag enables BRCM mbedtls support

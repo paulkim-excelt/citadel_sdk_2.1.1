@@ -1,0 +1,7 @@
+identifier: citadel_svk_58202
+name: Citadel SVK 58202
+type: mcu
+arch: arm
+toolchain:
+  - zephyr
+  - gccarmemb

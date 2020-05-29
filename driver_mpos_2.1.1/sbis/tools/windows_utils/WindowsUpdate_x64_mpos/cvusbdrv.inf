@@ -1,0 +1,253 @@
+;/*++
+;
+;Copyright (c) Broadcom Corporation.  All rights reserved.
+;
+;Module Name:
+;
+;    CVUSBDRV.INF
+;
+;Abstract:
+;    Installation inf for Dell ControlVault USB Driver
+;
+;--*/
+
+[Version]
+DriverPackageType=PlugAndPlay
+Signature="$WINDOWS NT$"
+Class=CVAULT
+ClassGuid={09E9A11D-CCB2-45ae-9BE8-65C263E60491}
+Provider=%ProviderName%
+DriverVer = 02/24/2019,5.1.16.27
+CatalogFile=CVAULT.cat
+
+
+; ================= Class section =====================
+
+[ClassInstall32]
+Addreg=CvaultClassReg     
+
+[CvaultClassReg]
+HKR,,ClassDesc,,%CVaultClassName% 
+HKR,,Icon,,-5
+HKR,,EnumPropPages32,,"bcmcvproppage.dll,CVPropPageProvider"
+
+; ================= Device section =====================
+
+[Manufacturer]
+%MfgName%=Dell,NTamd64
+
+; For XP and later
+[Dell.NTamd64]
+%USB\VID_0A5C&PID_5840.DeviceDesc%=cvusbdrv.Dev, USB\VID_0A5C&PID_5840
+%USB\VID_0A5C&PID_5840.DeviceDesc%=cvusbdrv.Dev, USB\VID_0A5C&PID_5840&REV_0102
+%USB\VID_0A5C&PID_5841.DeviceDesc%=cvusbdrv.Dev, USB\VID_0A5C&PID_5841
+%USB\VID_0A5C&PID_5841.DeviceDesc%=cvusbdrv.Dev, USB\VID_0A5C&PID_5841&REV_0102
+%USB\VID_0A5C&PID_5842.DeviceDesc%=cvusbdrv.Dev, USB\VID_0A5C&PID_5842&REV_0101&MI_00
+%USB\VID_0A5C&PID_5842.DeviceDesc%=cvusbdrv.Dev, USB\VID_0A5C&PID_5842&REV_0102
+%USB\VID_0A5C&PID_5843.DeviceDesc%=cvusbdrv.Dev_Touch, USB\VID_0A5C&PID_5843&REV_0101&MI_00
+%USB\VID_0A5C&PID_5843.DeviceDesc%=cvusbdrv.Dev_Touch, USB\VID_0A5C&PID_5843&REV_0102
+%USB\VID_0A5C&PID_5844.DeviceDesc%=cvusbdrv.Dev, USB\VID_0A5C&PID_5844&REV_0101&MI_00
+%USB\VID_0A5C&PID_5845.DeviceDesc%=cvusbdrv.Dev_Touch, USB\VID_0A5C&PID_5845&REV_0101&MI_00
+
+
+[cvusbdrv.Dev.NT]
+CopyFiles=cvusbdrv.Files.Ext, cv_sys_components_copy, cv_fw_copy, cv_bin_components_copy
+;Install other driver packages
+CopyINF = ushwbfdrv.inf, bcmnfcusb.inf, bcmnfcser.inf
+
+[cvusbdrv.Dev_Touch.NT]
+CopyFiles=cvusbdrv.Files.Ext, cv_sys_components_copy, cv_fw_copy, cv_bin_components_copy
+;Install other driver packages
+CopyINF = ushwbfdrv.inf, bcmnfcusb.inf, bcmnfcser.inf
+
+[cvusbdrv.Dev_Swipe.NT]
+CopyFiles=cvusbdrv.Files.Ext, cv_sys_components_copy, cv_fw_copy, cv_bin_components_copy
+;Install other driver packages
+CopyINF = ushwbfdrv.inf, bcmnfcusb.inf, bcmnfcser.inf
+
+[cvusbdrv.Dev.NT.HW]
+AddReg=Dev.NT.AddReg
+
+[cvusbdrv.Dev_Touch.NT.HW]
+AddReg=Dev_Touch.NT.AddReg
+; USH Overrider REG goes here.
+
+[cvusbdrv.Dev_Swipe.NT.HW]
+AddReg=Dev_Swipe.NT.AddReg
+
+[Dev.NT.AddReg]
+
+[Dev_Touch.NT.AddReg]
+HKR,,"WBF_TOUCH_CONFIGURED",0x10001, 1
+
+[Dev_Swipe.NT.AddReg]
+HKR,,"WBF_SWIPE_CONFIGURED",0x10001, 1
+
+[cvusbdrv.Dev.NT.Services]
+Addservice = cvusbdrv, 2, cvusbdrv.AddService
+;USH Upgrade service. Start after the service is installed 0x00000800 (SPSVCSINST_STARTSERVICE)
+Addservice = ushupgradesvc, 0x00000800, ushupgradesvc.AddService
+;CV Host Services
+Addservice = hostcontrolsvc, 0x00000800, hostcontrolsvc.AddService
+Addservice = hoststoragesvc, 0x00000800, hoststoragesvc.AddService
+
+[cvusbdrv.Dev_Swipe.NT.Services]
+Addservice = cvusbdrv, 2, cvusbdrv.AddService
+;USH Upgrade service. Start after the service is installed 0x00000800 (SPSVCSINST_STARTSERVICE)
+Addservice = ushupgradesvc, 0x00000800, ushupgradesvc.AddService
+;CV Host Services
+Addservice = hostcontrolsvc, 0x00000800, hostcontrolsvc.AddService
+Addservice = hoststoragesvc, 0x00000800, hoststoragesvc.AddService
+
+[cvusbdrv.Dev_Touch.NT.Services]
+Addservice = cvusbdrv, 2, cvusbdrv.AddService
+;USH Upgrade service. Start after the service is installed 0x00000800 (SPSVCSINST_STARTSERVICE)
+Addservice = ushupgradesvc, 0x00000800, ushupgradesvc.AddService
+;CV Host Services
+Addservice = hostcontrolsvc, 0x00000800, hostcontrolsvc.AddService
+Addservice = hoststoragesvc, 0x00000800, hoststoragesvc.AddService
+
+[cvusbdrv.AddService]
+DisplayName    = %cvusbdrv.SvcDesc%
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_DEMAND_START
+ErrorControl   = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %10%\System32\Drivers\cvusbdrv.sys
+AddReg         = cvusbdrv.AddReg
+LoadOrderGroup = Base
+
+[ushupgradesvc.AddService]
+DisplayName    = %ushupgradesvc.SvcDispName%
+Description    = %ushupgradesvc.SvcDesc%
+ServiceType    = 0x00000010         ; SERVICE_WIN32_OWN_PROCESS
+StartType      = 2                  ; SERVICE_AUTO_START
+ErrorControl   = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary  = """%11%\bcmUshUpgradeService.exe"""
+LoadOrderGroup = Base
+
+[hostcontrolsvc.AddService]
+DisplayName    = %hostcontrolsvc.SvcDispName%
+Description    = %hostcontrolsvc.SvcDesc%
+ServiceType    = 0x00000010         ; SERVICE_WIN32_OWN_PROCESS
+StartType      = 2                  ; SERVICE_AUTO_START
+ErrorControl   = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary  = """%11%\bcmHostControlService.exe"""
+LoadOrderGroup = SmartCardGroup
+
+[hoststoragesvc.AddService]
+DisplayName    = %hoststoragesvc.SvcDispName%
+Description    = %hoststoragesvc.SvcDesc%
+ServiceType    = 0x00000010         ; SERVICE_WIN32_OWN_PROCESS
+StartType      = 2                  ; SERVICE_AUTO_START
+ErrorControl   = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary  = """%11%\bcmHostStorageService.exe"""
+LoadOrderGroup = SmartCardGroup
+
+[cvusbdrv.AddReg]
+HKR, Parameters\Wdf, VerboseOn,       0x00010001, 1
+HKR, Parameters\Wdf, VerifierOn,      0x00010001, 1
+HKR, Parameters\Wdf, DbgBreakOnError, 0x00010001, 1
+
+
+[cvusbdrv.Files.Ext]
+cvusbdrv.sys
+
+[cv_sys_components_copy]
+bcmbipdll.dll
+bcmcvproppage.dll
+
+[cv_fw_copy]
+bcmCitadel_1.otp ;CV Firmware binaries
+bcmCitadel_7.otp
+bcm_cv_clearscd.bin
+bcm_cv_current_version.txt
+bcmsbiCitadelA0_1.otp
+bcmsbiCitadelA0_7.otp
+bcmsbiCitadelA0_Unassigned.otp
+
+[cv_bin_components_copy]
+bcmlms.dll
+bcmCVUsrIfc.dll
+bcmCVRemoteServer.exe
+bcmHostControlService.exe
+bcmHostStorageService.exe
+bcmFirmwareUpgradeProgress.exe
+bcmUshUpgradeService.exe ;CV Firmware Upgrade Service
+
+[SourceDisksNames]
+1=%Disk_Description%,,,
+
+[SourceDisksFiles]
+cvusbdrv.sys = 1
+WdfCoInstaller01009.dll=1 ; make sure the number matches with SourceDisksNames
+;Ush Upgrade Service
+bcmUshUpgradeService.exe = 1, .\bin
+;CV Firmware related files
+bcmCitadel_1.otp = 1, .\firmware
+bcmCitadel_7.otp = 1, .\firmware
+bcm_cv_clearscd.bin = 1, .\firmware
+bcm_cv_current_version.txt = 1, .\firmware
+bcmsbiCitadelA0_1.otp = 1, .\firmware
+bcmsbiCitadelA0_7.otp = 1, .\firmware
+bcmsbiCitadelA0_Unassigned.otp = 1, .\firmware
+bcmbipdll.dll = 1, .\bin
+bcmcvproppage.dll = 1, .\bin
+bcmlms.dll = 1, .\bin
+bcmCVUsrIfc.dll = 1, .\bin
+bcmCVRemoteServer.exe = 1, .\bin
+bcmHostControlService.exe = 1, .\bin
+bcmHostStorageService.exe = 1, .\bin
+bcmFirmwareUpgradeProgress.exe = 1, .\bin
+
+[DestinationDirs]
+cvusbdrv.Files.Ext = 12
+CoInstaller_CopyFiles = 11
+
+cv_sys_components_copy = 11 ; Windows\System32
+cv_fw_copy = 11 ; Windows\System32
+cv_bin_components_copy = 11 ; Windows\System32
+
+;-------------- WDF Coinstaller installation
+
+[cvusbdrv.Dev.NT.CoInstallers]
+AddReg=CoInstaller_AddReg
+CopyFiles=CoInstaller_CopyFiles
+
+[CoInstaller_CopyFiles]
+WdfCoInstaller01009.dll
+
+[CoInstaller_AddReg]
+HKR,,CoInstallers32,0x00010000, "WdfCoInstaller01009.dll,WdfCoInstaller"
+
+[cvusbdrv.Dev.NT.Wdf]
+KmdfService = cvusbdrv, cvusbdrv_wdfsect
+[cvusbdrv_wdfsect]
+KmdfLibraryVersion = 1.9
+
+[cvusbdrv.Dev_Touch.NT.Wdf]
+KmdfService = cvusbdrv, cvusbdrv_wdfsect
+
+[cvusbdrv.Dev_Swipe.NT.Wdf]
+KmdfService = cvusbdrv, cvusbdrv_wdfsect
+
+;---------------------------------------------------------------;
+
+[Strings]
+ProviderName="Dell"
+MfgName="Dell"
+Disk_Description="Dell ControlVault(cvusbdrv) Installation Disk"
+USB\VID_0A5C&PID_5842.DeviceDesc="Dell ControlVault w/o Fingerprint Sensor"
+USB\VID_0A5C&PID_5843.DeviceDesc="Dell ControlVault w/ Fingerprint Touch Sensor"
+USB\VID_0A5C&PID_5844.DeviceDesc="Dell ControlVault w/o Fingerprint Touch Sensor"
+USB\VID_0A5C&PID_5845.DeviceDesc="Dell ControlVault w/ Fingerprint Touch Sensor"
+USB\VID_0A5C&PID_5840.DeviceDesc="Dell ControlVault SBL"
+USB\VID_0A5C&PID_5841.DeviceDesc="Dell ControlVault SBI"
+cvusbdrv.SvcDesc="Dell ControlVault"
+CVaultClassName="ControlVault Device"
+PROG_FILES_INST_DIR="Broadcom"
+ushupgradesvc.SvcDispName="Credential Vault Upgrade Service"
+ushupgradesvc.SvcDesc="USH Upgrade Service for upgrading all USH components"
+hostcontrolsvc.SvcDispName="Credential Vault Host Control Service"
+hostcontrolsvc.SvcDesc="Host Control Service for Fingerprint Processing"
+hoststoragesvc.SvcDispName="Credential Vault Host Storage"
+hoststoragesvc.SvcDesc="Host Storage Service for Persisting CV Objects into Hard drive"

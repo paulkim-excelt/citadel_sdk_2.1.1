@@ -1,0 +1,121 @@
+SecImageWin\Distribution
+------------------------
+Please copy the files in system32 folder to system32 directory.
+
+The PLL boot frequency setting in the Unauthenticated header can be modified by editing the value of the lower 4 bits of Reserved field in the configuration file "unauth.cfg"
+
+AB Pending - RSA 2048 (using ROM key as COT)
+--------------------------------------------
+SecImageWin chain -out chain.out -rsa -key rsa_eng_key.pem 0x0 0xABCD 0x01 -key rsa_sbi1.pem 0x0 0xABCD 0x01 -key rsa_sbi2.pem 0x0 0xABCD 0x01 -key rsa_sbi3.pem 0x0 0xABCD 0x01
+creates chain of trust file (chain.out) [parameters are CID 0x0, ProductID 0xABCD, CustomerRevisionID 0x01]
+
+SecImageWin sbi -out fabi.bin -config unauth.cfg -chain chain.out -rsa rsa_sbi3.pem -bl simple_sbi.bin -depth 3 -SBIConfiguration 0x10 -SBIRevisionID 0x10 -CustomerID 0x0 -ProductID 0xABCD -CustomerRevisionID 0x01 -SBIUsage 0x0
+creates the SBI binary (fabi.bin). simple_sbi.bin is the bootloader binary. 
+
+AB Production - RSA2048 DAUTH
+-----------------------------
+SecImageWin chain -out chain.out -rsa -key rsa_dauth2048_key.pem 0x60000007 0xABCD 0x01 -key rsa_sbi1.pem 0x60000007 0xABCD 0x01 -key rsa_sbi2.pem 0x60000007 0xABCD 0x01 -key rsa_sbi3.pem 0x60000007 0xABCD 0x01
+creates chain of trust file (chain.out)
+
+SecImageWin sbi -out fabi.bin -config unauth.cfg -dauth -public rsa_dauth2048_key_pub.pem -chain chain.out -rsa rsa_sbi3.pem -bl simple_sbi.bin -depth 3 -SBIConfiguration 0x10 -SBIRevisionID 0x10 -CustomerID 0x60000007 -ProductID 0xABCD -CustomerRevisionID 0x01 -BroadcomRevisionID 0x0001 -SBIUsage 0x0
+creates the SBI binary (fabi.bin). simple_sbi.bin is the bootloader binary. 
+
+AB Production - RSA2048 DAUTH (with encryption - AES 128) - This needs AES key in OTP
+-------------------------------------------------------------------------------------
+
+SecImageWin chain -out chain.out -rsa -key rsa_dauth2048_key.pem 0x60000007 0xABCD 0x01 -key rsa_sbi1.pem 0x60000007 0xABCD 0x01 -key rsa_sbi2.pem 0x60000007 0xABCD 0x01 -key rsa_sbi3.pem 0x60000007 0xABCD 0x01
+creates chain of trust file (chain.out)
+
+SecImageWin sbi -out fabi.bin -config unauth.cfg -dl kaes128 -AESKeySize 16 -iv ivaes -dauth -public rsa_dauth2048_key_pub.pem -chain chain.out -rsa rsa_sbi3.pem -bl test_sbi.bin -depth 3 -SBIConfiguration 0x110 -SBIRevisionID 0x10 -CustomerID 0x60000007 -ProductID 0xABCD -CustomerRevisionID 0x01 -BroadcomRevisionID 0x0001 -SBIUsage 0x0 -v
+
+
+AB Production - Symmetric Authentication HMAC-SHA256
+----------------------------------------------------
+SecImageWin sbi -out fabi.bin -config unauth.cfg -hmac khmacsha256 -bl simple_sbi.bin -SBIConfiguration 0x40 -SBIRevisionID 0x10 -CustomerID 0x60000007 -ProductID 0xABCD -CustomerRevisionID 0x01 -SBIUsage 0x0 -v
+(-v is verbose)
+
+
+AB Production - Symmetric Authentication HMAC-SHA256 AES128 FIRST 128 bits
+--------------------------------------------------------------------------
+SecImageWin sbi -out fabi.bin -config unauth.cfg -dl kaes128 -AESKeySize 16 -iv ivaes -hmac khmacsha256 -bl simple_sbi.bin -SBIConfiguration 0x140 -SBIRevisionID 0x10 -CustomerID 0x60000007 -ProductID 0xABCD -CustomerRevisionID 0x01 -SBIUsage 0x0 -v
+
+
+AB Production - Symmetric Authentication HMAC-SHA256 AES128 SECOND 128 bits
+---------------------------------------------------------------------------
+SecImageWin sbi -out fabi.bin -config unauth.cfg -dl kaes128 -AESKeySize 16 -iv ivaes -hmac khmacsha256 -bl simple_sbi.bin -SBIConfiguration 0x240 -SBIRevisionID 0x10 -CustomerID 0x60000007 -ProductID 0xABCD -CustomerRevisionID 0x01 -SBIUsage 0x0 -v
+
+
+AB Production - Symmetric Authentication HMAC-SHA256 AES128 FIRST 128 bits (DBA)
+--------------------------------------------------------------------------------
+SecImageWin sbi -out fabi.bin -config unauth.cfg -dl kaes128 -AESKeySize 16 -iv ivaes -hmac khmacsha256 -bl simple_sbi.bin -SBIConfiguration 0x540 -SBIRevisionID 0x10 -CustomerID 0x60000007 -ProductID 0xABCD -CustomerRevisionID 0x01 -SBIUsage 0x0 -v
+
+
+AB Production - Symmetric Authentication HMAC-SHA256 AES128 SECOND 128 bits (DBA)
+---------------------------------------------------------------------------------
+SecImageWin sbi -out fabi.bin -config unauth.cfg -dl kaes128 -AESKeySize 16 -iv ivaes -hmac khmacsha256 -bl simple_sbi.bin -SBIConfiguration 0x640 -SBIRevisionID 0x10 -CustomerID 0x60000007 -ProductID 0xABCD -CustomerRevisionID 0x01 -SBIUsage 0x0 -v
+
+
+AB Production - Symmetric Authentication HMAC-SHA256 AES256
+-----------------------------------------------------------
+SecImageWin sbi -out fabi.bin -config unauth.cfg -dl kaes256 -AESKeySize 32 -iv ivaes -hmac khmacsha256 -bl simple_sbi.bin -SBIConfiguration 0x340 -SBIRevisionID 0x10 -CustomerID 0x60000007 -ProductID 0xABCD -CustomerRevisionID 0x01 -SBIUsage 0x0 -v
+
+
+AB Production - Symmetric Authentication HMAC-SHA256 AES256 (DBA)
+-----------------------------------------------------------------
+SecImageWin sbi -out fabi.bin -config unauth.cfg -dl kaes256 -AESKeySize 32 -iv ivaes -hmac khmacsha256 -bl simple_sbi.bin -SBIConfiguration 0x740 -SBIRevisionID 0x10 -CustomerID 0x60000007 -ProductID 0xABCD -CustomerRevisionID 0x01 -SBIUsage 0x0 -v
+
+
+AB Production - Symmetric Authentication HMAC-SHA256 AES256 (DBA) with BBL KEK
+------------------------------------------------------------------------------
+SecImageWin sbi -out fabi.bin -config unauth.cfg -dl kaes256 -AESKeySize 32 -iv ivaes -hmac khmacsha256 -bl simple_sbi.bin -SBIConfiguration 0x740 -SBIRevisionID 0x10 -CustomerID 0x60000007 -ProductID 0xABCD -CustomerRevisionID 0x01 -SBIUsage 0x0 -bblkey BBLkey.bin -v
+
+
+AB Production - RSA4096 DAUTH
+-----------------------------
+SecImageWin chain -out chain_4096.out -rsa -key rsa_dauth4096_key.pem 0x60000007 0xABCD 0x01 -key rsa_sbi1_4096.pem 0x60000007 0xABCD 0x01 -key rsa_sbi2_4096.pem 0x60000007 0xABCD 0x01 -key rsa_sbi3_4096.pem 0x60000007 0xABCD 0x01
+creates chain of trust file (chain.out)
+
+SecImageWin sbi -out fabi_4096.bin -config unauth.cfg -dauth -public rsa_dauth4096_key_pub.pem -chain chain_4096.out -rsa rsa_sbi3_4096.pem -bl simple_sbi.bin -depth 3 -SBIConfiguration 0x10 -SBIRevisionID 0x10 -CustomerID 0x60000007 -ProductID 0xABCD -CustomerRevisionID 0x01 -BroadcomRevisionID 0x0001 -SBIUsage 0x0
+creates the SBI binary (fabi_4096.bin). simple_sbi.bin is the bootloader binary.
+
+AB Pending - ECDSA P256 (using ROM key as COT)
+----------------------------------------------
+SecImageWin chain -out chainecdsa.out -ecdsa -key ec_eng_key.pem 0x0 0xABCD 0x01 -key ec_sbi1.pem 0x0 0xABCD 0x01 -key ec_sbi2.pem 0x0 0xABCD 0x01 -key ec_sbi3.pem 0x0 0xABCD 0x01 > chainecdsa.txt
+creates chain of trust file (chainecdsa.out) [parameters are CID 0x0, ProductID 0xABCD, CustomerRevisionID 0x01]
+
+SecImageWin sbi -out fabi_ecdsa.bin -config unauth.cfg -chain chainecdsa.out -ecdsa ec_sbi3.pem -bl simple_sbi.bin -depth 3 -SBIConfiguration 0x20 -SBIRevisionID 0x10 -CustomerID 0x0 -ProductID 0xABCD -CustomerRevisionID 0x01 -SBIUsage 0x0 -v > fabi_ecdsa.txt
+
+AB Production - ECDSA P256
+--------------------------
+SecImageWin chain -out chainecdsa_dauth.out -ecdsa -key ec_dauth.pem 0x60000007 0xABCD 0x01 -key ec_sbi1.pem 0x60000007 0xABCD 0x01 -key ec_sbi2.pem 0x60000007 0xABCD 0x01 -key ec_sbi3.pem 0x60000007 0xABCD 0x01 > chainecdsa_dauth.txt
+creates chain of trust file (chainecdsa_dauth.out)
+
+SecImageWin sbi -out fabi_ecdsa_dauth.bin -config unauth.cfg -dauth -public ec_dauth_pub.pem -chain chainecdsa_dauth.out -ecdsa ec_sbi3.pem -bl test_sbi.bin -depth 3 -SBIConfiguration 0x20 -SBIRevisionID 0x10 -CustomerID 0x60000007 -ProductID 0xABCD -CustomerRevisionID 0x01 -BroadcomRevisionID 0x0001 -SBIUsage 0x0 -v > fabi_ecdsa_dauth.txt
+
+RSA 2048 MFG_DEBUG (using ROM key as COT)
+-----------------------------------------
+SecImageWin chain -out chain.out -rsa -key rsa_eng_key.pem 0x600FFFFE 0x0 0x0 -key rsa_sbi1.pem 0x600FFFFE 0x0 0x0 -key rsa_sbi2.pem 0x600FFFFE 0x0 0x0 -key rsa_sbi3.pem 0x600FFFFE 0x0 0x0
+creates chain of trust file (chain.out) [parameters are CID 0x600FFFFE, ProductID 0x0, CustomerRevisionID 0x0]
+
+SecImageWin sbi -out fabi.bin -config unauth.cfg -chain chain.out -rsa rsa_sbi3.pem -bl simple_sbi.bin -depth 3 -SBIConfiguration 0x10 -SBIRevisionID 0x10 -CustomerID 0x600FFFFE -ProductID 0x0 -CustomerRevisionID 0x0 -SBIUsage 0x0
+
+
+NOTE: The process of creating images for AB Production and AB Development is similar. The only difference being in the CustomerID used.
+
+
+Supported SBIConfiguration values
+---------------------------------
+IPROC_SBI_CONFIG_RSA					0x1 <<  4 (0x0010)
+IPROC_SBI_CONFIG_ECDSA					0x1 <<  5 (0x0020) 
+IPROC_SBI_CONFIG_SYMMETRIC				0x1 <<  6 (0x0040)
+IPROC_SBI_CONFIG_AES_128_ENCRYPTION_FIRST128BITS	0x1 <<  8 (0x0100)	
+IPROC_SBI_CONFIG_AES_128_ENCRYPTION_SECOND128BITS	0x2 <<  8 (0x0200)
+IPROC_SBI_CONFIG_AES_256_ENCRYPTION			0x3 <<  8 (0x0300)	
+IPROC_SBI_CONFIG_DECRYPT_BEFORE_AUTH			0x1 << 10 (0x0400)	
+
+Supported SBIUsage Values
+-------------------------
+SBI_USAGE_NONE			0
+SBI_USAGE_SLEEP			1
+SBI_USAGE_DEEP_SLEEP		2
+SBI_USAGE_EXCEPTION		4

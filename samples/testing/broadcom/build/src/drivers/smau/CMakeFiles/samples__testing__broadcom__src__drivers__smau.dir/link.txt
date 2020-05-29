@@ -1,0 +1,2 @@
+ccache /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-ar qc libsamples__testing__broadcom__src__drivers__smau.a  CMakeFiles/samples__testing__broadcom__src__drivers__smau.dir/test_smau.c.obj
+ccache /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-ranlib libsamples__testing__broadcom__src__drivers__smau.a

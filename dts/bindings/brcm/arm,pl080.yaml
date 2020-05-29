@@ -1,0 +1,33 @@
+---
+title: ARM PL080 DMA CONTROLLER
+version: 0.1
+
+description: >
+    This binding gives a base representation of the ARM PL080 DMA CONTROLLER
+
+properties:
+    compatible:
+      type: string
+      category: required
+      description: compatible strings
+      constraint: "arm,pl080"
+
+    reg:
+      type: array
+      category: required
+      description: mmio register space
+      generation: define
+
+    interrupts:
+      type: array
+      category: required
+      description: required interrupts
+      generation: define
+
+    dma-channels:
+      type: int
+      category: required
+      description: number of DMA channels present
+      generation: define
+
+...

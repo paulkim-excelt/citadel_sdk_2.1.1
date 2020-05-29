@@ -1,0 +1,1 @@
+zephyr_library_sources(test_bcm58202_qspi.c)

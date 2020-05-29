@@ -1,0 +1,1 @@
+zephyr_library_sources(spl_bcm58202.c)

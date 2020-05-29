@@ -1,0 +1,21 @@
+---
+title: Broadcom SPRU Indirect register access interface registers
+version: 0.1
+
+description: >
+    This binding describes the Broadcom SPRU
+
+properties:
+    compatible:
+      category: required
+      type: string
+      description: compatible strings
+      constraint: "brcm,cit-spru"
+
+    reg:
+      category: required
+      type: int
+      description: mmio register space
+      generation: define
+
+...

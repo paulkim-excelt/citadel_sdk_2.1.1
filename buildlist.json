@@ -1,0 +1,36 @@
+{
+   "build" : {
+      "resource" : "ASH_UBUNTU18",
+      "dirs" : [
+         ".*"
+      ],
+      "buildlist" : {
+         "smoketest" : [
+            "citadel-serp",
+            "citadel-58201",
+            "citadel-58202"
+         ]
+      },
+      "config" : {
+         "citadel-serp" : {
+            "build_cmd" : "bash ./zephyr-build.sh serp_cp",
+            "install_cmd" : "cp samples/testing/broadcom/build/zephyr/zephyr.* $INSTALL_DIR",
+            "dirs" : [
+            ]
+         },
+         "citadel-58202" : {
+            "build_cmd" : "bash ./zephyr-build.sh citadel_svk_58202",
+            "install_cmd" : "cp samples/testing/broadcom/build/zephyr/zephyr.* $INSTALL_DIR",
+            "dirs" : [
+            ]
+         },
+         "citadel-58201" : {
+            "build_cmd" : "bash ./zephyr-build.sh citadel_svk_58201",
+            "install_cmd" : "cp samples/testing/broadcom/build/zephyr/zephyr.* $INSTALL_DIR",
+            "dirs" : [
+            ]
+         }
+      }
+   }
+}
+

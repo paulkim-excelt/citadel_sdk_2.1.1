@@ -1,0 +1,1 @@
+zephyr_library_sources(iomux_bcm58202.c)

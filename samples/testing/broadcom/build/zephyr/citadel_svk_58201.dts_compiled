@@ -1,0 +1,350 @@
+/dts-v1/;
+
+/ {
+	#address-cells = <0x1>;
+	#size-cells = <0x1>;
+	model = "Citadel SVK 58201 (BCM95820X)";
+	compatible = "brcm,bcm5820x", "brcm,citadel";
+
+	chosen {
+		zephyr,console = "/soc/uart@44030000";
+		zephyr,shell-uart = "/soc/uart@44030000";
+		zephyr,sram = "/soc/memory@24000000";
+		zephyr,code-partition = "/code-partition@400";
+		zephyr,flash = "/flash@63000000";
+	};
+
+	aliases {
+	};
+
+	cpus {
+		#address-cells = <0x1>;
+		#size-cells = <0x0>;
+
+		cpu@0 {
+			device_type = "cpu";
+			compatible = "arm,cortex-a7";
+			reg = <0x0>;
+		};
+	};
+
+	soc {
+		#address-cells = <0x1>;
+		#size-cells = <0x1>;
+		interrupt-parent = <0x1>;
+
+		sram0: memory@24000000 {
+			compatible = "mmio-sram";
+			reg = <0x24000000 0x100000>;
+		};
+
+		bspi_flash0: flash0_read@63000000 {
+			compatible = "brcm,cit-qspi";
+			reg = <0x63000000 0x2000000>;
+		};
+
+		bspi_flash1: flash1_read@65000000 {
+			compatible = "brcm,cit-qspi";
+			reg = <0x65000000 0x2000000>;
+		};
+
+		wspi_flash0: flash0_write@67000000 {
+			compatible = "brcm,cit-qspi";
+			reg = <0x67000000 0x2000000>;
+		};
+
+		wspi_flash1: flash1_write@69000000 {
+			compatible = "brcm,cit-qspi";
+			reg = <0x69000000 0x2000000>;
+		};
+
+		timer {
+			compatible = "arm,cortexa-timer";
+			interrupts = <0x0 0x1d>;
+		};
+
+		gic0: interrupt-controller@62001000 {
+			compatible = "arm,gic";
+			arm,num-irqs = <0xa0>;
+			reg = <0x62001000 0x1000 0x62002000 0x2000>;
+			interrupt-controller;
+			#interrupt-cells = <0x2>;
+			phandle = <0x1>;
+		};
+
+		a7pll: clock@56010000 {
+			compatible = "brcm,cit-armpll";
+			reg = <0x56010000 0xe00>;
+		};
+
+		unicam: unicam@56001000 {
+			compatible = "brcm,cit-unicam";
+			reg = <0x56001000 0x1528>;
+			interrupts = <0x1 0x4b>;
+		};
+
+		dma: dma@51000000 {
+			compatible = "arm,pl080";
+			reg = <0x51000000 0x1000>;
+			interrupts = <0x1 0xe 0x1 0xf>;
+			dma-channels = <0x8>;
+		};
+
+		usb2h: usb2h@46000000 {
+			compatible = "brcm,cit-usb2h";
+			reg = <0x46000000 0x1000>;
+			interrupts = <0x1 0x2c>;
+		};
+
+		timer0: timer@45040000 {
+			compatible = "arm,sp804-timer";
+			reg = <0x45040000 0x20>;
+			interrupts = <0x1 0x38>;
+		};
+
+		timer1: timer@45040020 {
+			compatible = "arm,sp804-timer";
+			reg = <0x45040020 0x20>;
+			interrupts = <0x1 0x39>;
+		};
+
+		timer2: timer@45050000 {
+			compatible = "arm,sp804-timer";
+			reg = <0x45050000 0x20>;
+			interrupts = <0x1 0x3a>;
+		};
+
+		timer3: timer@45050020 {
+			compatible = "arm,sp804-timer";
+			reg = <0x45050020 0x20>;
+			interrupts = <0x1 0x3b>;
+		};
+
+		timer4: timer@45140000 {
+			compatible = "arm,sp804-timer";
+			reg = <0x45140000 0x20>;
+			interrupts = <0x1 0x47>;
+		};
+
+		timer5: timer@45140020 {
+			compatible = "arm,sp804-timer";
+			reg = <0x45140020 0x20>;
+			interrupts = <0x1 0x48>;
+		};
+
+		timer6: timer@45150000 {
+			compatible = "arm,sp804-timer";
+			reg = <0x45150000 0x20>;
+			interrupts = <0x1 0x49>;
+		};
+
+		timer7: timer@45150020 {
+			compatible = "arm,sp804-timer";
+			reg = <0x45150020 0x20>;
+			interrupts = <0x1 0x4a>;
+		};
+
+		gpio: gpio@45030000 {
+			compatible = "brcm,cit-gpio";
+			reg = <0x45030000 0x450>;
+			interrupts = <0x1 0x36>;
+		};
+
+		iosys_gpio: gpio@44098000 {
+			compatible = "brcm,cit-iosys-gpio";
+			reg = <0x44098000 0x14>;
+		};
+
+		pwm: pwm@440a0500 {
+			compatible = "brcm,cit-pwm";
+			reg = <0x440a0500 0x1000>;
+			status = "ok";
+		};
+
+		wdt: wdt@44090000 {
+			compatible = "arm,sp805";
+			reg = <0x44090000 0x1000>;
+			interrupts = <0x1 0x26>;
+		};
+
+		scc: scc@45130000 {
+			compatible = "brcm,cit-scc";
+			reg = <0x45130000 0x1000>;
+		};
+
+		smc: smc@53000000 {
+			compatible = "arm,smc-pl352";
+			reg = <0x53000000 0x1000>;
+			status = "ok";
+		};
+
+		spi1: spi@44080000 {
+			compatible = "brcm,cit-spi";
+			reg = <0x44080000 0x1000>;
+			interrupts = <0x1 0x31>;
+		};
+
+		spi2: spi@44070000 {
+			compatible = "brcm,cit-spi";
+			reg = <0x44070000 0x1000>;
+			interrupts = <0x1 0x32>;
+		};
+
+		spi3: spi@44060000 {
+			compatible = "brcm,cit-spi";
+			reg = <0x44060000 0x1000>;
+			interrupts = <0x1 0x33>;
+		};
+
+		spi4: spi@44050000 {
+			compatible = "brcm,cit-spi";
+			reg = <0x44050000 0x1000>;
+			interrupts = <0x1 0x34>;
+		};
+
+		spi5: spi@44040000 {
+			compatible = "brcm,cit-spi";
+			reg = <0x44040000 0x1000>;
+			interrupts = <0x1 0x35>;
+		};
+
+		spl: spl@30025000 {
+			compatible = "brcm,cit-spl";
+			reg = <0x30025000 0x100>;
+			interrupts = <0x1 0x1b 0x1 0x1c 0x1 0x1d 0x1 0x1e>;
+			status = "ok";
+		};
+
+		uart0: uart@44030000 {
+			compatible = "ns16550";
+			reg = <0x44030000 0x100>;
+			interrupts = <0x1 0x2d>;
+			current-speed = <0x2580>;
+			clock-frequency = <0x3ef1480>;
+			label = "UART_0";
+		};
+
+		uart1: uart@44020000 {
+			compatible = "ns16550";
+			reg = <0x44020000 0x100>;
+			interrupts = <0x1 0x2e>;
+			current-speed = <0x2580>;
+			clock-frequency = <0x3ef1480>;
+			label = "UART_1";
+		};
+
+		uart2: uart@44010000 {
+			compatible = "ns16550";
+			reg = <0x44010000 0x100>;
+			interrupts = <0x1 0x2f>;
+			current-speed = <0x2580>;
+			clock-frequency = <0x3ef1480>;
+			label = "UART_2";
+		};
+
+		uart3: uart@44000000 {
+			compatible = "ns16550";
+			reg = <0x44000000 0x100>;
+			interrupts = <0x1 0x30>;
+			current-speed = <0x2580>;
+			clock-frequency = <0x3ef1480>;
+			label = "UART_3";
+		};
+
+		aon_gpio: gpio@30024800 {
+			compatible = "brcm,cit-aon-gpio";
+			reg = <0x30024800 0x400>;
+		};
+
+		dmu: dmu@30024000 {
+			compatible = "brcm,cit-dmu";
+			reg = <0x30024000 0x800>;
+		};
+
+		i2c0: i2c@30020000 {
+			compatible = "brcm,cit-i2c";
+			reg = <0x30020000 0x100>;
+		};
+
+		i2c1: i2c@30020100 {
+			compatible = "brcm,cit-i2c";
+			reg = <0x30020100 0x100>;
+		};
+
+		i2c2: i2c@30020200 {
+			compatible = "brcm,cit-i2c";
+			reg = <0x30020200 0x100>;
+		};
+
+		chip_dru: dru@3001d000 {
+			compatible = "brcm,cit-chip-dru";
+			reg = <0x3001d000 0xc00>;
+		};
+
+		crmu_dru: dru@3001c000 {
+			compatible = "brcm,cit-crmu-dru";
+			reg = <0x3001c000 0x1000>;
+		};
+
+		dpa: dpa@50020830 {
+			compatible = "brcm,cit-dpa";
+			reg = <0x50020830 0x100>;
+		};
+
+		smau: smau@50020400 {
+			compatible = "brcm,cit-smau";
+			reg = <0x50020400 0x100>;
+		};
+
+		rng: rng@45220000 {
+			compatible = "brcm,cit-rng";
+			reg = <0x45220000 0x100>;
+		};
+
+		pka: pka@E0042000 {
+			compatible = "brcm,cit-pka";
+			reg = <0xe0042000 0x100>;
+		};
+
+		sotp: sotp@30027000 {
+			compatible = "brcm,cit-sotp";
+			reg = <0x30027000 0x100>;
+		};
+
+		otpc: otpc@3001C800 {
+			compatible = "brcm,cit-otpc";
+			reg = <0x3001c800 0x100>;
+		};
+
+		spru: spru@30026000 {
+			compatible = "brcm,cit-spru";
+			reg = <0x30026000 0x10>;
+		};
+
+		bbl: bbl@0 {
+			compatible = "brcm,cit-bbl";
+			interrupts = <0x1 0x21 0x1 0x1a>;
+			reg = <0x0 0x200>;
+		};
+
+		usbd: usbd@47000000 {
+			compatible = "brcm,cit-usbd";
+			reg = <0x47000000 0x600>;
+			interrupts = <0x1 0x46>;
+		};
+
+		sdio: sdio@48000000 {
+			compatible = "brcm,cit-sdio";
+			reg = <0x48000000 0x100>;
+			interrupts = <0x1 0x4c>;
+		};
+	};
+
+	flash0: flash@63000000 {
+		reg = <0x63000000 0x800000>;
+	};
+
+	code_partition: code-partition@400 {
+		reg = <0x400 0x0>;
+	};
+};

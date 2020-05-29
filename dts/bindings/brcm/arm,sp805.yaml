@@ -1,0 +1,27 @@
+---
+title: SP805 Watchdog Timer register map
+version: 0.1
+
+description: >
+    This binding describes the ARM SP805 Watchdog Timer registers
+
+properties:
+    compatible:
+      category: required
+      type: string
+      description: compatible strings
+      constraint: "arm,sp805"
+
+    reg:
+      category: required
+      type: int
+      description: mmio register space
+      generation: define
+
+    interrupts:
+      category: required
+      type: array
+      description: required interrupts
+      generation: define
+
+...

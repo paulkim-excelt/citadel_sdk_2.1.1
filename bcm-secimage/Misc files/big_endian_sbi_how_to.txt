@@ -1,0 +1,5 @@
+1. Build big endian SBI in the directory fw/sbi/big_endian_sbi/
+2. Copy fw/sbi/big_endian_sbi/big_endian_sbi.bin/SBI_SECURE_CODE as ./f_big.bin
+3. Byte swap the words in f_bin.bin using ./big2little utility, e.g ./big2little f_bin.bin f.bin
+4. sign the f.bin by running sign_sbi_* script
+5. Load this SBI into boot source and run the bootloader as usual. 

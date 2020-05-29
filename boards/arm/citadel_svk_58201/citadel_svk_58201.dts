@@ -1,0 +1,50 @@
+/*
+ * Copyright (c) 2017 Broadcom Limited
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+/dts-v1/;
+
+#include <brcm/bcm5820x.dtsi>
+
+/ {
+	model = "Citadel SVK 58201 (BCM95820X)";
+	compatible = "brcm,bcm5820x", "brcm,citadel";
+
+	chosen {
+		zephyr,console = &uart0;
+		zephyr,shell-uart = &uart0;
+		zephyr,sram = &sram0;
+		zephyr,code-partition = &code_partition;
+		zephyr,flash = &flash0;
+	};
+
+	flash0: flash@63000000 {
+		reg = <0x63000000 0x800000>;
+	};
+
+#ifdef CONFIG_SOC_UNPROGRAMMED
+	/* Flash code is loaded at an offset of 0x0 for unprogrammed parts */
+	code_partition: code-partition@0 {
+		reg = <0x0 0x0>;
+	};
+#else
+	/* Flash code is loaded at an offset of 0x400 for unassigned parts */
+	code_partition: code-partition@400 {
+		reg = <0x400 0x0>;
+	};
+#endif
+};
+
+&pwm {
+	status = "ok";
+};
+
+&spl {
+	status = "ok";
+};
+
+&smc {
+	status = "ok";
+};

@@ -1,0 +1,27 @@
+---
+title: Broadcom SPI Controller register map
+version: 0.1
+
+description: >
+    This binding describes the Broadcom SPI controller registers
+
+properties:
+    compatible:
+      category: required
+      type: string
+      description: compatible strings
+      constraint: "brcm,cit-spi"
+
+    reg:
+      category: required
+      type: int
+      description: mmio register space
+      generation: define
+
+    interrupts:
+      type: array
+      category: required
+      description: required interrupts
+      generation: define
+
+...

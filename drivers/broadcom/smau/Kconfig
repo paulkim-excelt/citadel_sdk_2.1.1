@@ -1,0 +1,19 @@
+# Kconfig - BRCM SMAU drvier configuration options
+
+#
+# Copyright (c) 2018 Broadcom Inc.
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+#
+# BRCM SMAU driver options
+#
+
+config MIN_SMAU_WINDOW_SIZE
+	hex
+	# Omit prompt to signify "hidden" option
+	default 0x100000
+	depends on BRCM_DRIVER_SMAU
+	help
+		Minimum SMAU window size allowed to be configured

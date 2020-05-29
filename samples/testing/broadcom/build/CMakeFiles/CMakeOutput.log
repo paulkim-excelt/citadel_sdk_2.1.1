@@ -1,0 +1,499 @@
+The target system is: Generic - 1.14.0 - arm
+The host system is: Linux - 4.15.0-70-generic - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc 
+Build flags: 
+Id flags: -c 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+
+The C compiler identification is GNU, found in "/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/3.16.0/CompilerIdC/CMakeCCompilerId.o"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-g++ 
+Build flags: 
+Id flags: -c 
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
+
+The CXX compiler identification is GNU, found in "/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/3.16.0/CompilerIdCXX/CMakeCXXCompilerId.o"
+
+Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+arm-none-eabi-gcc (GNU Tools for ARM Embedded Processors 6-2017-q1-update) 6.3.1 20170215 (release) [ARM/embedded-6-branch revision 245512]
+Copyright (C) 2016 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Performing C SOURCE FILE Test toolchain_is_ok succeeded with the following output:
+Change Dir: /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_8bb62/fast && /usr/bin/make -f CMakeFiles/cmTC_8bb62.dir/build.make CMakeFiles/cmTC_8bb62.dir/build
+make[1]: Entering directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8bb62.dir/src.c.obj
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc   -Dtoolchain_is_ok -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files   -o CMakeFiles/cmTC_8bb62.dir/src.c.obj   -c /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_8bb62
+/opt/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8bb62.dir/link.txt --verbose=1
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc  -Dtoolchain_is_ok -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files    CMakeFiles/cmTC_8bb62.dir/src.c.obj  -o cmTC_8bb62 
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000008000
+make[1]: Leaving directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__mthumb succeeded with the following output:
+Change Dir: /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_c1ea9/fast && /usr/bin/make -f CMakeFiles/cmTC_c1ea9.dir/build.make CMakeFiles/cmTC_c1ea9.dir/build
+make[1]: Entering directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c1ea9.dir/src.c.obj
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc   -Dcheck_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__mthumb -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -mthumb   -o CMakeFiles/cmTC_c1ea9.dir/src.c.obj   -c /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_c1ea9
+/opt/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c1ea9.dir/link.txt --verbose=1
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc  -Dcheck_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__mthumb -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -mthumb    CMakeFiles/cmTC_c1ea9.dir/src.c.obj  -o cmTC_c1ea9 
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000008000
+make[1]: Leaving directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__mcpu_cortex_a7 succeeded with the following output:
+Change Dir: /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_98b97/fast && /usr/bin/make -f CMakeFiles/cmTC_98b97.dir/build.make CMakeFiles/cmTC_98b97.dir/build
+make[1]: Entering directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_98b97.dir/src.c.obj
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc   -Dcheck_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__mcpu_cortex_a7 -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -mcpu=cortex-a7   -o CMakeFiles/cmTC_98b97.dir/src.c.obj   -c /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_98b97
+/opt/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_98b97.dir/link.txt --verbose=1
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc  -Dcheck_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__mcpu_cortex_a7 -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -mcpu=cortex-a7    CMakeFiles/cmTC_98b97.dir/src.c.obj  -o cmTC_98b97 
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000008000
+make[1]: Leaving directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__mfpu_neon_vfpv4 succeeded with the following output:
+Change Dir: /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_73048/fast && /usr/bin/make -f CMakeFiles/cmTC_73048.dir/build.make CMakeFiles/cmTC_73048.dir/build
+make[1]: Entering directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_73048.dir/src.c.obj
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc   -Dcheck_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__mfpu_neon_vfpv4 -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -mfpu=neon-vfpv4   -o CMakeFiles/cmTC_73048.dir/src.c.obj   -c /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_73048
+/opt/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_73048.dir/link.txt --verbose=1
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc  -Dcheck_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__mfpu_neon_vfpv4 -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -mfpu=neon-vfpv4    CMakeFiles/cmTC_73048.dir/src.c.obj  -o cmTC_73048 
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000008000
+make[1]: Leaving directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__mfloat_abi_hard succeeded with the following output:
+Change Dir: /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_4d141/fast && /usr/bin/make -f CMakeFiles/cmTC_4d141.dir/build.make CMakeFiles/cmTC_4d141.dir/build
+make[1]: Entering directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4d141.dir/src.c.obj
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc   -Dcheck_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__mfloat_abi_hard -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -mfloat-abi=hard   -o CMakeFiles/cmTC_4d141.dir/src.c.obj   -c /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_4d141
+/opt/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4d141.dir/link.txt --verbose=1
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc  -Dcheck_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__mfloat_abi_hard -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -mfloat-abi=hard    CMakeFiles/cmTC_4d141.dir/src.c.obj  -o cmTC_4d141 
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000008000
+make[1]: Leaving directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__nostdlib succeeded with the following output:
+Change Dir: /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_1b102/fast && /usr/bin/make -f CMakeFiles/cmTC_1b102.dir/build.make CMakeFiles/cmTC_1b102.dir/build
+make[1]: Entering directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1b102.dir/src.c.obj
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc   -Dcheck_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__nostdlib -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -nostdlib   -o CMakeFiles/cmTC_1b102.dir/src.c.obj   -c /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_1b102
+/opt/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1b102.dir/link.txt --verbose=1
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc  -Dcheck_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__nostdlib -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -nostdlib    CMakeFiles/cmTC_1b102.dir/src.c.obj  -o cmTC_1b102 
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000008000
+make[1]: Leaving directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__static succeeded with the following output:
+Change Dir: /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_eb8cb/fast && /usr/bin/make -f CMakeFiles/cmTC_eb8cb.dir/build.make CMakeFiles/cmTC_eb8cb.dir/build
+make[1]: Entering directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_eb8cb.dir/src.c.obj
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc   -Dcheck_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__static -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -static   -o CMakeFiles/cmTC_eb8cb.dir/src.c.obj   -c /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_eb8cb
+/opt/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eb8cb.dir/link.txt --verbose=1
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc  -Dcheck_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__static -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -static    CMakeFiles/cmTC_eb8cb.dir/src.c.obj  -o cmTC_eb8cb 
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000008000
+make[1]: Leaving directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__no_pie succeeded with the following output:
+Change Dir: /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_276ca/fast && /usr/bin/make -f CMakeFiles/cmTC_276ca.dir/build.make CMakeFiles/cmTC_276ca.dir/build
+make[1]: Entering directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_276ca.dir/src.c.obj
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc   -Dcheck_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__no_pie -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -no-pie   -o CMakeFiles/cmTC_276ca.dir/src.c.obj   -c /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_276ca
+/opt/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_276ca.dir/link.txt --verbose=1
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc  -Dcheck_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__no_pie -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -no-pie    CMakeFiles/cmTC_276ca.dir/src.c.obj  -o cmTC_276ca 
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000008000
+make[1]: Leaving directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_fno_asynchronous_unwind_tables_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files succeeded with the following output:
+Change Dir: /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_7ac96/fast && /usr/bin/make -f CMakeFiles/cmTC_7ac96.dir/build.make CMakeFiles/cmTC_7ac96.dir/build
+make[1]: Entering directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7ac96.dir/src.c.obj
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc   -Dcheck_fno_asynchronous_unwind_tables_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files   -fno-asynchronous-unwind-tables -o CMakeFiles/cmTC_7ac96.dir/src.c.obj   -c /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_7ac96
+/opt/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7ac96.dir/link.txt --verbose=1
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc  -Dcheck_fno_asynchronous_unwind_tables_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files    CMakeFiles/cmTC_7ac96.dir/src.c.obj  -o cmTC_7ac96 
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000008000
+make[1]: Leaving directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_fno_pie_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files succeeded with the following output:
+Change Dir: /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_f8f0e/fast && /usr/bin/make -f CMakeFiles/cmTC_f8f0e.dir/build.make CMakeFiles/cmTC_f8f0e.dir/build
+make[1]: Entering directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f8f0e.dir/src.c.obj
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc   -Dcheck_fno_pie_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files   -fno-pie -o CMakeFiles/cmTC_f8f0e.dir/src.c.obj   -c /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_f8f0e
+/opt/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f8f0e.dir/link.txt --verbose=1
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc  -Dcheck_fno_pie_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files    CMakeFiles/cmTC_f8f0e.dir/src.c.obj  -o cmTC_f8f0e 
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000008000
+make[1]: Leaving directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_fno_pic_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files succeeded with the following output:
+Change Dir: /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_309f7/fast && /usr/bin/make -f CMakeFiles/cmTC_309f7.dir/build.make CMakeFiles/cmTC_309f7.dir/build
+make[1]: Entering directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_309f7.dir/src.c.obj
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc   -Dcheck_fno_pic_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files   -fno-pic -o CMakeFiles/cmTC_309f7.dir/src.c.obj   -c /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_309f7
+/opt/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_309f7.dir/link.txt --verbose=1
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc  -Dcheck_fno_pic_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files    CMakeFiles/cmTC_309f7.dir/src.c.obj  -o cmTC_309f7 
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000008000
+make[1]: Leaving directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_fno_strict_overflow_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files succeeded with the following output:
+Change Dir: /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_42f8c/fast && /usr/bin/make -f CMakeFiles/cmTC_42f8c.dir/build.make CMakeFiles/cmTC_42f8c.dir/build
+make[1]: Entering directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_42f8c.dir/src.c.obj
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc   -Dcheck_fno_strict_overflow_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files   -fno-strict-overflow -o CMakeFiles/cmTC_42f8c.dir/src.c.obj   -c /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_42f8c
+/opt/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_42f8c.dir/link.txt --verbose=1
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc  -Dcheck_fno_strict_overflow_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files    CMakeFiles/cmTC_42f8c.dir/src.c.obj  -o cmTC_42f8c 
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000008000
+make[1]: Leaving directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_Wno_pointer_sign_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files succeeded with the following output:
+Change Dir: /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_0f9c7/fast && /usr/bin/make -f CMakeFiles/cmTC_0f9c7.dir/build.make CMakeFiles/cmTC_0f9c7.dir/build
+make[1]: Entering directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0f9c7.dir/src.c.obj
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc   -Dcheck_Wno_pointer_sign_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files   -Wno-pointer-sign -o CMakeFiles/cmTC_0f9c7.dir/src.c.obj   -c /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_0f9c7
+/opt/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0f9c7.dir/link.txt --verbose=1
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc  -Dcheck_Wno_pointer_sign_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files    CMakeFiles/cmTC_0f9c7.dir/src.c.obj  -o cmTC_0f9c7 
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000008000
+make[1]: Leaving directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_Wno_unused_but_set_variable_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files succeeded with the following output:
+Change Dir: /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_7a8c8/fast && /usr/bin/make -f CMakeFiles/cmTC_7a8c8.dir/build.make CMakeFiles/cmTC_7a8c8.dir/build
+make[1]: Entering directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7a8c8.dir/src.c.obj
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc   -Dcheck_Wno_unused_but_set_variable_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files   -Wno-unused-but-set-variable -o CMakeFiles/cmTC_7a8c8.dir/src.c.obj   -c /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_7a8c8
+/opt/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7a8c8.dir/link.txt --verbose=1
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc  -Dcheck_Wno_unused_but_set_variable_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files    CMakeFiles/cmTC_7a8c8.dir/src.c.obj  -o cmTC_7a8c8 
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000008000
+make[1]: Leaving directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_fno_reorder_functions_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files succeeded with the following output:
+Change Dir: /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_c8454/fast && /usr/bin/make -f CMakeFiles/cmTC_c8454.dir/build.make CMakeFiles/cmTC_c8454.dir/build
+make[1]: Entering directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c8454.dir/src.c.obj
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc   -Dcheck_fno_reorder_functions_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files   -fno-reorder-functions -o CMakeFiles/cmTC_c8454.dir/src.c.obj   -c /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_c8454
+/opt/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c8454.dir/link.txt --verbose=1
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc  -Dcheck_fno_reorder_functions_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files    CMakeFiles/cmTC_c8454.dir/src.c.obj  -o cmTC_c8454 
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000008000
+make[1]: Leaving directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_fno_defer_pop_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files succeeded with the following output:
+Change Dir: /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_17f85/fast && /usr/bin/make -f CMakeFiles/cmTC_17f85.dir/build.make CMakeFiles/cmTC_17f85.dir/build
+make[1]: Entering directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_17f85.dir/src.c.obj
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc   -Dcheck_fno_defer_pop_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files   -fno-defer-pop -o CMakeFiles/cmTC_17f85.dir/src.c.obj   -c /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_17f85
+/opt/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_17f85.dir/link.txt --verbose=1
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc  -Dcheck_fno_defer_pop_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files    CMakeFiles/cmTC_17f85.dir/src.c.obj  -o cmTC_17f85 
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000008000
+make[1]: Leaving directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_Werror_implicit_int_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files succeeded with the following output:
+Change Dir: /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_353cc/fast && /usr/bin/make -f CMakeFiles/cmTC_353cc.dir/build.make CMakeFiles/cmTC_353cc.dir/build
+make[1]: Entering directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_353cc.dir/src.c.obj
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc   -Dcheck_Werror_implicit_int_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files   -Werror=implicit-int -o CMakeFiles/cmTC_353cc.dir/src.c.obj   -c /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_353cc
+/opt/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_353cc.dir/link.txt --verbose=1
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc  -Dcheck_Werror_implicit_int_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files    CMakeFiles/cmTC_353cc.dir/src.c.obj  -o cmTC_353cc 
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000008000
+make[1]: Leaving directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_Wpointer_arith_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files succeeded with the following output:
+Change Dir: /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_5fff3/fast && /usr/bin/make -f CMakeFiles/cmTC_5fff3.dir/build.make CMakeFiles/cmTC_5fff3.dir/build
+make[1]: Entering directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5fff3.dir/src.c.obj
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc   -Dcheck_Wpointer_arith_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files   -Wpointer-arith -o CMakeFiles/cmTC_5fff3.dir/src.c.obj   -c /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_5fff3
+/opt/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5fff3.dir/link.txt --verbose=1
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc  -Dcheck_Wpointer_arith_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files    CMakeFiles/cmTC_5fff3.dir/src.c.obj  -o cmTC_5fff3 
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000008000
+make[1]: Leaving directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl__X succeeded with the following output:
+Change Dir: /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_12dc6/fast && /usr/bin/make -f CMakeFiles/cmTC_12dc6.dir/build.make CMakeFiles/cmTC_12dc6.dir/build
+make[1]: Entering directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_12dc6.dir/src.c.obj
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc   -Dcheck_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl__X -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,-X   -o CMakeFiles/cmTC_12dc6.dir/src.c.obj   -c /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_12dc6
+/opt/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_12dc6.dir/link.txt --verbose=1
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc  -Dcheck_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl__X -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,-X    CMakeFiles/cmTC_12dc6.dir/src.c.obj  -o cmTC_12dc6 
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000008000
+make[1]: Leaving directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl__N succeeded with the following output:
+Change Dir: /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_f790f/fast && /usr/bin/make -f CMakeFiles/cmTC_f790f.dir/build.make CMakeFiles/cmTC_f790f.dir/build
+make[1]: Entering directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f790f.dir/src.c.obj
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc   -Dcheck_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl__N -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,-N   -o CMakeFiles/cmTC_f790f.dir/src.c.obj   -c /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_f790f
+/opt/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f790f.dir/link.txt --verbose=1
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc  -Dcheck_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl__N -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,-N    CMakeFiles/cmTC_f790f.dir/src.c.obj  -o cmTC_f790f 
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000008000
+make[1]: Leaving directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___gc_sections succeeded with the following output:
+Change Dir: /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_57fc7/fast && /usr/bin/make -f CMakeFiles/cmTC_57fc7.dir/build.make CMakeFiles/cmTC_57fc7.dir/build
+make[1]: Entering directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_57fc7.dir/src.c.obj
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc   -Dcheck_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___gc_sections -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--gc-sections   -o CMakeFiles/cmTC_57fc7.dir/src.c.obj   -c /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_57fc7
+/opt/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_57fc7.dir/link.txt --verbose=1
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc  -Dcheck_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___gc_sections -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--gc-sections    CMakeFiles/cmTC_57fc7.dir/src.c.obj  -o cmTC_57fc7 
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000008000
+make[1]: Leaving directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___build_id_none succeeded with the following output:
+Change Dir: /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_3d6cb/fast && /usr/bin/make -f CMakeFiles/cmTC_3d6cb.dir/build.make CMakeFiles/cmTC_3d6cb.dir/build
+make[1]: Entering directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3d6cb.dir/src.c.obj
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc   -Dcheck_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___build_id_none -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--build-id=none   -o CMakeFiles/cmTC_3d6cb.dir/src.c.obj   -c /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_3d6cb
+/opt/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3d6cb.dir/link.txt --verbose=1
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc  -Dcheck_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___build_id_none -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--build-id=none    CMakeFiles/cmTC_3d6cb.dir/src.c.obj  -o cmTC_3d6cb 
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000008000
+make[1]: Leaving directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___sort_common_descending succeeded with the following output:
+Change Dir: /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_b07ea/fast && /usr/bin/make -f CMakeFiles/cmTC_b07ea.dir/build.make CMakeFiles/cmTC_b07ea.dir/build
+make[1]: Entering directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b07ea.dir/src.c.obj
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc   -Dcheck_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___sort_common_descending -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--sort-common=descending   -o CMakeFiles/cmTC_b07ea.dir/src.c.obj   -c /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_b07ea
+/opt/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b07ea.dir/link.txt --verbose=1
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc  -Dcheck_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___sort_common_descending -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--sort-common=descending    CMakeFiles/cmTC_b07ea.dir/src.c.obj  -o cmTC_b07ea 
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000008000
+make[1]: Leaving directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___sort_section_alignment succeeded with the following output:
+Change Dir: /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_cccb6/fast && /usr/bin/make -f CMakeFiles/cmTC_cccb6.dir/build.make CMakeFiles/cmTC_cccb6.dir/build
+make[1]: Entering directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_cccb6.dir/src.c.obj
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc   -Dcheck_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___sort_section_alignment -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--sort-section=alignment   -o CMakeFiles/cmTC_cccb6.dir/src.c.obj   -c /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_cccb6
+/opt/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cccb6.dir/link.txt --verbose=1
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc  -Dcheck_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___sort_section_alignment -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--sort-section=alignment    CMakeFiles/cmTC_cccb6.dir/src.c.obj  -o cmTC_cccb6 
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000008000
+make[1]: Leaving directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___orphan_handling_warn succeeded with the following output:
+Change Dir: /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_78299/fast && /usr/bin/make -f CMakeFiles/cmTC_78299.dir/build.make CMakeFiles/cmTC_78299.dir/build
+make[1]: Entering directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_78299.dir/src.c.obj
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc   -Dcheck_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___orphan_handling_warn -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--orphan-handling=warn   -o CMakeFiles/cmTC_78299.dir/src.c.obj   -c /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_78299
+/opt/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_78299.dir/link.txt --verbose=1
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc  -Dcheck_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___orphan_handling_warn -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--orphan-handling=warn    CMakeFiles/cmTC_78299.dir/src.c.obj  -o cmTC_78299 
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000008000
+make[1]: Leaving directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_ffunction_sections_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files succeeded with the following output:
+Change Dir: /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_bd301/fast && /usr/bin/make -f CMakeFiles/cmTC_bd301.dir/build.make CMakeFiles/cmTC_bd301.dir/build
+make[1]: Entering directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bd301.dir/src.c.obj
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc   -Dcheck_ffunction_sections_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files   -ffunction-sections -o CMakeFiles/cmTC_bd301.dir/src.c.obj   -c /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_bd301
+/opt/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bd301.dir/link.txt --verbose=1
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc  -Dcheck_ffunction_sections_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files    CMakeFiles/cmTC_bd301.dir/src.c.obj  -o cmTC_bd301 
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000008000
+make[1]: Leaving directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_fdata_sections_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files succeeded with the following output:
+Change Dir: /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_5b47f/fast && /usr/bin/make -f CMakeFiles/cmTC_5b47f.dir/build.make CMakeFiles/cmTC_5b47f.dir/build
+make[1]: Entering directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5b47f.dir/src.c.obj
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc   -Dcheck_fdata_sections_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files   -fdata-sections -o CMakeFiles/cmTC_5b47f.dir/src.c.obj   -c /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_5b47f
+/opt/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5b47f.dir/link.txt --verbose=1
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc  -Dcheck_fdata_sections_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files    CMakeFiles/cmTC_5b47f.dir/src.c.obj  -o cmTC_5b47f 
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000008000
+make[1]: Leaving directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__mabi_aapcs succeeded with the following output:
+Change Dir: /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_19a77/fast && /usr/bin/make -f CMakeFiles/cmTC_19a77.dir/build.make CMakeFiles/cmTC_19a77.dir/build
+make[1]: Entering directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_19a77.dir/src.c.obj
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc   -Dcheck_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__mabi_aapcs -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -mabi=aapcs   -o CMakeFiles/cmTC_19a77.dir/src.c.obj   -c /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_19a77
+/opt/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_19a77.dir/link.txt --verbose=1
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc  -Dcheck_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__mabi_aapcs -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -mabi=aapcs    CMakeFiles/cmTC_19a77.dir/src.c.obj  -o cmTC_19a77 
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000008000
+make[1]: Leaving directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test check_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___print_memory_usage succeeded with the following output:
+Change Dir: /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_3e219/fast && /usr/bin/make -f CMakeFiles/cmTC_3e219.dir/build.make CMakeFiles/cmTC_3e219.dir/build
+make[1]: Entering directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3e219.dir/src.c.obj
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc   -Dcheck_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___print_memory_usage -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--print-memory-usage   -o CMakeFiles/cmTC_3e219.dir/src.c.obj   -c /home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_3e219
+/opt/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3e219.dir/link.txt --verbose=1
+/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-gcc  -Dcheck_C__nostartfiles__nostdlib__isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include___isystem___home_paulkim_work_toolchains_gcc_arm_none_eabi_6_2017_q1_update_bin____lib_gcc_arm_none_eabi_6_3_1_include_fixed___Wl___unresolved_symbols_ignore_in_object_files__Wl___print_memory_usage -nostartfiles -nostdlib -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include" -isystem "/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/include-fixed" -Wl,--unresolved-symbols=ignore-in-object-files -Wl,--print-memory-usage    CMakeFiles/cmTC_3e219.dir/src.c.obj  -o cmTC_3e219 
+Memory region         Used Size  Region Size  %age Used/home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000008000
+
+make[1]: Leaving directory '/home/paulkim/work/sdk/citadel/samples/testing/broadcom/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main(void) { return 0; }

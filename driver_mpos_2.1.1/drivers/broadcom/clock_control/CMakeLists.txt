@@ -1,0 +1,2 @@
+zephyr_library_sources(clocks_citadel_a7.c)
+zephyr_library_sources(clocks_bcm58202.c)

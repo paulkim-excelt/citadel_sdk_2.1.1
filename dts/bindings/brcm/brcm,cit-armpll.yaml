@@ -1,0 +1,21 @@
+---
+title: Broadcom ARM PLL Clocks
+version: 0.1
+
+description: >
+    This binding describes the Broadcom ARM PLL Clocks
+
+properties:
+    compatible:
+      category: required
+      type: string
+      description: compatible strings
+      constraint: "brcm,cit-armpll"
+
+    reg:
+      category: required
+      type: int
+      description: mmio register space
+      generation: define
+
+...

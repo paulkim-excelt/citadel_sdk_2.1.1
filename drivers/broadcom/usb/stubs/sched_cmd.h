@@ -1,0 +1,31 @@
+#define queue_cmd(cmd,from,task_woken)		(0)
+
+/* cur_sys_state of the sched cmd task */
+#define CUR_SYS_STATE_BOOT		(1 << 0)
+#define CUR_SYS_STATE_RESTART		(1 << 1)
+#define CUR_SYS_STATE_TPM_BOOT_HW_DONE	(1 << 2)
+#define CUR_SYS_STATE_ROM_RESTART	(1 << 3)
+#define CUR_SYS_STATE_SBI_LPC_INIT_BOOT		(1 << 4)
+#define CUR_SYS_STATE_RESTART_HANDLED		(1 << 5)
+#define CUR_SYS_STATE_INIT_DONE		(1 << 6)
+#define CUR_SYS_STATE_LOW_PWR		(1 << 7)
+#define CUR_SYS_STATE_WAITING_RESTART	(1 << 8)
+#define CUR_SYS_STATE_WAKEUP_BOOT	(1 << 9)
+#define CUR_SYS_STATE_USB_REENUM	(1 << 10)
+#define CUR_SYS_STATE_CHECK_BTOB_LOW_PWR_CMD	(1 << 11)
+#define CUR_SYS_STATE_TPM_RESTART	(1 << 12)
+#define CUR_SYS_STATE_TPM_RUN_BOOT_HW	(1 << 13)
+#define CUR_SYS_STATE_TPM_RUN_TPM_PROCESS	(1 << 14)
+#define CUR_SYS_STATE_TPM_RUN_TPM_HASH	(1 << 15)
+#define CUR_SYS_STATE_TPM_RUN_TPM_HASH_END	(1 << 16)
+#define CUR_SYS_STATE_IN_APP_INIT		(1 << 17)
+#define CUR_SYS_STATE_WAIT_FP_REENUM		(1 << 18)
+#define CUR_SYS_STATE_GOING_TO_LOW_PWR		(1 << 19)
+
+#define CUR_SYS_STATE_TPM_RUN_CMDS  (CUR_SYS_STATE_TPM_RUN_BOOT_HW  |	\
+					CUR_SYS_STATE_TPM_RUN_TPM_PROCESS |	\
+					CUR_SYS_STATE_TPM_RUN_TPM_HASH |	\
+					CUR_SYS_STATE_TPM_RUN_TPM_HASH_END )
+
+
+

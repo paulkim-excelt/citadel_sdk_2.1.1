@@ -1,0 +1,4 @@
+zephyr_library_sources(test_sdio.c)
+zephyr_library_sources(sd_mem_card_test.c)
+
+zephyr_library_sources_ifdef(CONFIG_DISK_ACCESS disk_access_sdcard.c)

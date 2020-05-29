@@ -1,0 +1,52 @@
+# Kconfig - QRcode decoder configuration options
+# 
+#
+# Copyright (c) 2018 Broadcom Inc.
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+config ZBAR
+	bool
+	prompt "Enable zbar to decode QRcode"
+	default n
+	help
+	Use simplified zbar-0.10 to decode QRcode
+
+if ZBAR
+config ZBAR_USE_STATIC_BUFFER
+	bool
+	prompt "Use static memory for ZBAR internal buffers"
+	default n
+	help
+	  Use static memory in ZBAR decoder
+
+config ZBAR_DEBUG
+	bool
+	default y
+	help
+	  Enable ZBAR debug messages
+
+# Including zbar unit test config flags here
+config ZBAR_STATIC_TEST
+	bool
+	prompt "Enable zbar unit tests"
+	default n
+	help
+	  Enable ZBAR unit test
+
+endif
+
+if ZBAR_STATIC_TEST
+config ZBAR_STATIC_TEST_Y800
+	bool
+	default y
+	help
+	  Enable Y8 image decoding unit test
+
+config ZBAR_STATIC_TEST_YUY2
+	bool
+	default y
+	help
+	  Enable YUY2 image decoding unit test
+endif

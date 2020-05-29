@@ -1,0 +1,2 @@
+ccache /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-ar qc libsubsys__testsuite__ztest.a  CMakeFiles/subsys__testsuite__ztest.dir/src/ztest.c.obj
+ccache /home/paulkim/work/toolchains/gcc-arm-none-eabi-6-2017-q1-update/bin/arm-none-eabi-ranlib libsubsys__testsuite__ztest.a

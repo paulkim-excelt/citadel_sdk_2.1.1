@@ -1,0 +1,1 @@
+zephyr_library_sources(i2c_bcm58202.c)

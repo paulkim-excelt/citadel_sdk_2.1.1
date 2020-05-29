@@ -1,0 +1,164 @@
+# Kconfig - ARM Cortex-A platform configuration options
+
+#
+# Copyright (c) 2017 Broadcom Limited
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+config ISA_THUMB2
+	bool
+	# Omit prompt to signify "hidden" option
+	default n
+	help
+	From: http://www.arm.com/products/processors/technologies/instruction-set-architectures.php
+
+	Thumb-2 technology is the instruction set underlying the ARM Cortex
+	architecture which provides enhanced levels of performance, energy
+	efficiency, and code density for a wide range of embedded
+	applications.
+
+	Thumb-2 technology builds on the success of Thumb, the innovative
+	high code density instruction set for ARM microprocessor cores, to
+	increase the power of the ARM microprocessor core available to
+	developers of low cost, high performance systems.
+
+	The technology is backwards compatible with existing ARM and Thumb
+	solutions, while significantly extending the features available to
+	the Thumb instructions set. This allows more of the application to
+	benefit from the best in class code density of Thumb.
+
+	For performance optimized code Thumb-2 technology uses 31 percent
+	less memory to reduce system cost, while providing up to 38 percent
+	higher performance than existing high density code, which can be used
+	to prolong battery-life or to enrich the product feature set. Thumb-2
+	technology is featured in the  processor, and in all ARMv7
+	architecture-based processors.
+
+config ARMV7_A
+	bool
+	# Omit prompt to signify "hidden" option
+	default n
+	select ISA_THUMB2
+	select ATOMIC_OPERATIONS_C if ATOMIC_OPERATIONS_BUILTIN != y
+	help
+	This option signifies the use of an ARMv7-A processor implementation.
+
+config ARM_GIC_400
+	bool
+	# Omit prompt to signify "hidden" option
+	default n
+	help
+	This option signifies the use of ARM Generic Interrupt Controller
+
+config GIC_INIT_PRIORITY
+	int
+	# Omit prompt to signify "hidden" option
+	default 0
+	depends on ARM_GIC_400
+	help
+	GIC Interrupt driver priority
+
+config CPU_CORTEX_A7
+	bool
+	# Omit prompt to signify "hidden" option
+	select ARMV7_A
+	default n
+	help
+	This option signifies the use of a Cortex-A7 CPU
+
+config BOOT_LOADER_IN_ARM_STATE
+	bool
+	# Omit prompt to signify "hidden" option
+	default n
+	help
+	This option should be enabled if the system has a boot loader that
+	was built without the -mthumb option.
+
+menu "ARM Cortex-A options"
+	depends on CPU_CORTEX_A
+
+config DATA_ENDIANNESS_LITTLE
+	bool
+	default y
+	help
+	This is driven by the processor implementation, since it is fixed in
+	hardware. The board should set this value to 'n' if the data is
+	implemented as big endian.
+
+config STACK_ALIGN_DOUBLE_WORD
+	bool
+	prompt "Align stacks on double-words (8 octets)"
+	default y
+	help
+	This is needed to conform to AAPCS, the procedure call standard for
+	the ARM. It wastes stack space.
+
+config FAULT_DUMP
+	int
+	prompt "Fault dump level"
+	default 2
+	range 0 2
+	help
+	Different levels for display information when a fault occurs.
+
+	2: The default. Display specific and verbose information. Consumes
+		the most memory (long strings).
+
+	1: Display general and short information. Consumes less memory
+		(short strings).
+
+	0: Off.
+
+config STACK_DUMP_SIZE_ON_FAULT
+	int
+	prompt "Amount of stack to dump on a fault"
+	default 0
+	help
+	When set to non-zero the fault handler dumps the stack data
+	from the mode that caused the fault. Set to 0 to disable.
+
+config XIP
+	default y
+endmenu
+
+menu "ARM Cortex-A7 options"
+	depends on ARMV7_A
+
+config LDREX_STREX_AVAILABLE
+	bool
+	default n
+	depends on ARM_CORE_MMU
+
+config ARM_CORE_MMU
+	bool "ARM Core MMU functionalities"
+	select LDREX_STREX_AVAILABLE
+	select ATOMIC_OPERATIONS_BUILTIN
+	default n
+	help
+	  ARM Core MMU functionalities
+
+config DATA_CACHE_SUPPORT
+	bool "Enable Arm Data cache"
+	depends on ARM_CORE_MMU
+	default n
+	help
+	  Enable ARM Data Cache and include cache maintenance apis to build
+
+config IRQ_OFFLOAD
+	bool "Enable IRQ offload"
+	default n
+	help
+	Enable irq_offload() API which allows functions to be synchronously
+	run in interrupt context. Adds some overhead to context switching.
+	Mainly useful for test cases.
+
+config GEN_ISR_TABLES
+	default y
+
+config ARCH_HAS_THREAD_ABORT
+	bool
+	# omit prompt to signify a "hidden" option
+	default y
+
+endmenu

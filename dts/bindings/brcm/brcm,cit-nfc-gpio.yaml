@@ -1,0 +1,21 @@
+---
+title: Broadcom NFC GPIO register map
+version: 0.1
+
+description: >
+    This binding describes the Broadcom IOSYS GPIO controller registers
+
+properties:
+    compatible:
+      category: required
+      type: string
+      description: compatible strings
+      constraint: "brcm,cit-iosys-gpio"
+
+    reg:
+      category: required
+      type: array
+      description: mmio register space
+      generation: define
+
+...

@@ -1,0 +1,18 @@
+# Kconfig - BCM 5820X platform configuration options
+
+#
+# Copyright (c) 2017 Broadcom Limited
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+if SOC_BCM5820X
+
+config SOC
+	default "brcm_bcm5820x"
+
+config SYS_CLOCK_HW_CYCLES_PER_SEC
+	int
+	default 200000000
+
+endif # SOC_BCM5820X

@@ -1,0 +1,21 @@
+DAuth Hash generation instructions
+==================================
+
+Secimage utility supports DAuth hash generation from the RSA public key (2048 and 4096 bit keys) file in PEM format. Secimage utility is built to run on linux systems.
+
+Syntax:
+secimage: dauth -out hashoutputfile -key <-mont> [-public rsa_dauth_public key]
+
+Where 
+-mont: creates the montgomery context, a must for RSA 4096 bit keys, optional for 2048 bit keys
+
+Examples:
+To generate DAuth hash of 4096 bit RSA public key, run
+./secimage dauth -out dauth_hash.out -key -mont -public rsa_dauth4096_key_public.pem
+
+dauth_hash.out is the 32 byte hash file in binary format.
+ 
+To generate DAuth hash of 2048 bit RSA public key, run
+./secimage dauth -out dauth_hash.out -key -public rsa_dauth2048_key_public.pem
+
+

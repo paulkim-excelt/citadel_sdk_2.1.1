@@ -1,0 +1,67 @@
+# Kconfig - BRCM QSPI flash drvier configuration options
+
+#
+# Copyright (c) 2018 Broadcom Inc.
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+#
+# BRCM QSPI flash driver options
+#
+
+config USE_BSPI_FOR_READ
+	bool
+	# Omit prompt to signify "hidden" option
+	default y
+	depends on BRCM_DRIVER_QSPI
+	help
+		Enable BSPI Memory mapped access for flash read
+
+config USE_WSPI_FOR_WRITE
+	bool
+	# Omit prompt to signify "hidden" option
+	default y
+	depends on BRCM_DRIVER_QSPI
+	help
+		Enable WSPI Memory mapped access for flash write
+
+config USE_CPU_MEMCPY_FOR_WRITE
+	bool
+	# Omit prompt to signify "hidden" option
+	default y
+	depends on BRCM_DRIVER_QSPI
+	help
+		Enable optimized assembly version of memcpy for flash writes
+
+config ENABLE_CACHE_INVAL_ON_WRITE
+	bool
+	# Omit prompt to signify "hidden" option
+	default y
+	depends on BRCM_DRIVER_QSPI
+	help
+		Enable cache invalidation on flash writes
+
+config QSPI_QUAD_IO_ENABLED
+	bool
+	# Omit prompt to signify "hidden" option
+	default y
+	depends on BRCM_DRIVER_QSPI
+	help
+		Enable Quad lane flash access
+
+config SECONDARY_FLASH
+	bool
+	# Omit prompt to signify "hidden" option
+	default y
+	depends on BRCM_DRIVER_QSPI
+	help
+		Enable flash @CS1
+
+config SEC_FLASH_CLOCK_FREQUENCY
+	int
+	# Omit prompt to signify "hidden" option
+	default 25000000
+	depends on SECONDARY_FLASH
+	help
+		Sets the clock frequency for the secondary flash @CS1

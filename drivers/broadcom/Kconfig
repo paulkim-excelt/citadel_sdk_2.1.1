@@ -1,0 +1,239 @@
+# Kconfig - BRCM drvier configuration options
+
+#
+# Copyright (c) 2018 Broadcom Inc.
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+#
+# BRCM Driver options
+#
+menuconfig BRCM
+	bool
+	prompt "BRCM Drivers"
+	default y
+	help
+	  Enable BRCM Driver
+
+if BRCM
+
+config BRCM_DRIVER_ADC
+	bool "Enable BRCM ADC driver"
+	default n
+	help
+	  Enable BRCM ADC driver
+
+config BRCM_DRIVER_BBL
+	bool "Enable BRCM BBL driver"
+	default n
+	help
+	  Enable BRCM BBL driver
+
+config BRCM_DRIVER_CRYPTO
+	bool "Enable BRCM CRYPTO driver"
+	default n
+	help
+	  Enable BRCM CRYPTO driver
+
+if BRCM_DRIVER_CRYPTO
+source "drivers/broadcom/crypto/Kconfig"
+endif
+
+config BRCM_DRIVER_DMA
+	bool "Enable BRCM DMA driver"
+	default n
+	help
+	  Enable BRCM DMA driver
+
+config BRCM_DRIVER_DMU
+	bool "Enable BRCM DMU driver"
+	default n
+	help
+	  Enable BRCM DMU driver
+
+config BRCM_DRIVER_FT
+	bool "Enable BRCM FT driver"
+	default n
+	help
+	  Enable BRCM FT driver
+
+config BRCM_DRIVER_GPIO
+	bool "Enable BRCM GPIO driver"
+	default n
+	help
+	  Enable BRCM GPIO driver
+
+if BRCM_DRIVER_GPIO
+source "drivers/broadcom/gpio/Kconfig"
+endif
+
+config BRCM_DRIVER_I2C
+	bool "Enable BRCM I2C driver"
+	default n
+	help
+	  Enable BRCM I2C driver
+
+config BRCM_DRIVER_KEYPAD
+	bool "Enable BRCM KEYPAD driver"
+	default n
+	help
+	  Enable BRCM KEYPAD driver
+
+config BRCM_DRIVER_MSR
+	bool "Enable BRCM MSR driver"
+	default n
+	help
+	  Enable BRCM MSR driver
+
+config BRCM_DRIVER_LCD
+	bool "Enable BRCM LCD driver"
+	default n
+	help
+	  Enable BRCM LCD driver
+
+if BRCM_DRIVER_LCD
+source "drivers/broadcom/lcd/Kconfig"
+endif
+
+source "drivers/broadcom/pinmux/Kconfig"
+
+config BRCM_DRIVER_PM
+	bool "Enable BRCM PM driver"
+	default n
+	help
+	  Enable BRCM PM driver
+
+config BRCM_DRIVER_PRINTER
+	bool "Enable BRCM PRINTER driver"
+	default n
+	help
+	  Enable BRCM printer driver
+
+config BRCM_DRIVER_PWM
+	bool "Enable BRCM PWM driver"
+	default n
+	help
+	  Enable BRCM PWM driver
+
+config BRCM_DRIVER_QSPI
+	bool "Enable BRCM QSPI driver"
+	default n
+	help
+	  Enable BRCM QSPI driver
+
+if BRCM_DRIVER_QSPI
+source "drivers/broadcom/qspi_flash/Kconfig"
+endif
+
+config BRCM_DRIVER_RTC
+	bool "Enable BRCM RTC driver"
+	default n
+	help
+	  Enable BRCM RTC driver
+
+config BRCM_DRIVER_SCC
+	bool "Enable BRCM Smart card driver"
+	default n
+	help
+	  Enable BRCM Smart card driver
+
+if BRCM_DRIVER_SCC
+source "drivers/broadcom/sc/Kconfig"
+endif
+
+config BRCM_DRIVER_SDIO
+	bool "Enable BRCM SDIO driver"
+	default n
+	help
+	  Enable BRCM SDIO driver
+
+if BRCM_DRIVER_SDIO
+source "drivers/broadcom/sdio/Kconfig"
+endif
+
+config BRCM_DRIVER_SMAU
+	bool "Enable BRCM SMAU driver"
+	default n
+	help
+	  Enable BRCM SMAU driver
+
+if BRCM_DRIVER_SMAU
+source "drivers/broadcom/smau/Kconfig"
+endif
+
+config BRCM_DRIVER_SMC
+	bool "Enable BRCM SMC driver"
+	default n
+	select SPI1_USES_MFIO_6_TO_9
+	select SPI2_USES_MFIO_10_TO_13
+	select SPI3_USES_MFIO_14_TO_17
+	select SPI4_USES_MFIO_18_TO_21
+	help
+	  Enable BRCM SMC driver
+
+config BRCM_DRIVER_SOTP
+	bool "Enable BRCM SOTP driver"
+	default n
+	help
+	  Enable BRCM SOTP driver
+
+config BRCM_DRIVER_SPI
+	bool "Enable BRCM SPI driver"
+	default n
+	help
+	  Enable BRCM SPI driver
+
+if BRCM_DRIVER_SPI
+source "drivers/broadcom/spi/Kconfig"
+endif
+
+config BRCM_DRIVER_SPL
+	bool "Enable BRCM SPL driver"
+	default n
+	help
+	  Enable BRCM SPL driver
+
+config BRCM_DRIVER_TIMERS
+	bool "Enable BRCM Timer driver"
+	default n
+	help
+	  Enable BRCM Timer driver
+
+config BRCM_DRIVER_UNICAM
+	bool "Enable BRCM Unicam driver"
+	default n
+	help
+	  Enable BRCM Unicam driver
+
+if BRCM_DRIVER_UNICAM
+source "drivers/broadcom/unicam/Kconfig"
+endif
+
+config BRCM_DRIVER_USBH
+	bool "Enable BRCM USB Host driver"
+	default n
+	help
+	  Enable BRCM USB Host driver
+
+config BRCM_DRIVER_USBD
+	bool "Enable BRCM USB Device Controller Driver"
+	default n
+	select USB
+	select USB_DEVICE_DRIVER
+	select USB_DEVICE_STACK
+	help
+	  Enable BRCM USB Device Controller Driver
+
+config BRCM_DRIVER_WDT
+	bool "Enable BRCM Watchdog Timer driver"
+	default n
+	help
+	  Enable BRCM BRCM Watchdog Timer driver
+
+if BRCM_DRIVER_USBD
+source "drivers/broadcom/usbd/Kconfig"
+endif
+
+endif # BRCM
+

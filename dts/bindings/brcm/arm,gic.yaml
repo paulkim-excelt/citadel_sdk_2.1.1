@@ -1,0 +1,32 @@
+---
+title: ARM Generic Interrupt Controller (GIC)
+version: 0.1
+
+description: >
+    This binding describes the ARM GIC interrupt controller
+
+properties:
+    compatible:
+      category: required
+      type: string
+      description: compatible strings
+      constraint: "arm,gic"
+
+    reg:
+      category: required
+      type: int
+      description: mmio register space
+      generation: define
+
+    arm,num-irqs:
+      category: required
+      type: int
+      description: number of irq inputs the GIC handles
+      generation: define
+
+cell_string: IRQ
+
+"#cells":
+  - type
+  - irq
+...

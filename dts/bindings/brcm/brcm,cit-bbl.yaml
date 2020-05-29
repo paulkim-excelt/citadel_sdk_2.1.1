@@ -1,0 +1,21 @@
+---
+title: Broadcom BBL interrupts map
+version: 0.1
+
+description: >
+    This binding describes the Broadcom BBL interrupts
+
+properties:
+    compatible:
+      category: required
+      type: string
+      description: compatible strings
+      constraint: "brcm,cit-bbl"
+
+    interrupts:
+      type: array
+      category: required
+      description: required interrupts
+      generation: define
+
+...

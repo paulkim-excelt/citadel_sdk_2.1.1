@@ -1,0 +1,17 @@
+# Kconfig - Citadel SVK 58201 configuration
+#
+# Copyright (c) 2017 Broadcom Limited
+#
+# SPDX-License-Identifier: Apache-2.0
+
+if BOARD_CITADEL_SVK_58201
+
+config SOC_UNPROGRAMMED
+	bool "Generate code for unprogrammed parts"
+	default n
+
+config EXTRA_ROM_CODE_OFFSET
+	hex "Additional offset to the image load address start (For extra image headers)"
+	default 0
+
+endif

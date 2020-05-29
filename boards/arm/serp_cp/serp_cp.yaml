@@ -1,0 +1,7 @@
+identifier: serp_cp
+name: Citadel SERP BCM58201
+type: mcu
+arch: arm
+toolchain:
+  - zephyr
+  - gccarmemb
